@@ -804,7 +804,7 @@ class cocos2d::CCScheduler {
 	void unscheduleSelector(cocos2d::SEL_SCHEDULE, cocos2d::CCObject*) = imac 0x44b190, m1 0x3bc6c0;
 	void unscheduleUpdateForTarget(cocos2d::CCObject const*);
 
-	virtual void update(float) = imac 0x44d2a0, m1 0x3be890;
+	virtual void update(float) = imac 0x44d2a0, m1 0x3be890, ios 0x1b790c;
 }
 
 [[link(win, android)]]
@@ -2050,10 +2050,10 @@ class cocos2d::CCMenu {
 	cocos2d::CCMenuItem* itemForTouch(cocos2d::CCTouch*);
 	cocos2d::CCMenuItem* itemForTouch(cocos2d::CCTouch*, bool);
 
-	virtual bool init() = m1 0x6a7100, imac 0x79ec00;
-	virtual void addChild(cocos2d::CCNode*) = m1 0x6a7108, imac 0x79ec10;
-	virtual void addChild(cocos2d::CCNode*, int) = m1 0x6a710c, imac 0x79ec20;
-	virtual void addChild(cocos2d::CCNode*, int, int) = m1 0x6a7110, imac 0x79ec30;
+	virtual bool init() = m1 0x6a7100, imac 0x79ec00, ios 0x1e1c54;
+	virtual void addChild(cocos2d::CCNode*) = m1 0x6a7108, imac 0x79ec10, ios 0x24bed8;
+	virtual void addChild(cocos2d::CCNode*, int) = m1 0x6a710c, imac 0x79ec20, ios 0x24bec8;
+	virtual void addChild(cocos2d::CCNode*, int, int) = m1 0x6a7110, imac 0x79ec30, ios 0x1e1c64;
 	virtual void removeChild(cocos2d::CCNode*, bool) = m1 0x6a71b8, imac 0x79ecd0;
 	virtual void onExit() = m1 0x6a7170, imac 0x79ec80;
 	virtual void registerWithTouchDispatcher() = m1 0x6a726c;
