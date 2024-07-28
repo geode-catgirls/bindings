@@ -8024,23 +8024,23 @@ class GJDropDownLayer : cocos2d::CCLayerColor {
 		return nullptr;
 	}
 
-	virtual void draw() = win 0x41870, m1 0x51a640, imac 0x5f20b0;
-	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x3B850, m1 0x51a67c, imac 0x5f20e0;
+	virtual void draw() = win 0x41870, m1 0x51a640, imac 0x5f20b0, ios 0x3bb688;
+	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x3B850, m1 0x51a67c, imac 0x5f20e0, ios 0x3bb6c4;
 	virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) {}
 	virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) {}
 	virtual void ccTouchCancelled(cocos2d::CCTouch*, cocos2d::CCEvent*) {}
-	virtual void registerWithTouchDispatcher() = win 0x41750, m1 0x51a330, imac 0x5f1d70;
-	virtual void keyBackClicked() = win 0x245970, m1 0x51a368, imac 0x5f1db0;
-	virtual void customSetup() {}
-	virtual void enterLayer() = win 0x41720, m1 0x51a2f8, imac 0x5f1d40;
+	virtual void registerWithTouchDispatcher() = win 0x41750, m1 0x51a330, imac 0x5f1d70, ios 0x3bb378;
+	virtual void keyBackClicked() = win 0x245970, m1 0x51a368, imac 0x5f1db0, ios 0x3bb3b0;
+	virtual void customSetup() = ios 0x3bb314 {}
+	virtual void enterLayer() = win 0x41720, m1 0x51a2f8, imac 0x5f1d40, ios 0x3bb340;
 	virtual void exitLayer(cocos2d::CCObject*) = win 0x245990, m1 0x51a38c, ios 0x3bb3d4, imac 0x5f1df0;
-	virtual void showLayer(bool) = win 0x2459d0, m1 0x51a3d8, imac 0x5f1e30;
-	virtual void hideLayer(bool) = win 0x245b20, m1 0x51a4dc, imac 0x5f1f40;
-	virtual void layerVisible() = win 0x41820, m1 0x51a5e0, imac 0x5f2050;
-	virtual void layerHidden() = win 0x245c70, m1 0x51a5f0, imac 0x5f2070;
+	virtual void showLayer(bool) = win 0x2459d0, m1 0x51a3d8, imac 0x5f1e30, ios 0x3bb420;
+	virtual void hideLayer(bool) = win 0x245b20, m1 0x51a4dc, imac 0x5f1f40, ios 0x3bb524;
+	virtual void layerVisible() = win 0x41820, m1 0x51a5e0, imac 0x5f2050, ios 0x3bb628;
+	virtual void layerHidden() = win 0x245c70, m1 0x51a5f0, imac 0x5f2070, ios 0x3bb638;
 	virtual void enterAnimFinished() {}
-	virtual void disableUI() = win 0x245930, m1 0x51a2d0, imac 0x5f1d00;
-	virtual void enableUI() = win 0x245950, m1 0x51a2e4, imac 0x5f1d20;
+	virtual void disableUI() = win 0x245930, m1 0x51a2d0, imac 0x5f1d00, ios 0x3bb318;
+	virtual void enableUI() = win 0x245950, m1 0x51a2e4, imac 0x5f1d20, ios 0x3bb32c;
 
 	cocos2d::CCPoint m_endPosition;
 	cocos2d::CCPoint m_startPosition;
