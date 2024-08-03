@@ -1106,6 +1106,7 @@ class cocos2d::CCLayerRGBA {
 class cocos2d::CCMouseDispatcher {
 	// CCMouseDispatcher(cocos2d::CCMouseDispatcher const&);
 	// CCMouseDispatcher();
+	// ~CCMouseDispatcher() = ios 0x30ed60;
 	void addDelegate(cocos2d::CCMouseDelegate*);
 	bool dispatchScrollMSG(float, float) = m1 0x4c4a74, imac 0x578540;
 	void forceAddDelegate(cocos2d::CCMouseDelegate*);
