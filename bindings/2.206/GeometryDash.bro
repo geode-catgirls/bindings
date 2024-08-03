@@ -12221,10 +12221,10 @@ class MenuGameLayer : cocos2d::CCLayer {
 	}
 
 	void destroyPlayer() = win 0x3129e0, imac 0x505ac0, m1 0x45d628;
-	cocos2d::ccColor3B getBGColor(int) = win 0x311340, imac 0x504a10, m1 0x45c6e4;
-	void resetPlayer() = win 0x311db0, imac 0x504f10, m1 0x45cc04;
-	void tryJump(float) = win 0x311610, imac 0x504ab0, m1 0x45c7e8;
-	void updateColor(float) = win 0x3111f0, imac 0x504d10, m1 0x45ca58;
+	cocos2d::ccColor3B getBGColor(int) = win 0x311340, imac 0x504a10, m1 0x45c6e4, ios 0x3a3ce4;
+	void resetPlayer() = win 0x311db0, imac 0x504f10, m1 0x45cc04, ios 0x3a40e8;
+	void tryJump(float) = win 0x311610, imac 0x504ab0, m1 0x45c7e8, ios 0x3a3d84;
+	void updateColor(float) = win 0x3111f0, imac 0x504d10, m1 0x45ca58, ios 0x3a3fd0;
 	void updateColors() = imac 0x5056e0, m1 0x45d2b8;
 
 	virtual void update(float) = win 0x3118e0, m1 0x45d330, imac 0x505750;
@@ -13361,7 +13361,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	static PlayerObject* create(int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool) = win 0x3648d0, m1 0x37c5c0, imac 0x403500, ios 0x227d30;
 
 	void activateStreak() = win 0x37e0a0, imac 0x40c550, m1 0x38447c;
-	TodoReturn addAllParticles() = win 0x3667D0;
+	TodoReturn addAllParticles() = win 0x3667D0, ios 0x2299e4;
 	TodoReturn addToTouchedRings(RingObject*) = imac 0x41ecf0, m1 0x393d24;
 	TodoReturn addToYVelocity(double, int);
 	void animatePlatformerJump(float) = win 0x36adb0, m1 0x384c3c, imac 0x40cdb0;
@@ -13380,8 +13380,8 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void createFadeOutDartStreak() = win 0x376690;
 	void createRobot(int) = win 0x366050;
 	void createSpider(int) = win 0x366410;
-	void deactivateParticle() = m1 0x3828c8, imac 0x40a870; // inlined on windows
-	void deactivateStreak(bool);
+	void deactivateParticle() = m1 0x3828c8, imac 0x40a870, ios 0x22ccec; // inlined on windows
+	void deactivateStreak(bool) = ios 0x229b7c;
 	TodoReturn destroyFromHitHead();
 	TodoReturn didHitHead();
 	void disableCustomGlowColor() {
@@ -13398,7 +13398,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void exitPlatformerAnimateJump();
 	void fadeOutStreak2(float) = win 0x37e1a0, m1 0x392438, imac 0x41cfd0, ios 0x237f98;
 	void flashPlayer(float, float, cocos2d::ccColor3B mainColor, cocos2d::ccColor3B secondColor);
-	void flipGravity(bool, bool) = win 0x3781e0, m1 0x3848b4, imac 0x40c9c0;
+	void flipGravity(bool, bool) = win 0x3781e0, m1 0x3848b4, imac 0x40c9c0, ios 0x22e590;
 	TodoReturn flipMod();
 	void gameEventTriggered(int p0, int p1) = win inline, m1 0x384c24, imac 0x40cd80 {
 		if (this->m_gameLayer)
@@ -13424,7 +13424,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void incrementJumps() = win 0x36acd0, imac 0x40c980, m1 0x38487c;
 	bool init(int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool) = win 0x364970, m1 0x37c678, imac 0x403590, ios 0x227dd4;
 	bool isBoostValid(float);
-	bool isFlying() = imac 0x40a810, m1 0x38285c;
+	bool isFlying() = imac 0x40a810, m1 0x38285c, ios 0x22cc90;
 	bool isInBasicMode();
 	bool isInNormalMode();
 	bool isSafeFlip(float) = m1 0x38b488, imac 0x415120;
@@ -13457,17 +13457,17 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void preCollision() = m1 0x3855d8, imac 0x40d7d0;
 	bool preSlopeCollision(float, GameObject*) = win 0x36d370;
 	void propellPlayer(float, bool, int) = win 0x37d860, imac 0x424240, m1 0x398e28;
-	void pushButton(PlayerButton) = win 0x375f70, imac 0x41d330, m1 0x27f4b0;
+	void pushButton(PlayerButton) = win 0x375f70, imac 0x41d330, m1 0x27f4b0, ios 0x238fd0;
 	TodoReturn pushDown();
 	void pushPlayer(float);
 	TodoReturn redirectDash(float);
 	TodoReturn redirectPlayerForce(float, float, float, float);
 	void releaseAllButtons() = win 0x37d110, imac 0x423a90, m1 0x398664;
-	void releaseButton(PlayerButton) = win 0x376200, imac 0x41e7b0, m1 0x393880;
+	void releaseButton(PlayerButton) = win 0x376200, imac 0x41e7b0, m1 0x393880, ios 0x2381e0;
 	TodoReturn removeAllParticles();
 	void removePendingCheckpoint() = win 0x3801a0;
 	TodoReturn removePlacedCheckpoint();
-	TodoReturn resetAllParticles();
+	TodoReturn resetAllParticles() = ios 0x22e138;
 	TodoReturn resetCollisionLog(bool);
 	TodoReturn resetCollisionValues();
 	void resetPlayerIcon() = win 0x3792f0, m1 0x394f20, imac 0x41ffb0;
@@ -13492,7 +13492,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void runNormalRotation(bool, float) = win 0x9999999, m1 0x381364, mac 0x408ef0;
 	void runRotateAction(bool, int) = win 0x36b480;
 	TodoReturn saveToCheckpoint(PlayerCheckpoint*);
-	void setSecondColor(cocos2d::ccColor3B const&) = win 0x37b3b0, m1 0x37fac8, imac 0x407090;
+	void setSecondColor(cocos2d::ccColor3B const&) = win 0x37b3b0, m1 0x37fac8, imac 0x407090, ios 0x22a8cc;
 	void setupStreak() = win 0x366920, m1 0x37e59c, imac 0x405810;
 	void setYVelocity(double, int) = win 0x366e70;
 	TodoReturn spawnCircle();
@@ -13514,19 +13514,19 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void stopParticles() = win 0x3699b0, ios 0x22e478;
 	void stopPlatformerJumpAnimation() = win 0x36b190, m1 0x3850f0, imac 0x40d290;
 	TodoReturn stopRotation(bool, int);
-	void stopStreak2() = imac 0x424840, m1 0x39934c;
+	void stopStreak2() = imac 0x424840, m1 0x39934c, ios 0x23d30c;
 	void storeCollision(PlayerCollisionDirection, int);
 	TodoReturn switchedDirTo(PlayerButton) = win 0x375e60;
 	void switchedToMode(GameObjectType) = win 0x379e40, m1 0x391544, imac 0x41bfc0;
 	TodoReturn testForMoving(float, GameObject*);
 	void toggleBirdMode(bool, bool) = win 0x378830, m1 0x395124, imac 0x4201d0;
-	void toggleDartMode(bool, bool) = win 0x378fa0, m1 0x396120, imac 0x421270;
+	void toggleDartMode(bool, bool) = win 0x378fa0, m1 0x396120, imac 0x421270, ios 0x23abe4;
 	void toggleFlyMode(bool, bool) = win 0x378500, m1 0x3946ec, imac 0x41f6e0;
 	void toggleGhostEffect(GhostType) = win 0x37ce40, m1 0x391a70, imac 0x41c590, ios 0x23783c;
 	void togglePlatformerMode(bool val) {
         m_isPlatformer = val;
     }
-	void togglePlayerScale(bool, bool) = win 0x37e710, m1 0x3916bc, imac 0x41c110;
+	void togglePlayerScale(bool, bool) = win 0x37e710, m1 0x3916bc, imac 0x41c110, ios 0x23751c;
 	void toggleRobotMode(bool, bool) = win 0x379700, m1 0x396af0, imac 0x421cf0;
 	void toggleRollMode(bool, bool) = win 0x379580, m1 0x396724, imac 0x421930;
 	void toggleSpiderMode(bool, bool) = win 0x379a80, m1 0x396f64, imac 0x4221b0;
@@ -13548,7 +13548,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void updateEffects(float param) = win inline, imac 0x40bd80, m1 0x383d54 {
 		m_waveTrail->updateStroke(param);
 	}
-	void updateGlowColor() = win 0x37b440, m1 0x397f58, imac 0x423390;
+	void updateGlowColor() = win 0x37b440, m1 0x397f58, imac 0x423390, ios 0x23c424;
 	TodoReturn updateInternalActions(float) = win 0x380e60;
 	void updateJump(float) = win 0x369a50, imac 0x407100, m1 0x37fb30;
 	TodoReturn updateJumpVariables();
@@ -13556,7 +13556,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn updateMove(float) = win 0x368220;
 	void updatePlayerArt() = win 0x376890, m1 0x3940fc, imac 0x41f0a0;
 	void updatePlayerBirdFrame(int) = win 0x37c2f0, m1 0x3954e0, imac 0x4205f0;
-	void updatePlayerDartFrame(int) = win 0x37c9f0, m1 0x3964f0, imac 0x4216e0;
+	void updatePlayerDartFrame(int) = win 0x37c9f0, m1 0x3964f0, imac 0x4216e0, ios 0x23ae6c;
 	void updatePlayerForce(cocos2d::CCPoint, bool);
 	void updatePlayerFrame(int) = win 0x37bc60, m1 0x395e20, imac 0x420f90;
 	void updatePlayerGlow() = win 0x37e2b0, m1 0x393f3c, imac 0x41ef10;
