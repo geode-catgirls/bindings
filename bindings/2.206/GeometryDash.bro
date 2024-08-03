@@ -7509,9 +7509,9 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn visitWithColorFlash();
 	TodoReturn volumeForProximityEffect(SFXTriggerInstance&) = win 0x2316f0;
 
-	virtual void update(float) = win 0x2277d0, imac 0x147140, m1 0x11a52c;
-	virtual bool init() = win 0x1f7dd0, m1 0xe38c8, imac 0x102b70;
-	virtual void visit() = win 0x235f90, m1 0x127d48, imac 0x1581b0;
+	virtual void update(float) = win 0x2277d0, imac 0x147140, m1 0x11a52c, ios 0x209388;
+	virtual bool init() = win 0x1f7dd0, m1 0xe38c8, imac 0x102b70, ios 0x1e4484;
+	virtual void visit() = win 0x235f90, m1 0x127d48, imac 0x1581b0, ios 0x212c80;
 	virtual void postUpdate(float);
 	virtual TodoReturn checkForEnd() = m1 0xdf6c8, imac 0xfd990;
 	virtual TodoReturn testTime() = m1 0xdf6cc, imac 0xfd9a0;
@@ -13599,7 +13599,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn yStartDown();
 	TodoReturn yStartUp();
 
-	virtual void update(float) = m1 0x37ec58, imac 0x405f60, win 0x366ee0;
+	virtual void update(float) = m1 0x37ec58, imac 0x405f60, win 0x366ee0, ios 0x229c5c;
 	virtual void setScaleX(float) = m1 0x39a4ec, win 0x380860, imac 0x425cd0;
 	virtual void setScaleY(float) = m1 0x39a4f0, win 0x380870, imac 0x425ce0;
 	virtual void setScale(float) = m1 0x39a4f4, win 0x380880, imac 0x425cf0;
@@ -13607,7 +13607,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	virtual void setVisible(bool) = m1 0x39a4f8, win 0x380890, imac 0x425d00;
 	virtual void setRotation(float) = win 0x380790, imac 0x425c40, m1 0x39a47c; // merged thunk
 	virtual void setOpacity(unsigned char) = win 0x37bb00, m1 0x398408, imac 0x423850;
-	virtual void setColor(cocos2d::ccColor3B const&) = win 0x37b320, m1 0x397e20, imac 0x423230;
+	virtual void setColor(cocos2d::ccColor3B const&) = win 0x37b320, m1 0x397e20, imac 0x423230, ios 0x23c360;
 	virtual void setFlipX(bool) = win 0x3807a0, m1 0x39a480, imac 0x425c50;
 	virtual void setFlipY(bool) = imac 0x425cc0;
 	virtual void resetObject() = m1 0x390ae4, imac 0x41b180;
