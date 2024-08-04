@@ -301,7 +301,7 @@ class cocos2d::CCSet {
 	static cocos2d::CCSet* create();
 
 	// CCSet(cocos2d::CCSet const&);
-	// CCSet();
+	// CCSet() = ios 0x1b8068;
 	void addObject(cocos2d::CCObject*);
 	cocos2d::CCObject* anyObject() = m1 0x6c5cec, imac 0x7bfee0;
 	cocos2d::CCSetIterator begin();
@@ -313,7 +313,7 @@ class cocos2d::CCSet {
 	void removeAllObjects();
 	void removeObject(cocos2d::CCObject*);
 
-	virtual void acceptVisitor(cocos2d::CCDataVisitor&);
+	virtual void acceptVisitor(cocos2d::CCDataVisitor&) = ios 0x1b8284;
 }
 
 [[link(win, android)]]
@@ -1240,7 +1240,7 @@ class cocos2d::CCTouchDispatcher {
 	void decrementForcePrio(int);
 	cocos2d::CCTouchHandler* findHandler(cocos2d::CCArray*, cocos2d::CCTouchDelegate*);
 	cocos2d::CCTouchHandler* findHandler(cocos2d::CCTouchDelegate*) = imac 0x4d5fe0, m1 0x433f14, ios 0x159ef0;
-	void forceAddHandler(cocos2d::CCTouchHandler*, cocos2d::CCArray*);
+	void forceAddHandler(cocos2d::CCTouchHandler*, cocos2d::CCArray*) = ios 0x159b5c;
 	void forceRemoveAllDelegates();
 	void forceRemoveDelegate(cocos2d::CCTouchDelegate*);
 	void incrementForcePrio(int);
@@ -1267,11 +1267,9 @@ class cocos2d::CCTouchDispatcher {
 class cocos2d::CCTouchHandler {
 	static cocos2d::CCTouchHandler* handlerWithDelegate(cocos2d::CCTouchDelegate*, int);
 
-	cocos2d::CCTouchDelegate* getDelegate() = m1 0x3efbb0, imac 0x48a010;
+	cocos2d::CCTouchDelegate* getDelegate() = m1 0x3efbb0, imac 0x48a010, ios 0xc42c;
 	int getEnabledSelectors();
-	int getPriority() = ios inline, m1 0x3efc24, imac 0x48a090 {
-		return m_nPriority;
-	}
+	int getPriority() = ios 0xc434, m1 0x3efc24, imac 0x48a090;
 
 	void setDelegate(cocos2d::CCTouchDelegate*);
 	void setEnalbedSelectors(int);
@@ -1591,7 +1589,7 @@ class cocos2d::CCSprite {
 	cocos2d::CCPoint const& getOffsetPosition();
 	cocos2d::_ccV3F_C4B_T2F_Quad getQuad();
 	cocos2d::CCTextureAtlas* getTextureAtlas();
-	cocos2d::CCRect const& getTextureRect();// = ios inline { return m_obRect; }
+	cocos2d::CCRect const& getTextureRect();
 	float getTlVertexMod() const;
 	float getTrVertexMod() const;
 	cocos2d::CCPoint const& getUnflippedOffsetPosition();
@@ -1795,7 +1793,7 @@ class cocos2d::CCArray {
 	void fastRemoveObjectAtIndexChild(unsigned int);
 	void fastRemoveObjectAtIndexNew(unsigned int);
 	unsigned int indexOfObject(cocos2d::CCObject*) const;
-	void insertObject(cocos2d::CCObject*, unsigned int);
+	void insertObject(cocos2d::CCObject*, unsigned int) = ios 0x259ccc;
 	bool isEqualToArray(cocos2d::CCArray*);
 	// cocos2d::CCObject* lastObject() = imac 0x72d310;
 	// cocos2d::CCObject* objectAtIndex(unsigned int) = imac 0x72d2f0, m1 0x63fdac, ios 0x259c24;
