@@ -1016,7 +1016,7 @@ class CCCircleWaveDelegate {
 [[link(android)]]
 class CCContentLayer : cocos2d::CCLayerColor {
 	inline CCContentLayer() {}
-	~CCContentLayer() = m1 0x6d4460, imac 0x4bc530;
+	~CCContentLayer() = m1 0x6d4460, imac 0x4bc530, ios 0x19a8bc;
 
 	static CCContentLayer* create(cocos2d::ccColor4B const&, float, float) = ios 0x19a780;
 
