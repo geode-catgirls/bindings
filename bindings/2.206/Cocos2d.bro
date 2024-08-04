@@ -1793,7 +1793,7 @@ class cocos2d::CCArray {
 	void fastRemoveObjectAtIndexChild(unsigned int);
 	void fastRemoveObjectAtIndexNew(unsigned int);
 	unsigned int indexOfObject(cocos2d::CCObject*) const;
-	void insertObject(cocos2d::CCObject*, unsigned int) = ios 0x259ccc;
+	void insertObject(cocos2d::CCObject*, unsigned int);// = ios 0x259ccc;
 	bool isEqualToArray(cocos2d::CCArray*);
 	// cocos2d::CCObject* lastObject() = imac 0x72d310;
 	// cocos2d::CCObject* objectAtIndex(unsigned int) = imac 0x72d2f0, m1 0x63fdac, ios 0x259c24;
