@@ -16,19 +16,19 @@ GEODE_MEMBER_CHECK(LevelEditorLayer, m_trailTimer, 0x3600);
 GEODE_MEMBER_CHECK(FMODAudioEngine, m_system, 0x1e8);
 
 
-GEODE_SIZE_CHECK(GJBaseGameLayer, 0x3508);
+GEODE_SIZE_CHECK(GJBaseGameLayer, 0x34c0);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_groupDict, 0xde0);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_massiveFloatArray, 0xfa4);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_attempts, 0x2f74);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_shaderLayer, 0x3058);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_startPosObject, 0x3068);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_isPracticeMode, 0x30d0);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_queuedButtons, 0x31c8);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_unk3458, 0x32f8);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_uiLayer, 0x3308);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_sections, 0x3340);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_audioVisualizerBG, 0x3468);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_loadingLayer, 0x34e0);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_massiveFloatArray, 0xf6c);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_attempts, 0x2f14);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_shaderLayer, 0x2fd8);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_startPosObject, 0x2fe8);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_isPracticeMode, 0x3050);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_queuedButtons, 0x3158);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_unk3458, 0x3288);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_uiLayer, 0x3298);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_sections, 0x32f8);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_audioVisualizerBG, 0x3420);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_loadingLayer, 0x3498);
 
 
 // GEODE_SIZE_CHECK(PlayerObject, 0xbe8); 
