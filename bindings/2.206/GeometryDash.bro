@@ -7626,7 +7626,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	bool m_decimalPercentage;
 	bool m_extraLDM;
 	bool m_0173;
-	PAD = win 0xc9, android32 0x61, android64 0xC0, mac 0xac, ios 0xc0;
+	PAD = win 0xc9, android32 0x61, android64 0xC0, mac 0xac, ios 0xac;
 	GJEffectManager* m_effectManager;
 	cocos2d::CCSpriteBatchNode* m_unk950;
 	cocos2d::CCSpriteBatchNode* m_unk958;
@@ -7781,7 +7781,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	gd::unordered_map<int, gd::vector<GameObject*>> m_unknownD48;
 	gd::vector<GameObject*> m_unknownD70;
 	gd::unordered_map<int, gd::vector<GameObject*>> m_unknownD88;
-	PAD = win 0x10, android32 0x28, android64 0x18, mac 0x28, ios 0x18;
+	PAD = win 0x10, android32 0x28, android64 0x18, mac 0x28, ios 0x28;
 	cocos2d::CCDictionary* m_groupDict;
 	cocos2d::CCDictionary* m_staticGroupDict;
 	cocos2d::CCDictionary* m_optimizedGroupDict;
@@ -7809,9 +7809,9 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	cocos2d::CCArray* m_unk1030;
 	cocos2d::CCDictionary* m_unk1038;
 	void* m_unk1040;
-	PAD = win 0x8c, android32 0x50, android64 0x9c, mac 0x64, ios 0x9c; // (for win) between 0x8 bytes, there is a member thats 0x8 size. I think its a CCDictionary*
+	PAD = win 0x8c, android32 0x50, android64 0x9c, mac 0x64, ios 0x64; // (for win) between 0x8 bytes, there is a member thats 0x8 size. I think its a CCDictionary*
 	std::array<float, 2000> m_massiveFloatArray;
-	PAD = win 0x78, android32 0x4c, android64 0x90, mac 0x68, ios 0x90; // not sure about the android paddings
+	PAD = win 0x78, android32 0x4c, android64 0x90, mac 0x68, ios 0x68; // not sure about the android paddings
 	int m_attempts; // found in EndLevelLayer::customSetup
 	bool m_bUnk30b8;
 	int m_leftSectionIndex; // these 4 ints can be found in GJBaseGameLayer::updateDebugDraw or GJBaseGameLayer::updateObjectSection (easier)
@@ -7820,7 +7820,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	int m_topSectionIndex;
 	PAD = win 0x2, android32 0x2, android64 0x2, mac 0x2, ios 0x2;
 	bool m_isPlatformer;
-	PAD = win 0xc5, android32 0x61, android64 0xb5, mac 0x99, ios 0xb5;
+	PAD = win 0xc5, android32 0x61, android64 0xb5, mac 0x99, ios 0x99;
 	cocos2d::CCDictionary* m_unk2a50;
 	void* m_unk2a54;
 	ShaderLayer* m_shaderLayer;
@@ -7851,7 +7851,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	int m_unk323c;
 	PAD = win 0x6, android32 0x10, android64 0x6, mac 0x6, ios 0x6; // mac not verified
 	bool m_started;
-	PAD = win 0xA6, android32 0x66, android64 0x8e, mac 0xa0, ios 0x8e;
+	PAD = win 0xA6, android32 0x66, android64 0x8e, mac 0xa0, ios 0xa0;
 	gd::vector<PlayerButtonCommand> m_queuedButtons;
 	PAD = win 0x148, android32 0xa0, android64 0x138, mac 0x118, ios 0x118;
 	cocos2d::CCDictionary* m_unk3458;
@@ -7864,7 +7864,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	bool m_levelEndAnimationStarted;
 	PAD = win 0x7, android32 0x0, android64 0x0, mac 0x0, ios 0x0;
 	bool m_cantPause;
-	PAD = win 0x18, android32 0x7, android64 0x7, mac 0x30, ios 0x7;
+	PAD = win 0x18, android32 0x7, android64 0x7, mac 0x30, ios 0x30;
 	gd::vector<gd::vector<gd::vector<GameObject*>*>*> m_sections;
 	PAD = win 0x90, android32 0x48, android64 0x90, mac 0x90, ios 0x90;
 	gd::vector<gd::vector<int>*> m_sectionSizes;
