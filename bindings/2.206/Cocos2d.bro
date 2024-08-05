@@ -1054,7 +1054,7 @@ class cocos2d::CCLayerColor {
 	}
 
 	// CCLayerColor(cocos2d::CCLayerColor const&);
-	CCLayerColor() = imac 0x4bc3c0, m1 0x41d19c, ios 0x6bfd4;
+	CCLayerColor() = imac 0x4bc3c0, m1 0x41d19c, ios 0x154480;
 	~CCLayerColor() = imac 0x4bc600, m1 0x41d318, ios 0x15314c;
 
 	void setVertices(cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::CCPoint);
