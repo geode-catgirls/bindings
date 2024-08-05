@@ -23,7 +23,7 @@ class cocos2d::CCEGLViewProtocol {
 
 [[link(win, android)]]
 class cocos2d::CCEaseIn {
-	static cocos2d::CCEaseIn* create(cocos2d::CCActionInterval*, float) = imac 0x51cbe0, m1 0x471f80;
+	static cocos2d::CCEaseIn* create(cocos2d::CCActionInterval*, float) = imac 0x51cbe0, m1 0x471f80, ios 0x27bb2c;
 
 	// CCEaseIn(cocos2d::CCEaseIn const&);
 	// CCEaseIn();
@@ -1939,7 +1939,7 @@ class cocos2d::CCRepeatForever {
 
 [[link(win, android)]]
 class cocos2d::CCTransitionMoveInT {
-	static cocos2d::CCTransitionMoveInT* create(float, cocos2d::CCScene*) = imac 0xd9c40, m1 0xc0d10;
+	static cocos2d::CCTransitionMoveInT* create(float, cocos2d::CCScene*) = imac 0xd9c40, m1 0xc0d10, ios 0x1d7818;
 
 	// CCTransitionMoveInT(cocos2d::CCTransitionMoveInT const&);
 	// CCTransitionMoveInT();
