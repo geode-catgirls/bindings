@@ -498,7 +498,7 @@ class AudioEffectsLayer : cocos2d::CCLayerColor {
 
 	static AudioEffectsLayer* create(gd::string) = ios 0x3ccee0;
 
-	void audioStep(float) = win 0x83720;
+	void audioStep(float) = win 0x83720, ios 0x3cd2f4;
 	TodoReturn getBGSquare();
 	TodoReturn goingDown();
 	bool init(gd::string);
@@ -7505,7 +7505,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	bool triggerShaderCommand(ShaderGameObject*);
 	TodoReturn triggerTransformCommand(TransformTriggerGameObject*);
 	TodoReturn tryGetGroupParent(int);
-	GameObject* tryGetMainObject(int) = win 0x214d10, imac 0x11ea90, m1 0xfabe4;
+	GameObject* tryGetMainObject(int) = win 0x214d10, imac 0x11ea90, m1 0xfabe4, ios 0x1f4dbc;
 	TodoReturn tryGetObject(int) = win 0x214d80;
 	TodoReturn tryResumeAudio();
 	TodoReturn unclaimParticle(char const*, cocos2d::CCParticleSystemQuad*);
@@ -14041,7 +14041,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	TodoReturn loadDynamicSaveObjects(gd::vector<SavedObjectStateRef>&) = imac 0xbe9d0, m1 0xaa070;
 	void loadFromCheckpoint(CheckpointObject*) = win 0x394180, imac 0xbe490, m1 0xa9b90, ios 0x123c4c;
 	TodoReturn loadLastCheckpoint() = ios 0x123c00;
-	CheckpointObject * markCheckpoint() = win 0x3940b0, imac 0xbbd80, m1 0xa7d28;
+	CheckpointObject * markCheckpoint() = win 0x3940b0, imac 0xbbd80, m1 0xa7d28, ios 0x12236c;
 	void onQuit() = win 0x397540, imac 0xb3e90, m1 0xa0cb0, ios 0x11c484;
 	TodoReturn optimizeColorGroups() = win 0x38b7f0;
 	TodoReturn optimizeOpacityGroups() = win 0x38ba80;
@@ -14093,7 +14093,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	void togglePracticeMode(bool practiceMode) = win 0x396780, m1 0xaa64c, imac 0xbefe0, ios 0x124804;
 	TodoReturn tryStartRecord();
 	void updateAttempts() = win 0x396540, imac 0xbf1f0, m1 0xaa844, ios 0x124970;
-	void updateEffectPositions() = imac 0xbba40, m1 0xa7a54;
+	void updateEffectPositions() = imac 0xbba40, m1 0xa7a54, ios 0x122098;
 	void updateInfoLabel() = win 0x38f640, imac 0xb0120, m1 0x9d8d8, ios 0x11a24c;
 	TodoReturn updateInvisibleBlock(GameObject*, float, float, float, float, cocos2d::ccColor3B const&);
 	void updateProgressbar() = win 0x38efd0, imac 0xb1f90, m1 0x9f28c, ios 0x11ac7c;
@@ -14103,7 +14103,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 
 	virtual void onEnterTransitionDidFinish() = win 0x397920, m1 0xab0c4, imac 0xbfa80;
 	virtual void onExit() = win 0x397950, m1 0xab108, imac 0xbfab0;
-	virtual void postUpdate(float) = win 0x391460, imac 0xbbb10, m1 0xa7b08;
+	virtual void postUpdate(float) = win 0x391460, imac 0xbbb10, m1 0xa7b08, ios 0x12214c;
 	virtual TodoReturn checkForEnd() = imac 0xbbe40, m1 0xa7dec, win 0x391830;
 	virtual TodoReturn testTime() = imac 0xc0010, m1 0xab568;
 	virtual void updateVerifyDamage() = imac 0xbbf30, m1 0xa7ee8, win 0x391a00;
