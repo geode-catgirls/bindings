@@ -18250,7 +18250,7 @@ class UILayer : cocos2d::CCLayerColor {
 	void resetUINodeState() = win 0x4a09e0, m1 0x430d58, imac 0x4d2a40;
 	TodoReturn toggleCheckpointsMenu(bool);
 	void toggleMenuVisibility(bool) = imac 0x4d34c0, m1 0x43154c;
-	void togglePlatformerMode(bool) = ios 0x4ffe8;
+	void togglePlatformerMode(bool) = ios 0x4fd4c;
 	TodoReturn updateDualMode(bool);
 	TodoReturn updateUINodeVisibility(bool);
 	TodoReturn doPause();
