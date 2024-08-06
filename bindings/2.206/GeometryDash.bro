@@ -3393,7 +3393,7 @@ class EditLevelLayer : cocos2d::CCLayer, TextInputDelegate, FLAlertLayerProtocol
 	}
 
 	void closeTextInputs() = win 0xd3cd0, imac 0x1f7980, m1 0x1aa858;
-	void confirmClone(cocos2d::CCObject*) = win 0xd5ad0, imac 0x1f7150, m1 0x1aa014;
+	void confirmClone(cocos2d::CCObject*) = win 0xd5ad0, imac 0x1f7150, m1 0x1aa014, ios 0x2f1a0;
 	void confirmDelete(cocos2d::CCObject*) = win 0xd5330, imac 0x1f6f90, m1 0x1a9e54;
 	void confirmMoveToTop(cocos2d::CCObject*) = win 0xd5bf0, imac 0x1f7220, m1 0x1aa0ec;
 	bool init(GJGameLevel*) = win 0xd1c80, imac 0x1f4710, m1 0x1a7764, ios 0xea62c;
@@ -12951,7 +12951,7 @@ class NumberInputLayer : FLAlertLayer {
 	void onNumber(cocos2d::CCObject* sender);
 	TodoReturn updateNumberState();
 
-	virtual bool init() = m1 0x4000ac, win 0x326bb0, imac 0x49bbe0;
+	virtual bool init() = m1 0x4000ac, win 0x326bb0, imac 0x49bbe0, ios 0xfa73c;
 	virtual void registerWithTouchDispatcher() = m1 0x400b3c, imac 0x49c650, ios 0xfaefc;
 	virtual void keyBackClicked() = m1 0x400ac0, imac 0x49c5e0;
 }
