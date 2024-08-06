@@ -2316,7 +2316,7 @@ class cocos2d::CCDrawNode {
 	// CCDrawNode(cocos2d::CCDrawNode const&);
 	CCDrawNode() = imac 0x61bd60, m1 0x53ef80, ios 0x48268;
 	~CCDrawNode() = imac 0x61bef0, m1 0x53f0dc, ios 0x482e0;
-	void clear() = imac 0x61dd20, m1 0x540cfc;
+	void clear() = imac 0x61dd20, m1 0x540cfc, ios 0x492ec;
 	void drawCircle(cocos2d::CCPoint const&, float, cocos2d::_ccColor4F const&, float, cocos2d::_ccColor4F const&, unsigned int) = imac 0x61db70, m1 0x540b60, ios 0x4915c;
 	void drawCubicBezier(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, unsigned int, cocos2d::_ccColor4F const&) = imac 0x61c9b0, m1 0x53fa38;
 	void drawDot(cocos2d::CCPoint const&, float, cocos2d::_ccColor4F const&) = imac 0x61c4f0, m1 0x53f648;
@@ -2329,7 +2329,7 @@ class cocos2d::CCDrawNode {
 	void listenBackToForeground(cocos2d::CCObject*) = imac 0x61dd60, m1 0x540d20;
 	void render() = imac 0x61c290, m1 0x53f414;
 
-	virtual bool init() = imac 0x61c130, m1 0x53f2dc;
+	virtual bool init() = imac 0x61c130, m1 0x53f2dc, ios 0x4842c;
 	virtual void draw() = imac 0x61c320, m1 0x53f49c, ios 0x485bc;
 }
 
