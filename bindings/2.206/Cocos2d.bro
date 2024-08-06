@@ -196,8 +196,8 @@ class cocos2d::CCMotionStreak {
 
 	~CCMotionStreak() = imac 0x57d3e0, m1 0x4c9930, ios 0x1828b0;
 
-	virtual void update(float) = imac 0x57dc50, m1 0x4ca018;
-	virtual void setPosition(cocos2d::CCPoint const&) = imac 0x57d9b0, m1 0x4c9e20;
+	virtual void update(float) = imac 0x57dc50, m1 0x4ca018, ios 0x182dd0;
+	virtual void setPosition(cocos2d::CCPoint const&) = imac 0x57d9b0, m1 0x4c9e20, ios 0x182ca0;
 	virtual void draw() = imac 0x57e2a0, m1 0x4ca54c;
 
 	virtual unsigned char getOpacity() = imac 0x57db60, m1 0x4c9f80;
