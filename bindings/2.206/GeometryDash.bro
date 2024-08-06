@@ -14040,7 +14040,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	void loadDefaultColors() = m1 0x9f46c, imac 0xb2130, ios 0x11adec;
 	TodoReturn loadDynamicSaveObjects(gd::vector<SavedObjectStateRef>&) = imac 0xbe9d0, m1 0xaa070;
 	void loadFromCheckpoint(CheckpointObject*) = win 0x394180, imac 0xbe490, m1 0xa9b90, ios 0x123c4c;
-	TodoReturn loadLastCheckpoint();
+	TodoReturn loadLastCheckpoint() = ios 0x123c00;
 	CheckpointObject * markCheckpoint() = win 0x3940b0, imac 0xbbd80, m1 0xa7d28;
 	void onQuit() = win 0x397540, imac 0xb3e90, m1 0xa0cb0, ios 0x11c484;
 	TodoReturn optimizeColorGroups() = win 0x38b7f0;
