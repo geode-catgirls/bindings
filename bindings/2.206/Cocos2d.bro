@@ -1184,7 +1184,7 @@ class cocos2d::CCTextureCache {
 	bool reloadTexture(char const*);
 	void removeAllTextures();
 	void removeTexture(cocos2d::CCTexture2D*);
-	void removeTextureForKey(char const*);
+	void removeTextureForKey(char const*) = ios 0x11607c;
 	void removeUnusedTextures();
 	cocos2d::CCDictionary* snapshotTextures();
 	cocos2d::CCTexture2D* textureForKey(char const*) = imac 0x5f8850, m1 0x5207c8, ios 0x1160fc;
