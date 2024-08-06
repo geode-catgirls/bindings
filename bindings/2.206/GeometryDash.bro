@@ -10461,17 +10461,18 @@ class GroupCommandObject2 {
 [[link(android)]]
 class HardStreak : cocos2d::CCDrawNode {
 	// virtual ~HardStreak();
+	//HardStreak() = ios 0x64da8;
 
-	static HardStreak* create() = win 0x2a6750;
+	static HardStreak* create() = win 0x2a6750, ios 0x641b4;
 
-	void addPoint(cocos2d::CCPoint p0) = win 0x2a7200, imac 0x9d260, m1 0x8d3d4;
+	void addPoint(cocos2d::CCPoint p0) = win 0x2a7200, imac 0x9d260, m1 0x8d3d4, ios 0x649a8;
 	TodoReturn clearAboveXPos(float);
 	TodoReturn clearBehindXPos(float);
-	TodoReturn createDuplicate();
-	void firstSetup();
+	TodoReturn createDuplicate() = ios 0x64c98;
+	void firstSetup() = ios 0x64268;
 	TodoReturn normalizeAngle(double);
 	TodoReturn quadCornerOffset(cocos2d::CCPoint, cocos2d::CCPoint, float);
-	void reset() = win inline, imac 0x9d240, m1 0x8d3b0 {
+	void reset() = win inline, imac 0x9d240, m1 0x8d3b0, ios inline {
 		this->clear();
 		m_pointArray->removeAllObjects();
 	}
@@ -10480,7 +10481,7 @@ class HardStreak : cocos2d::CCDrawNode {
 	void stopStroke() = win 0x2a68c0, imac 0x9d200, m1 0x8d374;
 	callback void updateStroke(float) = win 0x2a6900, imac 0x9c970, m1 0x8cc2c, ios 0x642fc;
 
-	virtual bool init() = m1 0x8cac0, imac 0x9c7c0;
+	virtual bool init() = m1 0x8cac0, imac 0x9c7c0, ios 0x64228;
 
 	cocos2d::CCArray* m_pointArray;
 	cocos2d::CCPoint m_currentPoint;
@@ -13504,14 +13505,14 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	bool isSafeMode(float);
 	bool isSafeSpiderFlip(float);
 	TodoReturn levelFlipFinished() = win 0x3698a0;
-	bool levelFlipping() = win 0x379500;
+	bool levelFlipping() = win 0x379500, ios 0x22ccc0;
 	TodoReturn levelWillFlip();
 	void loadFromCheckpoint(PlayerCheckpoint*) = win 0x37f9d0, imac 0x425520, m1 0x399e74;
 	void lockPlayer() = win 0x37d2e0, m1 0x3986a8, imac 0x423ad0;
 	TodoReturn logValues();
 	void modeDidChange() = imac 0x4201b0, m1 0x395100, ios 0x23a050;
 	TodoReturn performSlideCheck();
-	void placeStreakPoint() = win 0x37e690, m1 0x384544, imac 0x40c630;
+	void placeStreakPoint() = win 0x37e690, m1 0x384544, imac 0x40c630, ios 0x22e318;
 	TodoReturn playBumpEffect(int, GameObject*) = win 0x37da60;
 	TodoReturn playBurstEffect();
 	void playCompleteEffect(bool, bool) = win 0x3621d0, m1 0x1bfebc, imac 0x20eb00, ios 0x63758;
