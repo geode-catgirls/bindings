@@ -3844,7 +3844,7 @@ class EditorUI : cocos2d::CCLayer, FLAlertLayerProtocol, ColorSelectDelegate, GJ
 	virtual void scaleChangeEnded() {}
 	virtual void scaleXChanged(float, bool) = win 0x111250, m1 0x3b094, imac 0x3fdd0;
 	virtual void scaleYChanged(float, bool) = win 0x111300, m1 0x3b6cc, imac 0x40540;
-	virtual void scaleXYChanged(float, float, bool) = win 0x1113b0, m1 0x3b810, imac 0x40690;
+	virtual void scaleXYChanged(float, float, bool) = win 0x1113b0, m1 0x3b810, imac 0x40690, ios 0x3f8608;
 
 
 	PAD = win 0x40, android32 0x1c, android64 0x38, mac 0x28, ios 0x28;
