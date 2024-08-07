@@ -952,7 +952,7 @@ class CCBlockLayer : cocos2d::CCLayerColor {
 	}
 	static CCBlockLayer* create();
 
-	void decrementForcePrio() = m1 0x475db4, imac 0x520c30;
+	void decrementForcePrio() = m1 0x475db4, imac 0x520c30, ios 0x89f88;
 	void incrementForcePrio() = m1 0x475ba0, imac 0x520990;
 
 	virtual bool init() = win 0x41660, m1 0x475acc, imac 0x5208d0;
@@ -7367,7 +7367,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	void processOptionsTrigger(GameOptionsTrigger*) = win 0x214540, imac 0x1316f0, m1 0x10976c;
 	void processPlayerFollowActions(float) = win 0x21e6d0;
 	void processQueuedAudioTriggers() = win 0x22ac10;
-	void processQueuedButtons() = win 0x221f00, imac 0x13fbc0, m1 0x114e04;
+	void processQueuedButtons() = win 0x221f00, imac 0x13fbc0, m1 0x114e04, ios 0x20540c;
 	void processRotationActions() = win 0x21c000;
 	TodoReturn processSFXObjects();
 	TodoReturn processSFXState(SFXTriggerState*, SFXTriggerState*, int, float);
@@ -13323,7 +13323,7 @@ class PlatformToolbox {
 	static void setKeyboardState(bool);
 	static TodoReturn shouldResumeSound();
 	static void showAchievements();
-	static void showCursor() = win inline, imac 0x4cdbd0, m1 0x42c894 {
+	static void showCursor() = win inline, ios 0x1779b8, imac 0x4cdbd0, m1 0x42c894 {
 		cocos2d::CCEGLView::sharedOpenGLView()->showCursor(true);
 	}
 	static TodoReturn signInGooglePlay();
@@ -13535,7 +13535,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void pushPlayer(float);
 	TodoReturn redirectDash(float);
 	TodoReturn redirectPlayerForce(float, float, float, float);
-	void releaseAllButtons() = win 0x37d110, imac 0x423a90, m1 0x398664;
+	void releaseAllButtons() = win 0x37d110, imac 0x423a90, m1 0x398664, ios 0x23ca04;
 	void releaseButton(PlayerButton) = win 0x376200, imac 0x41e7b0, m1 0x393880, ios 0x2381e0;
 	TodoReturn removeAllParticles();
 	void removePendingCheckpoint() = win 0x3801a0;
@@ -13999,7 +13999,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	void applyCustomEnterEffect(GameObject*, bool) = win 0x38d580;
 
 	void applyEnterEffect(GameObject*, int, bool) = win 0x38e270;
-	bool canPauseGame() = win inline, m1 0xaac6c, imac 0xbf610 {
+	bool canPauseGame() = win inline, ios inline, m1 0xaac6c, imac 0xbf610 {
 		return !m_hasCompletedLevel && !m_cantPause;
 	}
 	TodoReturn checkpointWithID(int);
@@ -14045,7 +14045,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	void onQuit() = win 0x397540, imac 0xb3e90, m1 0xa0cb0, ios 0x11c484;
 	TodoReturn optimizeColorGroups() = win 0x38b7f0;
 	TodoReturn optimizeOpacityGroups() = win 0x38ba80;
-	void pauseGame(bool) = win 0x396a50, imac 0xbf630, m1 0xaac94;
+	void pauseGame(bool) = win 0x396a50, imac 0xbf630, m1 0xaac94, ios 0x124c2c;
 	void playEndAnimationToPos(cocos2d::CCPoint) = win 0x388570, imac 0xb6ca0, m1 0xa3680, ios 0x11e5ec;
 	void playPlatformerEndAnimationToPos(cocos2d::CCPoint, bool) = win 0x388f00, m1 0xa3bb8, imac 0xb7260, ios 0x11e9f4;
 	TodoReturn playReplay(gd::string);
@@ -14059,7 +14059,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	void removeFromGroupOld(GameObject*);
 	void resetLevel() = win 0x3958b0, imac 0xb32d0, m1 0xa01f0, ios 0x11baf4;
 	void resetLevelFromStart() = win 0x395710, imac 0xbf160, m1 0xaa7c0, ios 0x1248ec;
-	void resume() = win 0x396f80, m1 0xaaf4c, m1 0xaaf4c, imac 0xbf8f0;
+	void resume() = win 0x396f80, m1 0xaaf4c, m1 0xaaf4c, imac 0xbf8f0, ios 0x124e60;
 	void resumeAndRestart(bool) = win 0x396d10, m1 0xaaddc, imac 0xbf770;
 	TodoReturn saveActiveSaveObjects(gd::vector<SavedActiveObjectState>&, gd::vector<SavedSpecialObjectState>&);
 	TodoReturn saveDynamicSaveObjects(gd::vector<SavedObjectStateRef>&);
@@ -18245,8 +18245,8 @@ class UILayer : cocos2d::CCLayerColor {
 	void onPause(cocos2d::CCObject* sender) = win 0x4a1300, imac 0x4d2290, m1 0x430634;
 	void processUINodesTouch(GJUITouchEvent, cocos2d::CCTouch*); //was set to win 0x312bf0 but thats in the middle of a function
 	void processUINodeTouch(GJUITouchEvent, int, cocos2d::CCPoint, GJUINode*) = win 0x4a1810;
-	TodoReturn refreshDpad();
-	void resetAllButtons() = imac 0x4d3600, m1 0x431688;
+	TodoReturn refreshDpad() = ios 0x4fe28;
+	void resetAllButtons() = imac 0x4d3600, m1 0x431688, ios 0x50668;
 	void resetUINodeState() = win 0x4a09e0, m1 0x430d58, imac 0x4d2a40;
 	TodoReturn toggleCheckpointsMenu(bool);
 	void toggleMenuVisibility(bool) = imac 0x4d34c0, m1 0x43154c, ios 0x50608;
