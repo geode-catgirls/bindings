@@ -6780,7 +6780,7 @@ class GameToolbox {
 	static gd::string getResponse(cocos2d::extension::CCHttpResponse*) = win 0x62d20, imac 0x4f9610, m1 0x452480;
 	static gd::string getTimeString(int, bool) = win 0x64830, imac 0x4fc280, m1 0x454db4;
 	static TodoReturn hsvFromString(gd::string const&, char const*);
-	static gd::string intToShortString(int) = win 0x67b30, imac 0x501e80, m1 0x459ec8;
+	static gd::string intToShortString(int) = win 0x67b30, imac 0x501e80, m1 0x459ec8, ios 0x4e63c;
 	static TodoReturn intToString(int) = win 0x67a70, imac 0x501b70, m1 0x459ba0, ios 0x4e558;
 	static bool isIOS();
 	static bool isRateEasing(int);
