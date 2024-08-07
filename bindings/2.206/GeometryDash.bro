@@ -7583,7 +7583,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	virtual void toggleGlitter(bool) = m1 0xdf6e0, imac 0xfd9f0;
 	virtual void destroyPlayer(PlayerObject*, GameObject*) = m1 0xdf6e4, imac 0xfda00;
 	virtual void updateDebugDraw() = win 0x2015c0, imac 0x115b10, m1 0xf2fe4, ios 0x1eeb1c;
-	virtual void addToSection(GameObject*) = win 0x216dc0, imac 0x1336e0, m1 0x10b35c;
+	virtual void addToSection(GameObject*) = win 0x216dc0, imac 0x1336e0, m1 0x10b35c, ios 0x1fda48;
 	virtual void addToGroup(GameObject*, int, bool) = win 0x2147c0, m1 0x109a60, imac 0x131a60;
 	virtual void removeFromGroup(GameObject*, int) = win 0x214940, m1 0x109cb4, imac 0x131c90;
 	virtual void updateObjectSection(GameObject*) = m1 0x10c98c, win 0x2187e0, imac 0x1357e0;
