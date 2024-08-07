@@ -11256,9 +11256,9 @@ class LevelEditorLayer : GJBaseGameLayer, LevelSettingsDelegate {
 	TodoReturn validGroup(GameObject*, bool);
 
 	virtual void draw() = imac 0xf90a0;
-	virtual void postUpdate(float) = m1 0xd8f24, imac 0xf5f20, win 0x2cd530;
+	virtual void postUpdate(float) = m1 0xd8f24, imac 0xf5f20, win 0x2cd530, ios 0x372060;
 	virtual void updateVisibility(float) = win 0x2c5380, imac 0xee540, m1 0xd2794, ios 0x36d0b8;
-	virtual TodoReturn playerTookDamage(PlayerObject*) = m1 0xd8f10, win 0x2cd520, imac 0xf5f00;
+	virtual TodoReturn playerTookDamage(PlayerObject*) = m1 0xd8f10, win 0x2cd520, imac 0xf5f00, ios 0x37204c;
 	virtual void updateColor(cocos2d::ccColor3B&, float, int, bool, float, cocos2d::ccHSVValue&, int, bool, EffectGameObject*, int, int) = m1 0xd62b4, win 0x2c9d00, imac 0xf2a70;
 	virtual void updateDebugDraw() = win 0x2ce170, m1 0xda0d4, imac 0xf7130;
 	virtual void addToGroup(GameObject*, int, bool) = win 0x2cacf0, m1 0xd6a70, imac 0xf34c0;
