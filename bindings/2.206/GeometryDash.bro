@@ -9518,18 +9518,18 @@ class GJScaleControl : cocos2d::CCLayer {
 	void onToggleLockScale(cocos2d::CCObject* sender) = win 0x125c90, m1 0x4a7c4, imac 0x52a60;
 	float scaleFromValue(float) = m1 0x4a99c, imac 0x52c30;
 	float skewFromValue(float) = m1 0x4a9d8, imac 0x52c70;
-	void sliderChanged(cocos2d::CCObject* sender) = win 0x126330, m1 0x4a834, imac 0x52ac0;
+	void sliderChanged(cocos2d::CCObject* sender) = win 0x126330, m1 0x4a834, imac 0x52ac0, ios 0x4037a0;
 	void updateLabelX(float) = win 0x126ab0, m1 0x4a864, imac 0x52b10;
-	void updateLabelXY(float) = win 0x126bb0, m1 0x4a934, imac 0x52bd0;
+	void updateLabelXY(float) = win 0x126bb0, m1 0x4a934, imac 0x52bd0, ios 0x403878;
 	void updateLabelY(float) = win 0x126b30, m1 0x4a8cc, imac 0x52b70;
 	float valueFromScale(float) = m1 0x4a83c, imac 0x52ad0;
 	float valueFromSkew(float) = m1 0x4a9f0, imac 0x52cc0;
 
-	virtual bool init() = win 0x125850, m1 0x4a3e0, imac 0x52650;
-	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x126340, m1 0x4aa18, imac 0x52d00;
-	virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x126550, m1 0x4abb4, imac 0x52ef0;
-	virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x126970, m1 0x4affc, imac 0x533c0;
-	virtual void ccTouchCancelled(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x6fd20, m1 0x4b124, imac 0x53520;
+	virtual bool init() = win 0x125850, m1 0x4a3e0, imac 0x52650, ios 0x40334c;
+	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x126340, m1 0x4aa18, imac 0x52d00, ios 0x4038e0;
+	virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x126550, m1 0x4abb4, imac 0x52ef0, ios 0x403a6c;
+	virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x126970, m1 0x4affc, imac 0x533c0, ios 0x403dc4;
+	virtual void ccTouchCancelled(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x6fd20, m1 0x4b124, imac 0x53520, ios 0x403eec;
 
 	Slider* m_sliderX;
 	Slider* m_sliderY;
