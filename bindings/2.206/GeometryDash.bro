@@ -12302,10 +12302,10 @@ class MenuGameLayer : cocos2d::CCLayer {
 
 	virtual void update(float) = win 0x3118e0, m1 0x45d330, imac 0x505750, ios 0x3a477c;
 	virtual bool init() = win 0x310ac0, m1 0x45c2d0, imac 0x5045b0, ios 0x3a38cc;
-	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x312c60, m1 0x45d824, imac 0x505cc0;
-	virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) {}
-	virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) {}
-	virtual void ccTouchCancelled(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x6fd20, m1 0x45d94c, imac 0x505e20;
+	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x312c60, m1 0x45d824, imac 0x505cc0, ios 0x3a4c0c;
+	virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) = ios 0x3a4d24 {}
+	virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) = ios 0x3a4d2c {}
+	virtual void ccTouchCancelled(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x6fd20, m1 0x45d94c, imac 0x505e20, ios 0x3a4d34;
 	virtual void registerWithTouchDispatcher() = win 0x312e10, m1 0x45d968, imac 0x505e60, ios 0x3a4d50;
 
 	bool m_videoOptionsOpen;
