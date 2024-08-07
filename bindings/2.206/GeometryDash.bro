@@ -989,22 +989,22 @@ class CCCircleAlert : CCCircleWave {
 [[link(android)]]
 class CCCircleWave : cocos2d::CCNode {
 	// virtual ~CCCircleWave();
-	// CCCircleWave() = win 0x418b0;
+	// CCCircleWave() = win 0x418b0, ios 0x178284;
 
-	static CCCircleWave* create(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut) = win 0x41980, imac 0x173740, m1 0x13cef4;
+	static CCCircleWave* create(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut) = win 0x41980, imac 0x173740, m1 0x13cef4, ios 0x177c20;
 	static CCCircleWave* create(float startRadius, float endRadius, float duration, bool fadeIn) = imac 0x173730, m1 0x13ceec, ios 0x177c18, win inline {
 		return CCCircleWave::create(startRadius, endRadius, duration, fadeIn, true);
 	}
 
 	TodoReturn baseSetup(float);
 	TodoReturn followObject(cocos2d::CCNode*, bool) = imac 0x173af0, m1 0x13d244;
-	bool init(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut) = win 0x41a30, imac 0x173820, m1 0x13cfc0;
+	bool init(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut) = win 0x41a30, imac 0x173820, m1 0x13cfc0, ios 0x177cb0;
 	TodoReturn updatePosition(float) = win 0x41cb0, imac 0x173ab0, m1 0x13d1f8;
 
-	virtual void setPosition(cocos2d::CCPoint const&) = win 0x41c70, m1 0x13d1c4, imac 0x173a80;
-	virtual void removeMeAndCleanup() = win 0x42080, m1 0x13d660, imac 0x173f10;
-	virtual void draw() = win 0x41f50, m1 0x13d528, imac 0x173dd0;
-	virtual void updateTweenAction(float, char const*) = win 0x41cf0, m1 0x13d2d4, imac 0x173b80;
+	virtual void setPosition(cocos2d::CCPoint const&) = win 0x41c70, m1 0x13d1c4, imac 0x173a80, ios 0x177e78;
+	virtual void removeMeAndCleanup() = win 0x42080, m1 0x13d660, imac 0x173f10, ios 0x17824c;
+	virtual void draw() = win 0x41f50, m1 0x13d528, imac 0x173dd0, ios 0x178124;
+	virtual void updateTweenAction(float, char const*) = win 0x41cf0, m1 0x13d2d4, imac 0x173b80, ios 0x177f88;
 
 	cocos2d::CCNode* m_target;
 	float m_width;
