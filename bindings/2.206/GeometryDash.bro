@@ -12018,7 +12018,7 @@ class LevelTools {
 	static int getAudioBPM(int);
 	static gd::string getAudioFileName(int) = win 0x307cb0;
 	static gd::string getAudioString(int) = ios 0x1b41a8;
-	static gd::string getAudioTitle(int) = win 0x307130;
+	static gd::string getAudioTitle(int) = win 0x307130, ios 0x1b4048;
 	static TodoReturn getLastGameplayReversed();
 	static TodoReturn getLastGameplayRotated();
 	static TodoReturn getLastTimewarp();
@@ -17509,25 +17509,25 @@ class SongPlaybackDelegate {
 class SongSelectNode : cocos2d::CCNode, FLAlertLayerProtocol, CustomSongLayerDelegate, CustomSongDelegate {
 	// virtual ~SongSelectNode();
 
-	static SongSelectNode* create(int, bool, LevelSettingsObject*, SongSelectType, cocos2d::CCPoint, cocos2d::CCNode*, cocos2d::CCMenu*, bool) = imac 0x213480, m1 0x1c4458;
+	static SongSelectNode* create(int, bool, LevelSettingsObject*, SongSelectType, cocos2d::CCPoint, cocos2d::CCNode*, cocos2d::CCMenu*, bool) = imac 0x213480, m1 0x1c4458, ios 0x1519a4;
 
-	void audioNext(cocos2d::CCObject*) = win 0xc4cb0, imac 0x213f00, m1 0x1c4ecc;
-	void audioPrevious(cocos2d::CCObject*) = win 0xc4cf0, imac 0x213ec0, m1 0x1c4e98;
-	bool init(int, bool, LevelSettingsObject*, SongSelectType, cocos2d::CCPoint, cocos2d::CCNode*, cocos2d::CCMenu*, bool) = win 0xc42b0, imac 0x2135a0, m1 0x1c4568;
+	void audioNext(cocos2d::CCObject*) = win 0xc4cb0, imac 0x213f00, m1 0x1c4ecc, ios 0x1523f0;
+	void audioPrevious(cocos2d::CCObject*) = win 0xc4cf0, imac 0x213ec0, m1 0x1c4e98, ios 0x1523bc;
+	bool init(int, bool, LevelSettingsObject*, SongSelectType, cocos2d::CCPoint, cocos2d::CCNode*, cocos2d::CCMenu*, bool) = win 0xc42b0, imac 0x2135a0, m1 0x1c4568, ios 0x151ab4;
 	void onOpenCustomSong(cocos2d::CCObject* sender);
 	void onSongMode(cocos2d::CCObject* sender);
 	void onSongMode(int);
 	TodoReturn selectSong(int);
 	void showCustomSongSelect();
-	void updateAudioLabel() = win 0xc4bc0, imac 0x213dd0, m1 0x1c4d80;
+	void updateAudioLabel() = win 0xc4bc0, imac 0x213dd0, m1 0x1c4d80, ios 0x1522b8;
 	TodoReturn updateWidgetVisibility();
 
-	virtual void FLAlert_Clicked(FLAlertLayer*, bool) = win 0xc51e0, m1 0x1c5254, imac 0x2142e0;
-	virtual void customSongLayerClosed() = win 0xc5270, m1 0x1c533c, imac 0x2143c0;
-	virtual TodoReturn songIDChanged(int) = win 0xc52a0, m1 0x1c53a4, imac 0x214420;
-	virtual TodoReturn getActiveSongID() = win 0xc52b0, m1 0x1c53c4, imac 0x214450;
-	virtual TodoReturn getSongFileName() = win 0xc52c0, m1 0x1c53d4, imac 0x214470;
-	virtual LevelSettingsObject* getLevelSettings() = win 0xc5380, m1 0x1c550c, imac 0x2145b0;
+	virtual void FLAlert_Clicked(FLAlertLayer*, bool) = win 0xc51e0, m1 0x1c5254, imac 0x2142e0, ios 0x1526ac;
+	virtual void customSongLayerClosed() = win 0xc5270, m1 0x1c533c, imac 0x2143c0, ios 0x152728;
+	virtual TodoReturn songIDChanged(int) = win 0xc52a0, m1 0x1c53a4, imac 0x214420, ios 0x152790;
+	virtual TodoReturn getActiveSongID() = win 0xc52b0, m1 0x1c53c4, imac 0x214450, ios 0x1527b0;
+	virtual TodoReturn getSongFileName() = win 0xc52c0, m1 0x1c53d4, imac 0x214470, ios 0x1527c0;
+	virtual LevelSettingsObject* getLevelSettings() = win 0xc5380, m1 0x1c550c, imac 0x2145b0, ios 0x15286c;
 
 	int m_selectedSongID;
 }
