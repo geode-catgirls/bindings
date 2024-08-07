@@ -7432,7 +7432,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn rotateObject(GameObject*, float);
 	void rotateObjects(cocos2d::CCArray*, float, cocos2d::CCPoint, cocos2d::CCPoint, bool, bool);
 	void setGroupParent(GameObject*, int);
-	void setStartPosObject(StartPosObject* startPos) = win inline, imac 0x1176d0, m1 0xf48a8 {
+	void setStartPosObject(StartPosObject* startPos) = win inline, imac 0x1176d0, m1 0xf48a8, ios 0x1effd0 {
 		if (startPos != m_startPosObject) {
 			if (startPos) {
 				startPos->retain();
@@ -14081,7 +14081,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	TodoReturn spawnFirework();
 	void startGame() = win 0x3847f0, imac 0xb3e30, m1 0xa0c54, ios 0x11c428;
 	void startGameDelayed() = ios 0x11c7ac;
-	void startMusic() = win 0x3973f0, imac 0xb4130, m1 0xa0f20;
+	void startMusic() = win 0x3973f0, imac 0xb4130, m1 0xa0f20, ios 0x11c6d4;
 	TodoReturn startRecording();
 	TodoReturn startRecordingDelayed();
 	TodoReturn stopRecording();
@@ -18237,7 +18237,7 @@ class UILayer : cocos2d::CCLayerColor {
 	TodoReturn editorPlaytest(bool);
 	void enableEditorMode();
 	TodoReturn enableMenu() = imac 0x4d34a0, m1 0x431538, ios 0x505f4;
-	void handleKeypress(cocos2d::enumKeyCodes, bool) = win 0x4a0b80, m1 0x43103c, imac 0x4d2d40;
+	void handleKeypress(cocos2d::enumKeyCodes, bool) = win 0x4a0b80, m1 0x43103c, imac 0x4d2d40, ios 0x50208;
 	bool init(GJBaseGameLayer*) = win 0x49fe60, imac 0x4d1a70, m1 0x42fe64, ios 0x4f5ac;
 	bool isJumpButtonPressed(bool) = m1 0x431774, imac 0x4d3700, ios 0x50680;
 	void onCheck(cocos2d::CCObject* sender);
