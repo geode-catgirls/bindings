@@ -4278,11 +4278,11 @@ class EndLevelLayer : GJDropDownLayer {
 class EndPortalObject : GameObject {
 	// virtual ~EndPortalObject();
 
-	static EndPortalObject* create();
+	static EndPortalObject* create() = ios 0x407078;
 
 	TodoReturn getSpawnPos() = win 0x134050, imac 0x39f810, m1 0x3268cc;
 	void triggerObject(GJBaseGameLayer*) = imac 0x39f780, m1 0x326838;
-	TodoReturn updateColors(cocos2d::ccColor3B);
+	TodoReturn updateColors(cocos2d::ccColor3B) = ios 0x4073dc;
 	TodoReturn updateEndPos(bool) = win 0x1342c0, imac 0x39fa00, m1 0x326a8c;
 
 	virtual bool init() = m1 0x326498, imac 0x39f390;
@@ -7322,7 +7322,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn objectIntersectsCircle(GameObject*, GameObject*);
 	GJGameEvent objectTypeToGameEvent(int) = win 0x222520, imac 0x118d00, m1 0xf5ca0;
 	TodoReturn optimizeMoveGroups();
-	TodoReturn orderSpawnObjects();
+	TodoReturn orderSpawnObjects() = ios 0x212024;
 	TodoReturn parentForZLayer(int, bool, int, int);
 	void pauseAudio() = win 0x227430, imac 0x146fa0, m1 0x11a3b8, ios 0x209244;
 	TodoReturn performMathOperation(double, double, int);
@@ -7539,7 +7539,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn updateLayerCapacity(gd::string) = ios 0x1e8678;
 	TodoReturn updateLegacyLayerCapacity(int, int, int, int);
 	void updateLevelColors() = win 0x1fd240, imac 0x1078c0, m1 0xe7890, ios 0x1e7968;
-	void updateMaxGameplayY() = win 0x229ff0;
+	void updateMaxGameplayY() = win 0x229ff0, ios 0x20c7c0;
 	TodoReturn updateMGArtSpeed(float, float);
 	void updateMGOffsetY(float, float, int, float, int, int) = win 0x226060;
 	TodoReturn updateOBB2(cocos2d::CCRect);
@@ -12032,7 +12032,7 @@ class LevelTools {
 	static float posForTime(float time, cocos2d::CCArray* p1, int p2, bool p3, int& p4);
 	static float posForTimeInternal(float time, cocos2d::CCArray* gameObjects, int speedmodValue, bool disabledSpeedmod, bool, bool, int&, int) = win 0x30c400;
 	static TodoReturn sortChannelOrderObjects(cocos2d::CCArray*, cocos2d::CCDictionary*, bool);
-	static TodoReturn sortSpeedObjects(cocos2d::CCArray*, GJBaseGameLayer*);
+	static TodoReturn sortSpeedObjects(cocos2d::CCArray*, GJBaseGameLayer*) = ios 0x1b56a8;
 	static float timeForPos(cocos2d::CCPoint, cocos2d::CCArray*, int, int, int, bool, bool, bool, bool, int);
 	static TodoReturn toggleDebugLogging(bool);
 	static gd::string urlForAudio(int) = win 0x308c50;
@@ -13984,8 +13984,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 [[link(android)]]
 class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate, DialogDelegate {
 	virtual ~PlayLayer() = m1 0x9a050, win 0x382540, imac 0xab7d0;
-	// PlayLayer() = ios 0x1253e0;
-	PlayLayer() = win 0x381b80;
+	PlayLayer() = win 0x381b80, ios 0x1253e0;
 
 	static PlayLayer* create(GJGameLevel* level, bool useReplay, bool dontCreateObjects) = m1 0x9a148, imac 0xabbf0, ios 0x11782c;
 	static PlayLayer* get() {
@@ -14008,7 +14007,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	TodoReturn commitJumps();
 	TodoReturn compareStateSnapshot();
 	CheckpointObject* createCheckpoint() = win 0x391b00;
-	void createObjectsFromSetupFinished() = win 0x38a4f0, imac 0xb7740, m1 0xa400c;
+	void createObjectsFromSetupFinished() = win 0x38a4f0, imac 0xb7740, m1 0xa400c, ios 0x11ee70;
 	void delayedFullReset() = ios 0x1246b8;
 	void delayedResetLevel() = win 0x395700, imac 0xbb940, m1 0xa79c8, ios 0x122020;
 	void fullReset() = win 0x395600, m1 0xaa510, imac 0xbee70, ios 0x12472c;
