@@ -396,7 +396,7 @@ class cocos2d::CCParticleSystem {
 
 	// CCParticleSystem(cocos2d::CCParticleSystem const&);
 	// CCParticleSystem();
-	~CCParticleSystem() = imac 0x7d5860, m1 0x6d9dec;
+	~CCParticleSystem() = imac 0x7d5860, m1 0x6d9dec, ios 0x1a03ec;
 	bool addParticle();
 	void calculateWorldSpace();
 	bool isFull();
@@ -409,11 +409,11 @@ class cocos2d::CCParticleSystem {
 	void toggleUniformColorMode(bool);
 	void updateVisible();
 
-	virtual void update(float) = m1 0x6dad94, imac 0x7d6cd0;
-	virtual bool init();
+	virtual void update(float) = m1 0x6dad94, imac 0x7d6cd0, ios 0x1a1154;
+	virtual bool init() = ios 0x19f1c0;
 	virtual void setScaleX(float);
 	virtual void setScaleY(float);
-	virtual void setScale(float);
+	virtual void setScale(float) = ios 0x1a2108;
 	virtual void setVisible(bool);
 	virtual void setRotation(float);
 	virtual cocos2d::CCParticleBatchNode* getBatchNode();
