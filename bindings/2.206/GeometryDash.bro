@@ -17112,13 +17112,13 @@ class ShareCommentLayer : FLAlertLayer, TextInputDelegate, UploadActionDelegate,
 class ShareLevelLayer : FLAlertLayer {
 	// virtual ~ShareLevelLayer();
 
-	static ShareLevelLayer* create(GJGameLevel*) = m1 0x221684, imac 0x27c0a0; // inlined
+	static ShareLevelLayer* create(GJGameLevel*) = m1 0x221684, imac 0x27c0a0, ios 0x28505c; // inlined
 
 	CCMenuItemSpriteExtra* getStarsButton(int btnID, cocos2d::SEL_MenuHandler callback, cocos2d::CCMenu* menu, float scale); // also inlined
-	bool init(GJGameLevel* level) = win 0x463090, m1 0x221788, imac 0x27c1f0;
+	bool init(GJGameLevel* level) = win 0x463090, m1 0x221788, imac 0x27c1f0, ios 0x285118;
 	void onClose(cocos2d::CCObject* sender) = win 0x82fc0;
 	void onSettings(cocos2d::CCObject* sender) = win 0x4642f0;
-	void onShare(cocos2d::CCObject* sender) = win 0x464440, m1 0x222794, imac 0x27d380;
+	void onShare(cocos2d::CCObject* sender) = win 0x464440, m1 0x222794, imac 0x27d380, ios 0x285ff8;
 	void selectRating(cocos2d::CCObject*) = win 0x464160;
 	void setupStars() = win 0x463d50;
 
@@ -18461,7 +18461,7 @@ class UploadMessageDelegate {
 class UploadPopup : FLAlertLayer, LevelUploadDelegate {
 	// virtual ~UploadPopup();
 
-	static UploadPopup* create(GJGameLevel*);
+	static UploadPopup* create(GJGameLevel*) = ios 0x2864a0;
 
 	bool init(GJGameLevel*);
 	void onBack(cocos2d::CCObject* sender);
