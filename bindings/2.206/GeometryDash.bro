@@ -12243,12 +12243,12 @@ class MapPackCell : TableViewCell {
 	// virtual ~MapPackCell();
 	MapPackCell(char const*, float, float);
 
-	void loadFromMapPack(GJMapPack*) = win 0xaf940, m1 0x1ea984, imac 0x23ffb0;
+	void loadFromMapPack(GJMapPack*) = win 0xaf940, m1 0x1ea984, imac 0x23ffb0, ios 0x104738;
 	void onClaimReward(cocos2d::CCObject* sender);
 	void onClick(cocos2d::CCObject* sender);
 	TodoReturn playCompleteEffect();
 	TodoReturn reloadCell();
-	TodoReturn updateBGColor(int);
+	TodoReturn updateBGColor(int) = ios 0x105204;
 
 	virtual bool init() = win 0xaf8e0, m1 0x1f824c, imac 0x24e2e0;
 	virtual void draw() = m1 0x1f8744, imac 0x24e7d0;
