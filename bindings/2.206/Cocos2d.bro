@@ -871,7 +871,6 @@ class cocos2d::CCScheduler {
 
 	// CCScheduler(cocos2d::CCScheduler const&);
 	// CCScheduler();
-	~CCScheduler() = ios 0x1b5fcc;
 
 	void appendIn(cocos2d::_listEntry**, cocos2d::CCObject*, bool);
 	bool isTargetPaused(cocos2d::CCObject*);
