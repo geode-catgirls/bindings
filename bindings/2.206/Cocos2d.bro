@@ -303,7 +303,24 @@ class cocos2d::CCSet {
 	// CCSet(cocos2d::CCSet const&);
 	// CCSet() = ios 0x1b8068;
 	void addObject(cocos2d::CCObject*);
-	cocos2d::CCObject* anyObject() = m1 0x6c5cec, imac 0x7bfee0;
+	cocos2d::CCObject* anyObject() = m1 0x6c5cec, imac 0x7bfee0, ios inline {
+		if (!m_pSet || m_pSet->empty())
+		{
+			return nullptr;
+		}
+		
+		cocos2d::CCSetIterator it;
+		
+		for( it = m_pSet->begin(); it != m_pSet->end(); ++it)
+		{
+			if (*it)
+			{
+				return (*it);
+			}
+		}
+		
+		return nullptr;
+	}
 	cocos2d::CCSetIterator begin() = ios 0x1b83bc;
 	bool containsObject(cocos2d::CCObject*);
 	cocos2d::CCSet* copy();
@@ -1678,7 +1695,9 @@ class cocos2d::CCLabelBMFont {
 
 	static cocos2d::CCLabelBMFont* create(char const*, char const*) = imac 0x5e0fa0, m1 0x50b404, ios 0x30b814;
 	static cocos2d::CCLabelBMFont* create(char const*, char const*, float);
-	static cocos2d::CCLabelBMFont* create(char const*, char const*, float, cocos2d::CCTextAlignment) = imac 0x5e0ef0, m1 0x50b1c0;
+	static cocos2d::CCLabelBMFont* create(char const*, char const*, float, cocos2d::CCTextAlignment) = imac 0x5e0ef0, m1 0x50b1c0, ios inline {
+		return cocos2d::CCLabelBMFont::create(str, fntFile, width, alignment, CCPointZero);
+	}
 	static cocos2d::CCLabelBMFont* create(char const*, char const*, float, cocos2d::CCTextAlignment, cocos2d::CCPoint) = imac 0x5e0e50, m1 0x50b284, ios 0x30b754;
 	static cocos2d::CCLabelBMFont* create() = imac 0x5e0d30, m1 0x50b13c, ios inline {
 		auto pRet = new CCLabelBMFont();
