@@ -2664,7 +2664,7 @@ class CurrencyRewardLayer : cocos2d::CCLayer {
 	bool init(int, int, int, int, CurrencySpriteType, int, CurrencySpriteType, int, cocos2d::CCPoint, CurrencyRewardType, float, float) = win 0x9df80, m1 0x6b8764, imac 0x7b1b70;
 	void pulseSprite(cocos2d::CCSprite*) = win 0xa12c0, m1 0x6bc208, imac 0x7b5a90;
 
-	virtual void update(float) = win 0xa08f0, m1 0x6bb3b8, imac 0x7b4aa0;
+	virtual void update(float) = win 0xa08f0, m1 0x6bb3b8, imac 0x7b4aa0, ios 0x331a78;
 
 	CurrencyRewardDelegate* m_delegate;
 	cocos2d::CCArray* m_objects;
@@ -6627,10 +6627,10 @@ class GameStatsManager : cocos2d::CCNode {
 	bool hasCompletedMapPack(int);
 	bool hasCompletedOnlineLevel(int) = win 0x1d3c40;
 	bool hasCompletedStarLevel(GJGameLevel*) = ios 0x340ef4;
-	bool hasPendingUserCoin(char const*) = win 0x1d5a00, m1 0x63484, imac 0x6f5b0;
+	bool hasPendingUserCoin(char const*) = win 0x1d5a00, m1 0x63484, imac 0x6f5b0, ios 0x342124;
 	bool hasRewardBeenCollected(GJRewardType, int);
 	bool hasSecretCoin(char const*) = win 0x1d5ac0, imac 0x6cd60, m1 0x60c9c;
-	bool hasUserCoin(char const*) = win 0x1d5880, m1 0x6356c, imac 0x6f690;
+	bool hasUserCoin(char const*) = win 0x1d5880, m1 0x6356c, imac 0x6f690, ios 0x342194;
 	TodoReturn incrementActivePath(int);
 	TodoReturn incrementChallenge(GJChallengeType, int) = win 0x1d7970;
 	void incrementStat(char const*, int) = win 0x1ca5b0, m1 0x5ad38, imac 0x65ad0, ios 0x33c544;
@@ -7210,7 +7210,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn checkCameraLimitAfterTeleport(PlayerObject*, float) = win 0x229770, imac 0x115690, m1 0xf2bcc;
 	TodoReturn checkCollision(int, int);
 	void checkCollisionBlocks(EffectGameObject*, gd::vector<EffectGameObject*>*, int) = win 0x209650;
-	int checkCollisions(PlayerObject*, float, bool) = win 0x204350, imac 0x119810, m1 0xf661c;
+	int checkCollisions(PlayerObject*, float, bool) = win 0x204350, imac 0x119810, m1 0xf661c, ios 0x1f142c;
 	void checkRepellPlayer() = win 0x2294a0;
 	void checkSpawnObjects() = win 0x20b080, ios 0x1f6350;
 	TodoReturn claimMoveAction(int, bool);
@@ -7358,7 +7358,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	void processAreaTransformGroupAction(cocos2d::CCArray*, EnterEffectInstance*, cocos2d::CCPoint, int, int, int, int, int, bool, bool) = win 0x219a30;
 	void processAreaVisualActions(float) = imac 0x1389e0, m1 0x10f310;
 	TodoReturn processCameraObject(GameObject*, PlayerObject*);
-	void processCommands(float) = win 0x229830, imac 0x148740, m1 0x11b6d8;
+	void processCommands(float) = win 0x229830, imac 0x148740, m1 0x11b6d8, ios 0x20a110;
 	void processDynamicObjectActions(int, float) = win 0x21ea80;
 	void processFollowActions() = win 0x220d80;
 	TodoReturn processItems() = ios 0x1f42a4;
@@ -11260,7 +11260,7 @@ class LevelEditorLayer : GJBaseGameLayer, LevelSettingsDelegate {
 	virtual void updateVisibility(float) = win 0x2c5380, imac 0xee540, m1 0xd2794, ios 0x36d0b8;
 	virtual void playerTookDamage(PlayerObject*) = m1 0xd8f10, win 0x2cd520, imac 0xf5f00, ios 0x37204c;
 	virtual void updateColor(cocos2d::ccColor3B&, float, int, bool, float, cocos2d::ccHSVValue&, int, bool, EffectGameObject*, int, int) = m1 0xd62b4, win 0x2c9d00, imac 0xf2a70;
-	virtual void updateDebugDraw() = win 0x2ce170, m1 0xda0d4, imac 0xf7130;
+	virtual void updateDebugDraw() = win 0x2ce170, m1 0xda0d4, imac 0xf7130, ios 0x372e18;
 	virtual void addToGroup(GameObject*, int, bool) = win 0x2cacf0, m1 0xd6a70, imac 0xf34c0;
 	virtual void removeFromGroup(GameObject*, int) = win 0x2cae40, m1 0xd6b28, imac 0xf3570;
 	virtual void updateObjectSection(GameObject*) = win 0x2cbc10, m1 0xd7b7c, imac 0xf4830;
@@ -13541,7 +13541,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void removePendingCheckpoint() = win 0x3801a0;
 	TodoReturn removePlacedCheckpoint();
 	TodoReturn resetAllParticles() = ios 0x22e138;
-	TodoReturn resetCollisionLog(bool);
+	TodoReturn resetCollisionLog(bool) = ios 0x22ed00;
 	TodoReturn resetCollisionValues();
 	void resetPlayerIcon() = win 0x3792f0, m1 0x394f20, imac 0x41ffb0;
 	TodoReturn resetStateVariables();
@@ -13654,7 +13654,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void updatePlayerSwingFrame(int) = win 0x37c7c0, m1 0x395b5c, imac 0x420cd0;
 	void updateRobotAnimationSpeed() = win 0x37f0f0;
 	void updateRotation(float, float) = win 0x36b230, imac 0x40bab0, m1 0x383a84;
-	void updateRotation(float) = win 0x36f0b0, imac 0x416180, m1 0x38c360;
+	void updateRotation(float) = win 0x36f0b0, imac 0x416180, m1 0x38c360, ios 0x234744;
 	void updateShipRotation(float) = win 0x36ecd0;
 	void updateShipSpriteExtra(gd::string);
 	TodoReturn updateSlopeRotation(float);
@@ -18256,14 +18256,14 @@ class UILayer : cocos2d::CCLayerColor {
 	TodoReturn doPause();
 
 	virtual void draw() {}
-	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x4a14e0, m1 0x4317c0, imac 0x4d3740;
-	virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x4a1670, m1 0x431a14, imac 0x4d3920;
-	virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x4a1690, m1 0x431b48, imac 0x4d3a20;
-	virtual void ccTouchCancelled(cocos2d::CCTouch*, cocos2d::CCEvent*) = m1 0x43245c, imac 0x4d4260;
+	virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x4a14e0, m1 0x4317c0, imac 0x4d3740, ios 0x506bc;
+	virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x4a1670, m1 0x431a14, imac 0x4d3920, ios 0x508c8;
+	virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x4a1690, m1 0x431b48, imac 0x4d3a20, ios 0x508fc;
+	virtual void ccTouchCancelled(cocos2d::CCTouch*, cocos2d::CCEvent*) = m1 0x43245c, imac 0x4d4260, ios 0x50e80;
 	virtual void registerWithTouchDispatcher() = m1 0x432478, imac 0x4d42a0, ios 0x50e9c;
-	virtual void keyBackClicked() = win 0x4a1240, m1 0x431368, imac 0x4d32c0;
-	virtual void keyDown(cocos2d::enumKeyCodes) = win 0x4a1220, m1 0x431328, imac 0x4d3220;
-	virtual void keyUp(cocos2d::enumKeyCodes) = win 0x4a1230, m1 0x431348, imac 0x4d3270;
+	virtual void keyBackClicked() = win 0x4a1240, m1 0x431368, imac 0x4d32c0, ios 0x50528;
+	virtual void keyDown(cocos2d::enumKeyCodes) = win 0x4a1220, m1 0x431328, imac 0x4d3220, ios 0x504e8;
+	virtual void keyUp(cocos2d::enumKeyCodes) = win 0x4a1230, m1 0x431348, imac 0x4d3270, ios 0x50508;
 
 	// This member is here because rob managed to inhert CCKeyboardDelegate twice
 	// in this class, which ended up breaking addresser when trying to hook it.
