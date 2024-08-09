@@ -2,9 +2,7 @@
 class cocos2d::CCEGLViewProtocol {
     CCEGLViewProtocol() = win 0xbac00;
     virtual ~CCEGLViewProtocol() = win 0xbacc0;
-    auto getViewPortRect() const = m1 0x46e314, imac 0x518860, ios inline {
-		return m_obViewPortRect;
-	}
+    auto getViewPortRect() const = m1 0x46e314, imac 0x518860;
     auto getScaleX() const;
     auto getScaleY() const;
 
