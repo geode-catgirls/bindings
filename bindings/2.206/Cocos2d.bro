@@ -2,7 +2,9 @@
 class cocos2d::CCEGLViewProtocol {
     CCEGLViewProtocol() = win 0xbac00;
     virtual ~CCEGLViewProtocol() = win 0xbacc0;
-    auto getViewPortRect() const = m1 0x46e314, imac 0x518860;
+    auto getViewPortRect() const = m1 0x46e314, imac 0x518860, ios inline {
+		return m_obViewPortRect;
+	}
     auto getScaleX() const;
     auto getScaleY() const;
 
@@ -1138,7 +1140,7 @@ class cocos2d::CCTexture2D {
 	static void setDefaultAlphaPixelFormat(cocos2d::CCTexture2DPixelFormat) = m1 0x3e9b44, imac 0x4837e0, ios 0x134738;
 
 	bool initPremultipliedATextureWithImage(cocos2d::CCImage*, unsigned int, unsigned int) = m1 0x3e8c34, imac 0x4827a0;
-	bool initWithData(void const*, cocos2d::CCTexture2DPixelFormat, unsigned int, unsigned int, cocos2d::CCSize const&) = m1 0x3e88a8, imac 0x4823e0;
+	bool initWithData(void const*, cocos2d::CCTexture2DPixelFormat, unsigned int, unsigned int, cocos2d::CCSize const&) = m1 0x3e88a8, imac 0x4823e0, ios 0x133c60;
 	bool initWithETCFile(char const*) = m1 0x3e98bc, imac 0x483550;
 	bool initWithImage(cocos2d::CCImage*) = m1 0x3e8bc0, imac 0x482740;
 	bool initWithPVRFile(char const*) = m1 0x3e97e4, imac 0x483470;
@@ -1153,8 +1155,8 @@ class cocos2d::CCTexture2D {
 	void setTexParameters(cocos2d::_ccTexParams*) = m1 0x3e99e8, imac 0x483680, ios 0x134600;
 
 	// CCTexture2D(cocos2d::CCTexture2D const&);
-	~CCTexture2D() = m1 0x3e8734, imac 0x4821e0, ios 0x133aac;
-	CCTexture2D() = m1 0x3e8640, imac 0x4820e0;
+	~CCTexture2D() = m1 0x3e8734, imac 0x4821e0, ios 0x133b14;
+	CCTexture2D() = m1 0x3e8640, imac 0x4820e0, ios 0x133aac;
 	unsigned int bitsPerPixelForFormat(cocos2d::CCTexture2DPixelFormat) = m1 0x3e8b58, imac 0x4826e0;
 	unsigned int bitsPerPixelForFormat() = m1 0x3e9b5c, imac 0x483800;
 	char const* description() = m1 0x3e8b78, imac 0x482700;
@@ -1876,7 +1878,7 @@ class cocos2d::CCRenderTexture {
 	static cocos2d::CCRenderTexture* create(int, int, cocos2d::CCTexture2DPixelFormat, unsigned int) = m1 0x526bbc, imac 0x5ffc20;
 
 	bool initWithWidthAndHeight(int, int, cocos2d::CCTexture2DPixelFormat);
-	bool initWithWidthAndHeight(int, int, cocos2d::CCTexture2DPixelFormat, unsigned int) = m1 0x526ca4, imac 0x5ffcf0;
+	bool initWithWidthAndHeight(int, int, cocos2d::CCTexture2DPixelFormat, unsigned int) = m1 0x526ca4, imac 0x5ffcf0, ios 0x3c8f78;
 
 	cocos2d::_ccColor4F const& getClearColor() const;
 	float getClearDepth() const;
@@ -2658,7 +2660,7 @@ class cocos2d {
 
 		ccDrawSolidPoly(vertices, 4, color);
 	}
-	static void ccGLBindTexture2D(unsigned int) = m1 0x2e9b14, imac 0x35c2a0;
+	static void ccGLBindTexture2D(unsigned int) = m1 0x2e9b14, imac 0x35c2a0, ios 0x19a58c;
 	static void ccGLBindTexture2DN(unsigned int, unsigned int) = m1 0x2e9b60, imac 0x35c2e0;
 	static void ccGLBindVAO(unsigned int);
 	static void ccGLBlendFunc(unsigned int, unsigned int) = imac 0x35c1f0, m1 0x2e9a4c, ios 0x19a514;
