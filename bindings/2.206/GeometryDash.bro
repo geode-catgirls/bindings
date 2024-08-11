@@ -7386,7 +7386,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn lightningFlash(cocos2d::CCPoint, cocos2d::ccColor3B);
 	TodoReturn lightningFlash(cocos2d::CCPoint, cocos2d::CCPoint, cocos2d::ccColor3B, float, float, int, bool, float);
 	TodoReturn loadGroupParentsFromString(GameObject*, gd::string);
-	void loadLevelSettings() = win 0x229e30, imac 0x14cce0, m1 0x11edfc;
+	void loadLevelSettings() = win 0x229e30, imac 0x14cce0, m1 0x11edfc, ios 0x20c670;
 	void loadStartPosObject() = win 0x225710, ios 0x2073dc;
 	void loadUpToPosition(float, int, int) = win 0x2258b0;
 	TodoReturn maxZOrderForShaderZ(int);
@@ -13811,7 +13811,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void toggleDartMode(bool, bool) = win 0x378fa0, m1 0x396120, imac 0x421270, ios 0x23abe4;
 	void toggleFlyMode(bool, bool) = win 0x378500, m1 0x3946ec, imac 0x41f6e0;
 	void toggleGhostEffect(GhostType) = win 0x37ce40, m1 0x391a70, imac 0x41c590, ios 0x23783c;
-	void togglePlatformerMode(bool val) {
+	void togglePlatformerMode(bool val) = ios 0x2299dc {
         m_isPlatformer = val;
     }
 	void togglePlayerScale(bool, bool) = win 0x37e710, m1 0x3916bc, imac 0x41c110, ios 0x23751c;
