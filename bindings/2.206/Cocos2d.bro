@@ -1504,7 +1504,7 @@ class cocos2d::CCDirector {
 	int levelForSceneInStack(cocos2d::CCScene*);
 	void pause() = ios 0x1821c4;
 	void popScene();
-	bool popSceneWithTransition(float, cocos2d::PopTransition) = m1 0x3f2950, imac 0x48d2f0;
+	bool popSceneWithTransition(float, cocos2d::PopTransition) = m1 0x3f2950, imac 0x48d2f0, ios 0x181e6c;
 	void popToRootScene() = ios 0x181f3c;
 	void popToSceneInStack(cocos2d::CCScene*);
 	void popToSceneStackLevel(int);
@@ -1517,7 +1517,7 @@ class cocos2d::CCDirector {
 	void reshapeProjection(cocos2d::CCSize const&);
 	void resume();
 	void runWithScene(cocos2d::CCScene*) = ios 0x181c54;
-	int sceneCount();
+	int sceneCount() = ios 0x182024;
 	void setupScreenScale(cocos2d::CCSize, cocos2d::CCSize, cocos2d::TextureQuality);
 	void showFPSLabel();
 	void showStats();
