@@ -5762,7 +5762,7 @@ class GameManager : GManager {
 	TodoReturn rewardedVideoHidden();
 	TodoReturn rewardedVideoHiddenDelayed();
 	// partially inlined on windows
-	void safePopScene() = win 0x180700, m1 0x31652c, imac 0x38d5b0;
+	void safePopScene() = win 0x180700, m1 0x31652c, imac 0x38d5b0, ios 0x32e2a0;
 	TodoReturn saveAdTimer();
 	TodoReturn saveDPadLayout(int, bool);
 	void setGameVariable(char const*, bool) = win 0x179e80, imac 0x3854a0, m1 0x30f154, ios 0x32991c;
@@ -13651,7 +13651,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn addAllParticles() = win 0x3667D0, ios 0x2299e4;
 	TodoReturn addToTouchedRings(RingObject*) = imac 0x41ecf0, m1 0x393d24;
 	TodoReturn addToYVelocity(double, int);
-	void animatePlatformerJump(float) = win 0x36adb0, m1 0x384c3c, imac 0x40cdb0;
+	void animatePlatformerJump(float) = win 0x36adb0, m1 0x384c3c, imac 0x40cdb0, ios 0x22e74c;
 	void boostPlayer(float) = win 0x37def0, imac 0x40f770, m1 0x386edc, ios 0x2302fc;
 	void bumpPlayer(float, int, bool, GameObject*) = win 0x37d6b0, imac 0x423f30, m1 0x398b20;
 	TodoReturn buttonDown(PlayerButton);
