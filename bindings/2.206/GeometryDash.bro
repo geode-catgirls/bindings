@@ -587,18 +587,18 @@ class BoomListView : cocos2d::CCLayer, TableViewDelegate, TableViewDataSource {
 		return this->init(entries, nullptr, height, width, 0, type, 0.0f);
 	}
 
-	virtual void draw() {}
+	virtual void draw() = ios 0x1d9f24 {}
 	virtual void setupList(float) = win 0x3b500, m1 0x29dff8, ios 0x1d9980, imac 0x30bd80;
-	virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath&, TableViewCell*, TableView*) {}
-	virtual float cellHeightForRowAtIndexPath(CCIndexPath&, TableView*) = win 0x3b590, m1 0x29e088, imac 0x30be60;
-	virtual void didSelectRowAtIndexPath(CCIndexPath&, TableView*) {}
+	virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath&, TableViewCell*, TableView*) = ios 0x1d9a00 {}
+	virtual float cellHeightForRowAtIndexPath(CCIndexPath&, TableView*) = win 0x3b590, m1 0x29e088, imac 0x30be60, ios 0x1d9a10;
+	virtual void didSelectRowAtIndexPath(CCIndexPath&, TableView*) = ios 0x1d9a20 {}
 	virtual int numberOfRowsInSection(unsigned, TableView*) = win 0x3b5a0, m1 0x29e0a0, imac 0x30bea0, ios 0x1d9a28;
-	virtual unsigned int numberOfSectionsInTableView(TableView*) { return 1; }
-	virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath&, TableView*) = win 0x3b5c0, m1 0x29e0c0, imac 0x30bef0;
-	virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView*, TableViewCellEditingStyle, CCIndexPath&) {}
-	virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath&, TableViewCell*, TableView*) {}
-	virtual TableViewCell* getListCell(char const*) = win 0x3b650, m1 0x29e1dc, imac 0x30c000;
-	virtual void loadCell(TableViewCell*, int) = win 0x3b7c0, m1 0x29e370, imac 0x30c240;
+	virtual unsigned int numberOfSectionsInTableView(TableView*) = ios 0x1d9a38 { return 1; }
+	virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath&, TableView*) = win 0x3b5c0, m1 0x29e0c0, imac 0x30bef0, ios 0x1d9a48;
+	virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView*, TableViewCellEditingStyle, CCIndexPath&) = ios 0x1d9f1c {}
+	virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath&, TableViewCell*, TableView*) = ios 0x1d9a08 {}
+	virtual TableViewCell* getListCell(char const*) = win 0x3b650, m1 0x29e1dc, imac 0x30c000, ios 0x1d9adc;
+	virtual void loadCell(TableViewCell*, int) = win 0x3b7c0, m1 0x29e370, imac 0x30c240, ios 0x1d9bd4;
 
 	TableView* m_tableView;
 	cocos2d::CCArray* m_entries;
