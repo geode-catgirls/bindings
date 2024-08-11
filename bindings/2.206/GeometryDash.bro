@@ -997,7 +997,7 @@ class CCCircleWave : cocos2d::CCNode {
 	}
 
 	TodoReturn baseSetup(float);
-	TodoReturn followObject(cocos2d::CCNode*, bool) = imac 0x173af0, m1 0x13d244;
+	TodoReturn followObject(cocos2d::CCNode*, bool) = imac 0x173af0, m1 0x13d244, ios 0x177ef8;
 	bool init(float startRadius, float endRadius, float duration, bool fadeIn, bool easeOut) = win 0x41a30, imac 0x173820, m1 0x13cfc0, ios 0x177cb0;
 	TodoReturn updatePosition(float) = win 0x41cb0, imac 0x173ab0, m1 0x13d1f8;
 
@@ -3974,7 +3974,7 @@ class EffectGameObject : EnhancedGameObject {
 
 	TodoReturn getTargetColorIndex();
 	bool init(char const*); // inlined on windows :(
-	TodoReturn playTriggerEffect() = win 0x4798b0;
+	TodoReturn playTriggerEffect() = win 0x4798b0, ios 0x38e490;
 	TodoReturn resetSpawnTrigger();
 	void setTargetID(int);
 	void setTargetID2(int);
@@ -13676,7 +13676,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	}
 	TodoReturn disablePlayerControls();
 	void disableSwingFire() = win 0x378f10, m1 0x3924d4, imac 0x41d060, ios 0x238034;
-	void doReversePlayer(bool) = win 0x376540, m1 0x383584, imac 0x40b5e0;
+	void doReversePlayer(bool) = win 0x376540, m1 0x383584, imac 0x40b5e0, ios 0x22d77c;
 	void enableCustomGlowColor(cocos2d::_ccColor3B const& color) {
 		m_hasCustomGlowColor = true;
 		m_glowColor = color;
@@ -13709,7 +13709,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn hardFlipGravity();
 	void hitGround(GameObject*, bool) = win 0x379f40, m1 0x38b4b4, imac 0x415160;
 	TodoReturn hitGroundNoJump(GameObject*, bool);
-	void incrementJumps() = win 0x36acd0, imac 0x40c980, m1 0x38487c;
+	void incrementJumps() = win 0x36acd0, imac 0x40c980, m1 0x38487c, ios 0x22e558;
 	bool init(int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool) = win 0x364970, m1 0x37c678, imac 0x403590, ios 0x227dd4;
 	bool isBoostValid(float);
 	bool isFlying() = imac 0x40a810, m1 0x38285c, ios 0x22cc90;
@@ -13745,13 +13745,13 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void preCollision() = m1 0x3855d8, imac 0x40d7d0;
 	bool preSlopeCollision(float, GameObject*) = win 0x36d370;
 	void propellPlayer(float, bool, int) = win 0x37d860, imac 0x424240, m1 0x398e28;
-	void pushButton(PlayerButton) = win 0x375f70, imac 0x41d330, m1 0x27f4b0, ios 0x238fd0;
+	void pushButton(PlayerButton) = win 0x375f70, imac 0x41d330, m1 0x27f4b0, ios 0x2381e0;
 	TodoReturn pushDown();
 	void pushPlayer(float);
 	TodoReturn redirectDash(float);
 	TodoReturn redirectPlayerForce(float, float, float, float);
 	void releaseAllButtons() = win 0x37d110, imac 0x423a90, m1 0x398664, ios 0x23ca04;
-	void releaseButton(PlayerButton) = win 0x376200, imac 0x41e7b0, m1 0x393880, ios 0x2381e0;
+	void releaseButton(PlayerButton) = win 0x376200, imac 0x41e7b0, m1 0x393880, ios 0x238fd0;
 	TodoReturn removeAllParticles();
 	void removePendingCheckpoint() = win 0x3801a0;
 	TodoReturn removePlacedCheckpoint();
@@ -13763,8 +13763,8 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void resetStreak() = win 0x369730;
 	TodoReturn resetTouchedRings() = win 0x376310;
 	TodoReturn reverseMod();
-	void reversePlayer(EffectGameObject*) = win 0x376460, imac 0x41ed50, m1 0x393d7c;
-	void ringJump(RingObject*, bool) = win 0x376c30, imac 0x41d7c0, m1 0x392b20;
+	void reversePlayer(EffectGameObject*) = win 0x376460, imac 0x41ed50, m1 0x393d7c, ios 0x23913c;
+	void ringJump(RingObject*, bool) = win 0x376c30, imac 0x41d7c0, m1 0x392b20, ios 0x23844c;
 	void rotateGameplay(int, int, bool, float, float, bool, bool);
 	TodoReturn rotateGameplayObject(GameObject*) = win 0x36f480;
 	void rotateGameplayOnly(bool param) = win inline {
@@ -14206,7 +14206,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 		return GameManager::get()->m_playLayer;
 	}
 
-	void addCircle(CCCircleWave* cw) {
+	void addCircle(CCCircleWave* cw) = ios 0x122078 {
 		m_circleWaveArray->addObject(cw);
 	}
 	void addObject(GameObject*) = win 0x38a990, imac 0xb24e0, m1 0x9f734, ios 0x11afe8;
@@ -14247,7 +14247,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	TodoReturn getRelativeModNew(cocos2d::CCPoint, float, float, bool, bool);
 	TodoReturn getTempMilliTime() = win 0x3c070, ios 0x1181a8;
 	TodoReturn gravityEffectFinished();
-	void incrementJumps() = imac 0xbf5a0, m1 0xaabec;
+	void incrementJumps() = imac 0xbf5a0, m1 0xaabec, ios 0x124b84;
 	bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) = win 0x382890, imac 0xabc70, m1 0x9a1e4, ios 0x1178b8;
 	bool isGameplayActive();
 	void levelComplete() = win 0x384850, m1 0xa1078, imac 0xb4290, ios 0x11c818;
