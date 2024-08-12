@@ -1654,8 +1654,8 @@ class cocos2d::CCSprite {
 	virtual void setRotationX(float) = m1 0x22a8e4, imac 0x285ee0, ios 0x2491f0;
 	virtual void setRotationY(float) = m1 0x22a954, imac 0x285f50, ios 0x249260;
 	virtual void ignoreAnchorPointForPosition(bool) = imac 0x2862e0, m1 0x22ad08, ios 0x249614;
-	virtual void addChild(cocos2d::CCNode*) = imac 0x285930, m1 0x22a2fc, ios 0x24bec8;
-	virtual void addChild(cocos2d::CCNode*, int) = imac 0x285940, m1 0x22a304, ios 0x24bed8;
+	virtual void addChild(cocos2d::CCNode*) = imac 0x285930, m1 0x22a2fc, ios 0x248c24;
+	virtual void addChild(cocos2d::CCNode*, int) = imac 0x285940, m1 0x22a304, ios 0x248c28;
 	virtual void addChild(cocos2d::CCNode*, int, int) = m1 0x22a304, imac 0x285950, ios 0x248c2c;
 	virtual void removeChild(cocos2d::CCNode*, bool) = m1 0x22a46c, imac 0x285a90, ios 0x248d94;
 	virtual void removeAllChildrenWithCleanup(bool) = m1 0x22a4b4, imac 0x285ad0, ios 0x248ddc;
