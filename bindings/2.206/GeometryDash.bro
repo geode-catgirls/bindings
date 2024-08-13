@@ -17538,7 +17538,7 @@ class SlideInLayer : cocos2d::CCLayerColor {
 class Slider : cocos2d::CCLayer {
 	// virtual ~Slider();
 
-	static Slider* create(cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, char const*, char const*, float) = win 0x70230, m1 0x296e54, imac 0x303500, ios 0x2ff908;
+	static Slider* create(cocos2d::CCNode*, cocos2d::SEL_MenuHandler, char const*, char const*, char const*, char const*, float) = win 0x70230, m1 0x296e54, imac 0x303500, ios 0x2ff954;
 	static Slider* create(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler handler) = imac 0x3032c0, m1 0x296c3c {
 		return Slider::create(target, handler, 1.f);
 	}
