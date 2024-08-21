@@ -7560,7 +7560,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn swapBackground(int);
 	TodoReturn swapGround(int);
 	TodoReturn swapMiddleground(int);
-	void switchToFlyMode(PlayerObject*, GameObject*, bool, int) = m1 0xf5330, imac 0x118300, ios 0x2373f8;
+	void switchToFlyMode(PlayerObject*, GameObject*, bool, int) = m1 0xf5330, imac 0x118300, ios 0x1f0570;
 	void switchToRobotMode(PlayerObject*, GameObject*, bool);
 	void switchToRollMode(PlayerObject*, GameObject*, bool);
 	void switchToSpiderMode(PlayerObject*, GameObject*, bool);
@@ -13831,7 +13831,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void stopStreak2() = imac 0x424840, m1 0x39934c, ios 0x23d30c;
 	void storeCollision(PlayerCollisionDirection, int);
 	TodoReturn switchedDirTo(PlayerButton) = win 0x375e60;
-	void switchedToMode(GameObjectType) = win 0x379e40, m1 0x391544, imac 0x41bfc0;
+	void switchedToMode(GameObjectType) = win 0x379e40, m1 0x391544, imac 0x41bfc0, ios 0x2373f8;
 	TodoReturn testForMoving(float, GameObject*);
 	void toggleBirdMode(bool, bool) = win 0x378830, m1 0x395124, imac 0x4201d0;
 	void toggleDartMode(bool, bool) = win 0x378fa0, m1 0x396120, imac 0x421270, ios 0x23abe4;
