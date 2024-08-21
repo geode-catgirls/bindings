@@ -899,22 +899,22 @@ class CCAnimatedSprite : cocos2d::CCSprite {
 	// virtual ~CCAnimatedSprite();
 	CCAnimatedSprite() = win 0x3f030, m1 0x2e0478, imac 0x351390, ios inline {}
 
-	void cleanupSprite() = m1 0x2dfaf8, imac 0x3509d0;
-	static CCAnimatedSprite* createWithType(char const*, cocos2d::CCTexture2D*, bool) = m1 0x2df14c, imac 0x34ffe0;
-	bool initWithType(char const*, cocos2d::CCTexture2D*, bool) = win 0x3f140, m1 0x2df220, imac 0x3500c0;
-	void loadType(char const*, cocos2d::CCTexture2D*, bool) = win 0x3f360, m1 0x2df40c, imac 0x3502a0;
-	void runAnimation(gd::string) = win 0x3fe00, m1 0x2dfc94, imac 0x350b90;
-	void runAnimationForced(gd::string) = m1 0x2dfd7c, imac 0x350c60;
-	void stopTween() = m1 0x2e0290, imac 0x351190;
-	void switchToMode(spriteMode) = win 0x3fe70, m1 0x2dfb88, imac 0x350a70;
-	void tweenToAnimation(gd::string, float) = win 0x3fe70, m1 0x2dfea4, imac 0x350d70;
-	void tweenToAnimationFinished() = win 0x40140, m1 0x2e01a0, imac 0x3510a0;
-	void willPlayAnimation() = m1 0x2dfe74, imac 0x350d40;
+	void cleanupSprite() = m1 0x2dfaf8, imac 0x3509d0, ios 0x30e51c;
+	static CCAnimatedSprite* createWithType(char const*, cocos2d::CCTexture2D*, bool) = m1 0x2df14c, imac 0x34ffe0, ios 0x30de1c;
+	bool initWithType(char const*, cocos2d::CCTexture2D*, bool) = win 0x3f140, m1 0x2df220, imac 0x3500c0, ios 0x30dee0;
+	void loadType(char const*, cocos2d::CCTexture2D*, bool) = win 0x3f360, m1 0x2df40c, imac 0x3502a0, ios 0x30e044;
+	void runAnimation(gd::string) = win 0x3fe00, m1 0x2dfc94, imac 0x350b90, ios 0x30e6b8;
+	void runAnimationForced(gd::string) = m1 0x2dfd7c, imac 0x350c60, ios 0x30e740;
+	void stopTween() = m1 0x2e0290, imac 0x351190, ios 0x30ea94;
+	void switchToMode(spriteMode) = win 0x3fe70, m1 0x2dfb88, imac 0x350a70, ios 0x30e5ac;
+	void tweenToAnimation(gd::string, float) = win 0x3fe70, m1 0x2dfea4, imac 0x350d70, ios 0x30e804;
+	void tweenToAnimationFinished() = win 0x40140, m1 0x2e01a0, imac 0x3510a0, ios 0x30e9f8;
+	void willPlayAnimation() = m1 0x2dfe74, imac 0x350d40, ios 0x30e7d4;
 
-	virtual void setOpacity(unsigned char) = win 0x401f0, m1 0x2e0318, imac 0x351220;
-	virtual void setColor(cocos2d::ccColor3B const&) = win 0x40250, m1 0x2e03c8, imac 0x3512d0;
-	virtual void animationFinished(char const*) = win 0x401d0, m1 0x2e0300, imac 0x351200;
-	virtual void animationFinishedO(cocos2d::CCObject*) = win 0x40190, m1 0x2e02cc, imac 0x3511d0;
+	virtual void setOpacity(unsigned char) = win 0x401f0, m1 0x2e0318, imac 0x351220, ios 0x30eb1c;
+	virtual void setColor(cocos2d::ccColor3B const&) = win 0x40250, m1 0x2e03c8, imac 0x3512d0, ios 0x30eb7c;
+	virtual void animationFinished(char const*) = win 0x401d0, m1 0x2e0300, imac 0x351200, ios 0x30eb04;
+	virtual void animationFinishedO(cocos2d::CCObject*) = win 0x40190, m1 0x2e02cc, imac 0x3511d0, ios 0x30ead0;
 
 	gd::string m_unkString1;
 	gd::string m_unkString2;
@@ -13228,7 +13228,7 @@ class ObjectManager : cocos2d::CCNode {
 	// virtual ~ObjectManager();
 
 	TodoReturn animLoaded(char const*);
-	TodoReturn getDefinition(char const*);
+	TodoReturn getDefinition(char const*) = ios 0x25d818;
 	TodoReturn getGlobalAnimCopy(char const*);
 	static ObjectManager* instance() = win 0x6cee0, ios 0x25c9a8;
 	TodoReturn loadCopiedAnimations();
@@ -17894,20 +17894,20 @@ class SpriteAnimationManager : cocos2d::CCNode {
 	TodoReturn callAnimationFinished();
 	TodoReturn createAnimations(gd::string);
 	TodoReturn createWithOwner(CCAnimatedSprite*, gd::string);
-	TodoReturn doCleanup();
-	TodoReturn executeAnimation(gd::string);
+	TodoReturn doCleanup() = ios 0x335180;
+	TodoReturn executeAnimation(gd::string) = ios 0x334c54;
 	TodoReturn finishAnimation(gd::string);
 	TodoReturn getAnimType(gd::string);
 	TodoReturn getPrio(gd::string);
 	TodoReturn initWithOwner(CCAnimatedSprite*, gd::string);
 	TodoReturn loadAnimations(gd::string);
 	TodoReturn offsetCurrentAnimation(float);
-	void overridePrio() = win 0x72f30;
+	void overridePrio() = win 0x72f30, ios 0x334f4c;
 	TodoReturn playSound(gd::string);
 	TodoReturn playSoundForAnimation(gd::string);
 	TodoReturn queueAnimation(gd::string);
 	TodoReturn resetAnimState();
-	TodoReturn runAnimation(gd::string);
+	TodoReturn runAnimation(gd::string) = ios 0x334930;
 	TodoReturn runQueuedAnimation();
 	void stopAnimations() = win inline {
 		this->overridePrio();
