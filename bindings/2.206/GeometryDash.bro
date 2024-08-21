@@ -2340,7 +2340,7 @@ class CommunityCreditsPage : FLAlertLayer {
 	void onClose(cocos2d::CCObject* sender) = win 0x82fc0, m1 0x2b0024, imac 0x31f5a0;
 	void onSwitchPage(cocos2d::CCObject* sender) = win 0x947f0, m1 0x2b0060, imac 0x31f5d0;
 
-	virtual bool init() = win 0x927f0, m1 0x2ae0a8, imac 0x31d3b0;
+	virtual bool init() = win 0x927f0, m1 0x2ae0a8, imac 0x31d3b0, ios 0x1abe54;
 	virtual void registerWithTouchDispatcher() = win 0x41750, m1 0x2b03c8, imac 0x31f930, ios 0x1ae43c;
 	virtual void keyBackClicked() = win 0x82ff0, m1 0x2b034c, imac 0x31f8c0;
 	virtual void show() = win 0x94950, m1 0x2b01c4, imac 0x31f730;
@@ -10902,9 +10902,9 @@ class InheritanceNode : cocos2d::CCObject {
 class ItemInfoPopup : FLAlertLayer {
 	// virtual ~ItemInfoPopup();
 
-	static ItemInfoPopup* create(int, UnlockType) = win 0x269640, m1 0x2fc484, imac 0x3705b0;
+	static ItemInfoPopup* create(int, UnlockType) = win 0x269640, m1 0x2fc484, imac 0x3705b0, ios 0x31718c;
 
-	bool init(int, UnlockType) = win 0x269730, imac 0x3731a0, m1 0x2fed78;
+	bool init(int, UnlockType) = win 0x269730, imac 0x3731a0, m1 0x2fed78, ios 0x318df4;
 	bool isUnlockedByDefault(int, UnlockType);
 	TodoReturn nameForUnlockType(int, UnlockType) = win 0x26b660;
 	void onClose(cocos2d::CCObject* sender);
