@@ -4327,7 +4327,7 @@ class EnhancedGameObject : GameObject {
 	TodoReturn triggerAnimation();
 	TodoReturn updateRotateAction(float);
 	TodoReturn updateState(int);
-	void updateUserCoin() = win 0x19c930;
+	void updateUserCoin() = win 0x19c930, ios 0x26f0d4;
 	TodoReturn waitForAnimationTrigger();
 
 	virtual void customSetup() = win 0x19afb0, m1 0x502290, imac 0x5d5220;
@@ -6019,7 +6019,7 @@ class GameObject : CCSpritePlus {
 	void commonInteractiveSetup();
 	void commonSetup() = win 0x183d30, imac 0x5aa930, m1 0x4ed04c, ios 0x26486c;
 	void copyGroups(GameObject*) = win 0x192980, imac 0x5c70a0, m1 0x4f6300;
-	cocos2d::CCParticleSystemQuad* createAndAddParticle(int p0, char const* plistName, int p2, cocos2d::tCCPositionType positionType) = win 0x18eb60, imac 0x5bdd50, m1 0x4f1e1c;
+	cocos2d::CCParticleSystemQuad* createAndAddParticle(int p0, char const* plistName, int p2, cocos2d::tCCPositionType positionType) = win 0x18eb60, imac 0x5bdd50, m1 0x4f1e1c, ios 0x26936c;
 	void createColorGroupContainer(int);
 	void createGlow(gd::string);
 	void createGroupContainer(int size) = win inline {
@@ -6110,7 +6110,7 @@ class GameObject : CCSpritePlus {
 	cocos2d::CCSpriteBatchNode* parentForZLayer(int, bool, int);
 	gd::string perspectiveColorFrame(char const*, int);
 	gd::string perspectiveFrame(char const*, int);
-	void playDestroyObjectAnim(GJBaseGameLayer*) = win 0x1a04e0;
+	void playDestroyObjectAnim(GJBaseGameLayer*) = win 0x1a04e0, ios 0x368030;
 	void playPickupAnimation(cocos2d::CCSprite*, float, float, float, float, float, float, float, float, bool, float, float) = win 0x1a0000;
 	void playPickupAnimation(cocos2d::CCSprite*, float, float, float, float) = win 0x19ff10;
 	void playShineEffect() = win 0x18f3f0, imac 0x5c5a90, m1 0x4f4cac, ios 0x26be2c;
