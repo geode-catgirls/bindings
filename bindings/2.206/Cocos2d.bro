@@ -190,7 +190,7 @@ class cocos2d::CCMotionStreak {
 	bool isStartingPositionInitialized();
 	void reset() = imac 0x57e280, m1 0x4ca540;
 	void resumeStroke() = imac 0x57dc40, m1 0x4ca00c;
-	void stopStroke();
+	void stopStroke() = ios 0x182dbc;
 	void tintWithColor(cocos2d::_ccColor3B);
 	void updateFade(float);
 
