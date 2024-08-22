@@ -775,7 +775,7 @@ class cocos2d::CCNode {
 	void stopAllActions() = imac 0x26ef50, m1 0x215290, ios 0x24bd0c;
 	void transform() = ios 0x24c55c;
 	void transformAncestors() = ios 0x24c604;
-	void unschedule(cocos2d::SEL_SCHEDULE) = imac 0x2703c0, m1 0x216640;
+	void unschedule(cocos2d::SEL_SCHEDULE) = imac 0x2703c0, m1 0x216640, ios 0x24cb78;
 	void unscheduleAllSelectors() = imac 0x26ef70, m1 0x21529c;
 	void unscheduleUpdate() = imac 0x2702b0, m1 0x216570;
 	void updateChildIndexes();
@@ -1149,7 +1149,7 @@ class cocos2d::CCTexture2D {
 	bool initPremultipliedATextureWithImage(cocos2d::CCImage*, unsigned int, unsigned int) = m1 0x3e8c34, imac 0x4827a0;
 	bool initWithData(void const*, cocos2d::CCTexture2DPixelFormat, unsigned int, unsigned int, cocos2d::CCSize const&) = m1 0x3e88a8, imac 0x4823e0, ios 0x133c60;
 	bool initWithETCFile(char const*) = m1 0x3e98bc, imac 0x483550;
-	bool initWithImage(cocos2d::CCImage*) = m1 0x3e8bc0, imac 0x482740;
+	bool initWithImage(cocos2d::CCImage*) = m1 0x3e8bc0, imac 0x482740, ios 0x133f10;
 	bool initWithPVRFile(char const*) = m1 0x3e97e4, imac 0x483470;
 	bool initWithString(char const*, char const*, float) = m1 0x3e9444, imac 0x4830c0;
 	bool initWithString(char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment) = m1 0x3e94b4, imac 0x483120;
@@ -1861,13 +1861,13 @@ class cocos2d::CCDictionary {
 	cocos2d::CCArray* allKeys() = m1 0x29efec, imac 0x30d0b0, ios 0x42b91c;
 	cocos2d::CCArray* allKeysForObject(cocos2d::CCObject*);
 	char const* charForKey(gd::string const&);
-	unsigned int count() = imac 0x30d090, m1 0x29efd0;
+	unsigned int count() = imac 0x30d090, m1 0x29efd0, ios 0x42b900;
 	cocos2d::CCObject* objectForKey(gd::string const&) = ios 0x42bb44, imac 0x30d420, m1 0x29f408;
 	cocos2d::CCObject* objectForKey(intptr_t) = imac 0x30d7b0, m1 0x29f714, ios 0x42bdf4;
 	cocos2d::CCObject* randomObject();
 	void removeAllObjects() = imac 0x30ceb0, m1 0x29ee04, ios 0x42b7b8;
 	void removeObjectForElememt(cocos2d::CCDictElement*);
-	void removeObjectForKey(gd::string const&) = imac 0x30ed00, m1 0x2a0608;
+	void removeObjectForKey(gd::string const&) = imac 0x30ed00, m1 0x2a0608, ios 0x42cc24;
 	//void removeObjectForKey(int);
 	void removeObjectsForKeys(cocos2d::CCArray*);
 	cocos2d::CCString const* valueForKey(gd::string const&) = imac 0x30d3a0, m1 0x29f368, ios 0x42BAB0;
