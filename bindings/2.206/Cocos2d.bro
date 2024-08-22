@@ -1146,7 +1146,7 @@ class cocos2d::CCTexture2D {
 	static cocos2d::CCTexture2DPixelFormat defaultAlphaPixelFormat() = m1 0x3e9b50, imac 0x4837f0, ios 0x134744;
 	static void setDefaultAlphaPixelFormat(cocos2d::CCTexture2DPixelFormat) = m1 0x3e9b44, imac 0x4837e0, ios 0x134738;
 
-	bool initPremultipliedATextureWithImage(cocos2d::CCImage*, unsigned int, unsigned int) = m1 0x3e8c34, imac 0x4827a0;
+	bool initPremultipliedATextureWithImage(cocos2d::CCImage*, unsigned int, unsigned int) = m1 0x3e8c34, imac 0x4827a0, ios 0x133f78;
 	bool initWithData(void const*, cocos2d::CCTexture2DPixelFormat, unsigned int, unsigned int, cocos2d::CCSize const&) = m1 0x3e88a8, imac 0x4823e0, ios 0x133c60;
 	bool initWithETCFile(char const*) = m1 0x3e98bc, imac 0x483550;
 	bool initWithImage(cocos2d::CCImage*) = m1 0x3e8bc0, imac 0x482740, ios 0x133f10;
