@@ -782,13 +782,7 @@ class cocos2d::CCNode {
 
 	virtual void update(float) = m1 0x21666c, imac 0x2703e0, ios 0x24cba4;
 	virtual bool init() = m1 0x214b18, imac 0x26e670, ios 0x24b5bc;
-	virtual void setZOrder(int z) = m1 0x214b68, imac 0x26e700, ios inline { // ios 0x24b60c, marked as inline to fix something
-		_setZOrder(z);
-		if (m_pParent)
-		{
-			m_pParent->reorderChild(this, z);
-		}
-	}
+	virtual void setZOrder(int z) = m1 0x214b68, imac 0x26e700, ios 0x24b60c;
 	virtual void _setZOrder(int) = m1 0x214b60, imac 0x26e6f0, ios 0x24b604;
 	virtual int getZOrder() = m1 0x214b58, imac 0x26e6e0, ios 0x24b5fc;
 	virtual void setVertexZ(float) = m1 0x214bc0, imac 0x26e750;
@@ -991,7 +985,18 @@ class cocos2d::CCLayerGradient {
 		ret->setVector(a3);
 		return ret;
 	}
-	static cocos2d::CCLayerGradient* create();
+	static cocos2d::CCLayerGradient* create() = ios inline {
+		CCLayerGradient* pRet = new CCLayerGradient();
+		if (pRet && pRet->init())
+		{
+			pRet->autorelease();
+		}
+		else
+		{
+			CC_SAFE_DELETE(pRet);
+		}
+		return pRet;
+	}
 
 	bool getShouldPremultiply() const;
 
