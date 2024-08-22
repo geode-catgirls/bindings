@@ -35,7 +35,7 @@ class cocos2d::CCEaseIn {
 
 [[link(win, android)]]
 class cocos2d::CCEaseOut {
-	static cocos2d::CCEaseOut* create(cocos2d::CCActionInterval*, float) = imac 0x51ce00, m1 0x472190;
+	static cocos2d::CCEaseOut* create(cocos2d::CCActionInterval*, float) = imac 0x51ce00, m1 0x472190, ios 0x27bd10;
 
 	// CCEaseOut(cocos2d::CCEaseOut const&);
 	// CCEaseOut();
@@ -1155,7 +1155,7 @@ class cocos2d::CCTexture2D {
 	bool initWithString(char const*, char const*, float, cocos2d::CCSize const&, cocos2d::CCTextAlignment, cocos2d::CCVerticalTextAlignment) = m1 0x3e94b4, imac 0x483120;
 	bool initWithString(char const*, cocos2d::_ccFontDefinition*) = m1 0x3e95e4, imac 0x483260;
 
-	cocos2d::CCSize const& getContentSizeInPixels() = m1 0x3e87f8, imac 0x4822e0;
+	cocos2d::CCSize const& getContentSizeInPixels() = m1 0x3e87f8, imac 0x4822e0, ios 0x133bec;
 
 	void setAliasTexParameters() = m1 0x3e9a80, imac 0x483710;
 	void setAntiAliasTexParameters() = m1 0x3e9ad0, imac 0x483760;
@@ -1367,7 +1367,7 @@ class cocos2d::CCImage {
 
 	bool _initWithJpgData(void*, int);
 	bool _initWithPngData(void*, int);
-	bool _initWithRawData(void*, int, int, int, int, bool);
+	bool _initWithRawData(void*, int, int, int, int, bool) = ios 0x31be0;
 	bool _initWithTiffData(void*, int);
 	bool _initWithWebpData(void*, int);
 	bool _saveImageToJPG(char const*);
@@ -1460,7 +1460,7 @@ class cocos2d::CCDirector {
 	cocos2d::CCPoint getVisibleOrigin();
 	cocos2d::CCSize getVisibleSize();
 	cocos2d::CCSize getWinSize() = m1 0x3f1edc, imac 0x48c750, ios 0x1818b4;
-	cocos2d::CCSize getWinSizeInPixels();
+	cocos2d::CCSize getWinSizeInPixels() = ios 0x181bbc;
 	float getZEye();
 	//getScreenTop = ios 0x18260c, idk if i should add the function
 	//getScreenBottom() = ios 0x182614
@@ -1880,7 +1880,7 @@ class cocos2d::CCDictionary {
 
 [[link(win, android)]]
 class cocos2d::CCRenderTexture {
-	static cocos2d::CCRenderTexture* create(int, int) = m1 0x526fe4, imac 0x600090;
+	static cocos2d::CCRenderTexture* create(int, int) = m1 0x526fe4, imac 0x600090, ios 0x3c92ac;
 	static cocos2d::CCRenderTexture* create(int, int, cocos2d::CCTexture2DPixelFormat) = m1 0x526adc, imac 0x5ffb50;
 	static cocos2d::CCRenderTexture* create(int, int, cocos2d::CCTexture2DPixelFormat, unsigned int) = m1 0x526bbc, imac 0x5ffc20;
 
@@ -1899,16 +1899,31 @@ class cocos2d::CCRenderTexture {
 	void setClearStencil(float);
 
 	// CCRenderTexture(cocos2d::CCRenderTexture const&);
-	CCRenderTexture() = m1 0x5268fc, imac 0x5ff8b0;
-	void begin() = m1 0x5270d8, imac 0x600170;
-	void beginWithClear(float, float, float, float, float, int, unsigned int);
-	void beginWithClear(float, float, float, float);
+	CCRenderTexture() = m1 0x5268fc, imac 0x5ff8b0, ios inline {
+		m_uFBO = 0;
+		m_uDepthRenderBufffer = 0;
+		m_nOldFBO = 0;
+		m_pTexture = nullptr;
+		m_pTextureCopy = nullptr;    // a copy of m_pTexture
+		m_pUITextureImage = nullptr;
+		m_ePixelFormat = kCCTexture2DPixelFormat_RGBA8888;
+		
+		// code for "auto" update
+		m_uClearFlags = 0;
+		m_sClearColor = ccc4f(0,0,0,0);
+		m_fClearDepth = 0.0f;
+		m_nClearStencil = 0;
+		m_bAutoDraw = false;
+	}
+	void begin() = m1 0x5270d8, imac 0x600170, ios 0x3c9390;
+	void beginWithClear(float, float, float, float, float, int, unsigned int) = ios 0x3c9570;
+	void beginWithClear(float, float, float, float) = ios 0x0x3c9560;
 	void beginWithClear(float, float, float, float, float);
 	void beginWithClear(float, float, float, float, float, int);
 	void clear(float, float, float, float);
 	void clearDepth(float);
 	void clearStencil(int);
-	void end() = m1 0x527584, imac 0x6006d0;
+	void end() = m1 0x527584, imac 0x6006d0, ios 0x3c9698;
 	void endToLua();
 	bool isAutoDraw() const;
 	void listenToBackground(cocos2d::CCObject*);
@@ -1918,10 +1933,10 @@ class cocos2d::CCRenderTexture {
 	bool saveToFile(char const*, cocos2d::eImageFormat);
 	void updateInternalScale(float, float);
 
-	virtual void draw() = m1 0x527814, imac 0x600980;
-	virtual void visit() = m1 0x527788, imac 0x6008f0;
-	virtual cocos2d::CCSprite* getSprite() = m1 0x526a34, imac 0x5ffa60;
-	virtual void setSprite(cocos2d::CCSprite*) = m1 0x526a3c, imac 0x5ffa70;
+	virtual void draw() = m1 0x527814, imac 0x600980, ios 0x3c9770;
+	virtual void visit() = m1 0x527788, imac 0x6008f0, ios 0x3c96e4;
+	virtual cocos2d::CCSprite* getSprite() = m1 0x526a34, imac 0x5ffa60, ios 0x3c8e64;
+	virtual void setSprite(cocos2d::CCSprite*) = m1 0x526a3c, imac 0x5ffa70, ios 0x3c8e6c;
 }
 
 [[link(win, android)]]
