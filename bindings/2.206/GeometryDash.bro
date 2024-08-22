@@ -5760,7 +5760,7 @@ class GameManager : GManager {
 	TodoReturn reorderKey(int, bool);
 	void reportAchievementWithID(char const*, int, bool) = win 0x175280, m1 0x306c60, imac 0x37b7e0;
 	void reportPercentageForLevel(int levelID, int percentage, bool isPlatformer) = win 0x1748a0, ios 0x324494;
-	TodoReturn resetAchievement(gd::string);
+	TodoReturn resetAchievement(gd::string) = ios 0x324380;
 	TodoReturn resetAdTimer();
 	TodoReturn resetAllIcons();
 	TodoReturn resetCoinUnlocks();
