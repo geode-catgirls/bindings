@@ -692,7 +692,7 @@ class cocos2d::CCGLProgram {
 	unsigned int const getProgram();
 	int getUniformLocationForName(char const*);
 
-	void setUniformLocationWith1f(int, float);
+	void setUniformLocationWith1f(int, float) = ios 0x13be8c;
 	void setUniformLocationWith1i(int, int);
 	void setUniformLocationWith2f(int, float, float);
 	void setUniformLocationWith2fv(int, float*, unsigned int);
@@ -2420,7 +2420,9 @@ class cocos2d {
 	static cocos2d::CCPoint ccpCompMult(cocos2d::CCPoint const&, cocos2d::CCPoint const&);
 	static float ccpDistance(cocos2d::CCPoint const&, cocos2d::CCPoint const&) = m1 0x2e5120, imac 0x356d70;
 	static cocos2d::CCPoint ccpForAngle(float);
-	static cocos2d::CCPoint ccpFromSize(cocos2d::CCSize const&);
+	static cocos2d::CCPoint ccpFromSize(cocos2d::CCSize const& size) = ios inline {
+		return cocos2d::CCPoint(size.width, size.height);
+	}
 	static bool ccpFuzzyEqual(cocos2d::CCPoint const&, cocos2d::CCPoint const&, float);
 	static cocos2d::CCPoint ccpIntersectPoint(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&);
 	static float ccpLength(cocos2d::CCPoint const&);
