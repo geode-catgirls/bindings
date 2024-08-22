@@ -1917,7 +1917,7 @@ class cocos2d::CCRenderTexture {
 	}
 	void begin() = m1 0x5270d8, imac 0x600170, ios 0x3c9390;
 	void beginWithClear(float, float, float, float, float, int, unsigned int) = ios 0x3c9570;
-	void beginWithClear(float, float, float, float) = ios 0x0x3c9560;
+	void beginWithClear(float, float, float, float) = ios 0x3c9560;
 	void beginWithClear(float, float, float, float, float);
 	void beginWithClear(float, float, float, float, float, int);
 	void clear(float, float, float, float);
