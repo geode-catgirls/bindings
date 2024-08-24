@@ -7095,7 +7095,7 @@ class GJAccountManager : cocos2d::CCNode {
 
 	void addDLToActive(char const* tag, cocos2d::CCObject*);
 	void addDLToActive(char const* tag);
-	bool backupAccount(gd::string) = win 0x1f2bc0;
+	bool backupAccount(gd::string) = win 0x1f2bc0, ios 0x3a9f14;
 	void dataLoaded(DS_Dictionary*) = imac 0xd7f90, m1 0xbf188;
 	void encodeDataTo(DS_Dictionary*) = imac 0xd7f30, m1 0xbf130;
 	void firstSetup();
@@ -7110,7 +7110,7 @@ class GJAccountManager : cocos2d::CCNode {
 	void linkToAccount(gd::string, gd::string, int, int);
 	void loginAccount(gd::string, gd::string);
 	void onBackupAccountCompleted(gd::string, gd::string) = win 0x1f30f0; 
-	void onGetAccountBackupURLCompleted(gd::string, gd::string) = win 0x1f28f0; 
+	void onGetAccountBackupURLCompleted(gd::string, gd::string) = win 0x1f28f0, ios 0x3a91c4; 
 	void onGetAccountSyncURLCompleted(gd::string, gd::string) = win 0x1f3840; 
 	void onLoginAccountCompleted(gd::string, gd::string) = win 0x1f21b0; 
 	void onProcessHttpRequestCompleted(cocos2d::extension::CCHttpClient*, cocos2d::extension::CCHttpResponse*) = win 0x1f1490; 
@@ -10595,15 +10595,15 @@ class GJWriteMessagePopup : FLAlertLayer, TextInputDelegate, UploadMessageDelega
 class GManager : cocos2d::CCNode {
 	// virtual ~GManager();
 
-	TodoReturn getCompressedSaveString();
-	TodoReturn getSaveString();
+	TodoReturn getCompressedSaveString() = ios 0x259ff4;
+	TodoReturn getSaveString() = ios 0x259f70;
 	TodoReturn load();
 	void loadDataFromFile(gd::string const&) = win 0x69610;
-	void loadFromCompressedString(gd::string&);
-	void loadFromString(gd::string&);
+	void loadFromCompressedString(gd::string&) = ios 0x25a10c;
+	void loadFromString(gd::string&) = ios 0x25a060;
 	void save() = win 0x69520, imac 0x4b61b0, m1 0x4181c4;
-	TodoReturn saveData(DS_Dictionary*, gd::string);
-	void saveGMTo(gd::string) = m1 0x4182bc, imac 0x4b62b0;
+	TodoReturn saveData(DS_Dictionary*, gd::string) = ios 0x25a318;
+	void saveGMTo(gd::string) = m1 0x4182bc, imac 0x4b62b0, ios 0x25a238;
 	TodoReturn tryLoadData(DS_Dictionary*, gd::string const&);
 	inline GManager() {}
 
@@ -17934,12 +17934,12 @@ class SpriteAnimationManager : cocos2d::CCNode {
 [[link(android)]]
 class SpriteDescription : cocos2d::CCObject {
 	// virtual ~SpriteDescription();
-	// SpriteDescription();
+	// SpriteDescription() = ios 0x1bd8d4;
 
 	TodoReturn createDescription(cocos2d::CCDictionary*);
-	TodoReturn createDescription(DS_Dictionary*);
+	TodoReturn createDescription(DS_Dictionary*) = ios 0x1bd498;
 	TodoReturn initDescription(cocos2d::CCDictionary*);
-	TodoReturn initDescription(DS_Dictionary*);
+	TodoReturn initDescription(DS_Dictionary*) = ios 0x1bd58c;
 }
 
 [[link(android)]]
