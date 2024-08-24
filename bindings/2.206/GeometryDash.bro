@@ -8517,7 +8517,7 @@ class GJGameLevel : cocos2d::CCNode {
 
 	static GJGameLevel* create() = win 0x1642d0, imac 0x533810, m1 0x486e78, ios 0x95224;
 	static GJGameLevel* create(cocos2d::CCDictionary*, bool) = win 0x162b70, m1 0x4891fc, imac 0x535f20;
-	/*inline static GJGameLevel* createWithCoder(DS_Dictionary* dict) {
+	/*inline static GJGameLevel* createWithCoder(DS_Dictionary* dict) = ios 0xaf7fc {
 		//inlined on windows
 		auto level = GJGameLevel::create();
 		level->dataLoaded(dict);
@@ -8526,7 +8526,7 @@ class GJGameLevel : cocos2d::CCNode {
 
 	bool areCoinsVerified() = ios 0xb10f8;
 	void copyLevelInfo(GJGameLevel*) = win 0x165230;
-	void dataLoaded(DS_Dictionary*) = win 0x1658e0, m1 0x4b2db0, imac 0x564a60;
+	void dataLoaded(DS_Dictionary*) = win 0x1658e0, m1 0x4b2db0, imac 0x564a60, ios 0xaf82c;
 	int demonIconForDifficulty(DemonDifficultyType) = imac 0x566800, m1 0x4b48dc;
 	TodoReturn generateSettingsString();
 	gd::string getAudioFileName() = win 0x164b80, m1 0x4b1710, imac 0x562f90, ios 0xae6c0;
@@ -13070,7 +13070,7 @@ class MusicDownloadManager : cocos2d::CCNode, PlatformDownloadDelegate {
 	void parseSFXLibrary();
 	gd::string pathForSFX(int) = win 0x31e730, m1 0x4e0800, imac 0x597c20, ios 0x162688;
 	gd::string pathForSFXFolder(int) = win 0x31e5e0, m1 0x4e08e4, imac 0x597ce0; // for anyone who really needs it, this is inlined on imac <- no wonder why they call you silly
-	gd::string pathForSong(int) = win 0x31e400, m1 0x4df2bc, imac 0x596410;
+	gd::string pathForSong(int) = win 0x31e400, m1 0x4df2bc, imac 0x596410, ios 0x1619a0;
 	gd::string pathForSongFolder(int) = win 0x31e2b0, imac 0x5975b0, m1 0x4e0314;
 	void ProcessHttpGetRequest(gd::string, gd::string, cocos2d::extension::SEL_HttpResponse, int, int) = imac 0x5917a0, m1 0x4daccc;
 	callback void ProcessHttpRequest(gd::string, gd::string, gd::string, GJHttpType) = imac 0x591400, m1 0x4da968;
@@ -14470,7 +14470,7 @@ class ProfilePage : FLAlertLayer, FLAlertLayerProtocol, LevelCommentDelegate, Co
 
 	void blockUser();
 	bool init(int accountID, bool ownProfile) = win 0x39b3b0, imac 0x7c4fa0, m1 0x6ca6d8, ios 0x1a2528;
-	bool isCorrect(char const* key) = win 0x3A22F0;
+	bool isCorrect(char const* key) = win 0x3A22F0, ios 0x1a7f0c;
 	bool isOnWatchlist(int);
 	void loadPage(int) = win 0x3a2420;
 	void loadPageFromUserInfo(GJUserScore*) = win 0x39c890, imac 0x7c6330, m1 0x6cb934, ios 0x1a36b4;
@@ -14496,7 +14496,7 @@ class ProfilePage : FLAlertLayer, FLAlertLayerProtocol, LevelCommentDelegate, Co
 	void onUpdate(cocos2d::CCObject* sender) = win 0x39C360, m1 0x6CB634, imac 0x7c5ff0;
 	void onYouTube(cocos2d::CCObject* sender) = win 0x3A1A20, m1 0x6ce61c, imac 0x7c9510;
 	void setupComments() = m1 0x6cb1ec, imac 0x7c5b70;
-	void setupCommentsBrowser(cocos2d::CCArray*) = win 0x3a2710, m1 0x6CB804, imac 0x7C61F0;
+	void setupCommentsBrowser(cocos2d::CCArray*) = win 0x3a2710, m1 0x6CB804, imac 0x7C61F0, ios 0x1a3584;
 	void showNoAccountError() = win 0x3A1640;
 	TodoReturn toggleMainPageVisibility(bool);
 	TodoReturn updateLevelsLabel();
