@@ -9049,13 +9049,13 @@ class GJItemIcon : cocos2d::CCSprite {
 class GJLevelList : cocos2d::CCNode {
 	// virtual ~GJLevelList();
 
-	static GJLevelList* create() = win 0x16de90, m1 0x487c24, imac 0x5346e0;
+	static GJLevelList* create() = win 0x16de90, m1 0x487c24, imac 0x5346e0, ios 0x95b5c;
 	static GJLevelList* create(cocos2d::CCDictionary*) = win 0x16d5a0, m1 0x48b638, imac 0x538bb0;
+	static GJLevelList* createWithCoder(DS_Dictionary*) = ios 0xb387c;
 
 	void addLevelToList(GJGameLevel* level) = win 0x16E610;
 	TodoReturn completedLevels() = win 0x16ef90, imac 0x56a800, m1 0x4b7fc4;
-	TodoReturn createWithCoder(DS_Dictionary*);
-	void dataLoaded(DS_Dictionary*) = win 0x16f3c0, m1 0x4b8464, imac 0x56ac60;
+	void dataLoaded(DS_Dictionary*) = win 0x16f3c0, m1 0x4b8464, imac 0x56ac60, ios 0xb38ac;
 	TodoReturn duplicateListLevels(GJLevelList*);
 	TodoReturn frameForListDifficulty(int, DifficultyIconType) = imac 0x56b220, m1 0x4b89d4;
 	cocos2d::CCArray* getListLevelsArray(cocos2d::CCArray*) = win 0x16E890;
@@ -9071,9 +9071,9 @@ class GJLevelList : cocos2d::CCNode {
 	TodoReturn totalLevels() = imac 0x56a7e0, m1 0x4b7fb4;
 	TodoReturn updateLevelsString();
 
-	virtual void encodeWithCoder(DS_Dictionary*) = win 0x16f6e0, m1 0x4b8794, imac 0x56afa0;
-	virtual bool canEncode() = m1 0x4b89cc, imac 0x56b210;
-	virtual bool init() = m1 0x4b6c9c, imac 0x569080;
+	virtual void encodeWithCoder(DS_Dictionary*) = win 0x16f6e0, m1 0x4b8794, imac 0x56afa0, ios 0xb3ba8;
+	virtual bool canEncode() = m1 0x4b89cc, imac 0x56b210, ios 0xb3de0;
+	virtual bool init() = m1 0x4b6c9c, imac 0x569080, ios 0xb281c;
 
 	gd::vector<int> m_levels;
 	int m_listID;
