@@ -2055,29 +2055,46 @@ class cocos2d::CCCallFunc {
 
 [[link(win, android)]]
 class cocos2d::CCClippingNode : cocos2d::CCNode {
+	[[missing(ios)]]
 	static cocos2d::CCClippingNode* create() = imac 0x72c380, m1 0x63f068;
+	[[missing(ios)]]
 	static cocos2d::CCClippingNode* create(cocos2d::CCNode* stencil) = imac 0x72c410, m1 0x63f0f0;
 
+	[[missing(ios)]]
 	CCClippingNode();
+	[[missing(ios)]]
 	virtual ~CCClippingNode();
 
+	[[missing(ios)]]
 	virtual bool init() = imac 0x72c4c0, m1 0x63f190;
 
+	[[missing(ios)]]
 	virtual bool init(cocos2d::CCNode* pStencil) = imac 0x72c4e0, m1 0x63f1a0;
 
+	[[missing(ios)]]
 	virtual void onEnter() = imac 0x72c550, m1 0x63f210;
+	[[missing(ios)]]
 	virtual void onEnterTransitionDidFinish() = imac 0x72c580, m1 0x63f23c;
+	[[missing(ios)]]
 	virtual void onExit() = imac 0x72c5e0, m1 0x63f298;
+	[[missing(ios)]]
 	virtual void onExitTransitionDidStart() = imac 0x72c5b0, m1 0x63f268;
+	[[missing(ios)]]
 	virtual void visit() = imac 0x72c610, m1 0x63f2c8;
 
+	[[missing(ios)]]
 	cocos2d::CCNode* getStencil() const = imac 0x72c970, m1 0x63f5f0;
+	[[missing(ios)]]
 	void setStencil(cocos2d::CCNode* pStencil) = imac 0x72c980, m1 0x63f5f8;
 
+	[[missing(ios)]]
 	float getAlphaThreshold() const = imac 0x72c9c0, m1 0x63f63c;
+	[[missing(ios)]]
 	void setAlphaThreshold(float fAlphaThreshold) = imac 0x72c9d0, m1 0x63f644;
 
+	[[missing(ios)]]
 	bool isInverted() const = imac 0x72c9e0, m1 0x63f64c;
+	[[missing(ios)]]
 	void setInverted(bool bInverted) = imac 0x72c9f0, m1 0x63f654;
 }
 
