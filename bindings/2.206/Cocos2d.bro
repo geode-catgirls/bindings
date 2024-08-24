@@ -1484,7 +1484,7 @@ class cocos2d::CCDirector {
 	void setNextDeltaTimeZero(bool);
 	void setNextScene();
 	void setNotificationNode(cocos2d::CCNode*);
-	void setOpenGLView(cocos2d::CCEGLView*);
+	void setOpenGLView(cocos2d::CCEGLView*) = ios 0x1816f8;
 	void setProjection(cocos2d::ccDirectorProjection) = ios 0x1811e4;
 	void setSceneReference(cocos2d::CCScene*);
 	void setSmoothFix(bool);
@@ -1523,7 +1523,7 @@ class cocos2d::CCDirector {
 	void resume();
 	void runWithScene(cocos2d::CCScene*) = ios 0x181c54;
 	int sceneCount() = ios 0x182024;
-	void setupScreenScale(cocos2d::CCSize, cocos2d::CCSize, cocos2d::TextureQuality);
+	void setupScreenScale(cocos2d::CCSize, cocos2d::CCSize, cocos2d::TextureQuality) = ios 0x1818c0;
 	void showFPSLabel();
 	void showStats();
 	void toggleShowFPS(bool, gd::string, cocos2d::CCPoint);
