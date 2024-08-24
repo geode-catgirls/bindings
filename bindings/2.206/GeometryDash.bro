@@ -427,7 +427,7 @@ class AppDelegate : cocos2d::CCApplication, cocos2d::CCSceneDelegate {
 	void platformShutdown() = win 0x80f30;
 	void resumeSound() = win 0x81bf0, imac 0x669780, m1 0x585520;
 	void setIdleTimerDisabled(bool);
-	void setupGLView() = win 0x80f50;
+	void setupGLView() = win 0x80f50, ios 0x278d54;
 	void showLoadingCircle(bool, bool, bool) = ios 0x2793c0;
 
 	virtual bool applicationDidFinishLaunching() = win 0x81370, m1 0x585084, imac 0x6692b0, ios 0x278e40;
@@ -13542,7 +13542,7 @@ class PlatformToolbox {
 	}
 	static bool isHD();
 	static bool isLocalPlayerAuthenticated() = ios 0x1774e8;
-	static bool isLowMemoryDevice();
+	static bool isLowMemoryDevice() = ios 0x1774bc;
 	static bool isNetworkAvailable() = m1 0x42c7f0, imac 0x4cda60;
 	static bool isSignedInGooglePlay();
 	static TodoReturn loadAndDecryptFileToString(char const*, char const*);
