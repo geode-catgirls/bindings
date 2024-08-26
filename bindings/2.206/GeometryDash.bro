@@ -2586,14 +2586,14 @@ class CreatorLayer : cocos2d::CCLayer, cocos2d::CCSceneTransitionDelegate, Dialo
 	void onMapPacks(cocos2d::CCObject* sender) = win 0x9bc90, imac 0x294bf0, m1 0x237c24, ios 0xb88b8;
 	void onMultiplayer(cocos2d::CCObject* sender) = win 0x9bdd0, imac 0x294400, m1 0x2373f8, ios 0xb82a4;
 	void onMyLevels(cocos2d::CCObject* sender) = win 0x9b4a0, imac 0x294c90, m1 0x237cac, ios 0xb8940;
-	void onOnlineLevels(cocos2d::CCObject* sender) = win 0x9bc10, imac 0x294c50, m1 0x237c70;
+	void onOnlineLevels(cocos2d::CCObject* sender) = win 0x9bc10, imac 0x294c50, m1 0x237c70, ios 0xb8904;
 	void onOnlyFullVersion(cocos2d::CCObject* sender) = imac 0x294d70, m1 0x237d74;
-	void onPaths(cocos2d::CCObject* sender) = win 0x9bb20, imac 0x294b70, m1 0x237ba8;
-	void onSavedLevels(cocos2d::CCObject* sender) = win 0x9b6b0, imac 0x2942f0, m1 0x2372fc;
-	void onSecretVault(cocos2d::CCObject* sender) = win 0x9c8e0, imac 0x2950c0, m1 0x2380e8;
-	void onTopLists(cocos2d::CCObject* sender) = win 0x9bb40, imac 0x294b90, m1 0x237bc4;
+	void onPaths(cocos2d::CCObject* sender) = win 0x9bb20, imac 0x294b70, m1 0x237ba8, ios 0xb883c;
+	void onSavedLevels(cocos2d::CCObject* sender) = win 0x9b6b0, imac 0x2942f0, m1 0x2372fc, ios 0xb81a8;
+	void onSecretVault(cocos2d::CCObject* sender) = win 0x9c8e0, imac 0x2950c0, m1 0x2380e8, ios 0xb8ae4;
+	void onTopLists(cocos2d::CCObject* sender) = win 0x9bb40, imac 0x294b90, m1 0x237bc4, ios 0xb8858;
 	void onTreasureRoom(cocos2d::CCObject* sender) = win 0x9cfc0, imac 0x295340, m1 0x238398, ios 0xb8cbc;
-	void onWeeklyLevel(cocos2d::CCObject* sender) = win 0x9c530, imac 0x294900, m1 0x23794c;
+	void onWeeklyLevel(cocos2d::CCObject* sender) = win 0x9c530, imac 0x294900, m1 0x23794c, ios 0xb864c;
 
 	virtual bool init() = win 0x9a300, imac 0x2934c0, m1 0x236654, ios 0xb75b4;
 	virtual void keyBackClicked() = win 0x9dae0, m1 0x238b9c, imac 0x295bf0;
