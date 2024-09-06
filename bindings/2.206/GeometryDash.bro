@@ -8696,12 +8696,12 @@ class GJGameLevel : cocos2d::CCNode {
 class GJGameLoadingLayer : cocos2d::CCLayer {
 	// virtual ~GJGameLoadingLayer();
 
-	static GJGameLoadingLayer* create(GJGameLevel* level, bool editor);
+	static GJGameLoadingLayer* create(GJGameLevel* level, bool editor) = ios 0x213e3c;
+	static GJGameLoadingLayer* transitionToLoadingLayer(GJGameLevel* level, bool editor) = win 0x237ed0, ios 0x213db0;
 
 	void gameLayerDidUnload();
-	bool init(GJGameLevel* level, bool editor);
+	bool init(GJGameLevel* level, bool editor) = ios 0x213f88;
 	void loadLevel() = win 0x2380c0, m1 0x129940, imac 0x15a2e0;
-	static GJGameLoadingLayer* transitionToLoadingLayer(GJGameLevel* level, bool editor) = win 0x237ed0;
 
 	virtual void onEnter() = imac 0x15a350;
 	virtual void onEnterTransitionDidFinish() = imac 0x15a340;
@@ -13479,7 +13479,7 @@ class PauseLayer : CCBlockLayer, FLAlertLayerProtocol {
 	}
 
 	TodoReturn createToggleButton(gd::string, cocos2d::SEL_MenuHandler, bool, cocos2d::CCMenu*, cocos2d::CCPoint);
-	void goEdit() = win 0x35cac0, imac 0x3db8e0, m1 0x35c470;
+	void goEdit() = win 0x35cac0, imac 0x3db8e0, m1 0x35c470, ios 0x14e31c;
 	bool init(bool p0) = win inline, imac 0x3d9ca0, m1 0x35a880 {
 		m_unkBool1 = p0;
 		return CCBlockLayer::init();
@@ -14325,7 +14325,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	void startMusic() = win 0x3973f0, imac 0xb4130, m1 0xa0f20, ios 0x11c6d4;
 	TodoReturn startRecording();
 	TodoReturn startRecordingDelayed();
-	TodoReturn stopRecording();
+	TodoReturn stopRecording() = ios 0x1181ec;
 	void storeCheckpoint(CheckpointObject*) = win 0x393fe0, imac 0xbe2a0, m1 0xa99ac, ios 0x123ab4;
 	TodoReturn takeStateSnapshot();
 	TodoReturn toggleBGEffectVisibility(bool);
