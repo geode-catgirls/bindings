@@ -6064,7 +6064,7 @@ class GameObject : CCSpritePlus {
 	bool getGroupDisabled() = m1 0x4f660c, imac 0x5c73e0;
 	int getGroupID(int) = imac 0x5c7080, m1 0x4f62e0;
 	gd::string getGroupString();
-	cocos2d::CCPoint getLastPosition() = imac 0x5d3a00, m1 0x501170;
+	cocos2d::CCPoint getLastPosition() = imac 0x5d3a00, m1 0x501170, ios 0x272074;
 	GJSpriteColor* getMainColor();
 	int getMainColorMode();
 	int getObjectDirection(); // probably a enum
@@ -6075,7 +6075,7 @@ class GameObject : CCSpritePlus {
 	cocos2d::CCRect getOuterObjectRect();
 	int getParentMode();
 	GJSpriteColor* getRelativeSpriteColor(int);
-	cocos2d::CCPoint getScalePosDelta();
+	cocos2d::CCPoint getScalePosDelta() = ios 0x26cd1c;
 	GJSpriteColor* getSecondaryColor();
 	int getSecondaryColorMode();
 	float getSlopeAngle();
@@ -6142,9 +6142,9 @@ class GameObject : CCSpritePlus {
 	bool shouldLockX();
 	bool shouldNotHideAnimFreeze();
 	bool shouldShowPickupEffects();
-	bool slopeFloorTop();
+	bool slopeFloorTop() = ios 0x271218;
 	bool slopeWallLeft();
-	double slopeYPos(cocos2d::CCRect);
+	double slopeYPos(cocos2d::CCRect) = ios 0x271234;
 	double slopeYPos(float) = win 0x1973f0;
 	double slopeYPos(GameObject*);
 	void spawnDefaultPickupParticle(GJBaseGameLayer*);
@@ -13683,9 +13683,9 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn buttonDown(PlayerButton);
 	TodoReturn canStickToGround();
 	TodoReturn checkSnapJumpToObject(GameObject*);
-	void collidedWithObject(float, GameObject*, cocos2d::CCRect, bool) = win 0x36fa40, m1 0x38714c, imac 0x40fa20;
-	void collidedWithObject(float, GameObject*) = m1 0x38c4ec, imac 0x416340;
-	void collidedWithObjectInternal(float, GameObject*, cocos2d::CCRect, bool) = win 0x36fb00, m1 0x388d80, imac 0x411b50;
+	void collidedWithObject(float, GameObject*, cocos2d::CCRect, bool) = win 0x36fa40, m1 0x38714c, imac 0x40fa20, ios 0x230538;
+	void collidedWithObject(float, GameObject*) = m1 0x38c4ec, imac 0x416340, ios 0x2348d0;
+	void collidedWithObjectInternal(float, GameObject*, cocos2d::CCRect, bool) = win 0x36fb00, m1 0x388d80, imac 0x411b50, ios 0x231ba8;
 	void collidedWithSlope(float dt, GameObject* object , bool forced);
 	void collidedWithSlopeInternal(float dt, GameObject* object, bool forced) = win 0x36d8a0;
 	TodoReturn convertToClosestRotation(float);
@@ -13728,7 +13728,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn gravityUp();
 	TodoReturn handlePlayerCommand(int);
 	TodoReturn handleRotatedCollisionInternal(float, GameObject*, cocos2d::CCRect, bool, bool, bool) = win 0x36d1d0;
-	TodoReturn handleRotatedObjectCollision(float p0, GameObject* p1, cocos2d::CCRect p2, bool p3) = win inline {
+	TodoReturn handleRotatedObjectCollision(float p0, GameObject* p1, cocos2d::CCRect p2, bool p3) = win inline, ios 0x230788 {
 		return this->handleRotatedCollisionInternal(p0, p1, p2, p3, false, false);
 	}
 	TodoReturn handleRotatedSlopeCollision(float, GameObject*, bool);
@@ -13740,7 +13740,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	bool isBoostValid(float);
 	bool isFlying() = imac 0x40a810, m1 0x38285c, ios 0x22cc90;
 	bool isInBasicMode();
-	bool isInNormalMode();
+	bool isInNormalMode() = ios 0x22bb58;
 	bool isSafeFlip(float) = m1 0x38b488, imac 0x415120;
 	bool isSafeHeadTest();
 	bool isSafeMode(float);
