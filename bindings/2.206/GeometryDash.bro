@@ -5195,7 +5195,7 @@ class GameLevelManager : cocos2d::CCNode {
 	cocos2d::CCScene* getSearchScene(char const*) = imac 0x53fd70, m1 0x491f18;
 	int getSplitIntFromKey(char const*, int);
 	cocos2d::CCArray* getStoredLevelComments(char const*) = win 0x157b80, m1 0x4a8244, imac 0x559340;
-	cocos2d::CCArray* getStoredOnlineLevels(char const*) = win 0x144320, m1 0x4914d8, imac 0x53f3e0;
+	cocos2d::CCArray* getStoredOnlineLevels(char const*) = win 0x144320, m1 0x4914d8, imac 0x53f3e0, ios 0x9bc04;
 	cocos2d::CCArray* getStoredUserList(UserListType) = m1 0x4abfa8, imac 0x55d490;
 	GJUserMessage* getStoredUserMessage(int);
 	GJUserMessage* getStoredUserMessageReply(int);
@@ -6181,7 +6181,7 @@ class GameObject : CCSpritePlus {
 	virtual void setRotation(float) = win 0x18de40, imac 0x5c4660, m1 0x4f39e0, ios 0x26ad98;
 	virtual void setRotationX(float) = m1 0x4f3ac8, win 0x18df90, imac 0x5c4730;
 	virtual void setRotationY(float) = m1 0x4f3ba4, win 0x18e0e0, imac 0x5c47f0;
-	virtual void setOpacity(unsigned char) = win 0x18e840, m1 0x4f417c, imac 0x5c4e10;
+	virtual void setOpacity(unsigned char) = win 0x18e840, m1 0x4f417c, imac 0x5c4e10, ios 0x26b450;
 	virtual bool initWithTexture(cocos2d::CCTexture2D*) = m1 0x4ed1c4, win 0x183cf0, imac 0x5aaac0;
 	virtual void setChildColor(cocos2d::ccColor3B const&) = m1 0x4ff270, win 0x196e00, imac 0x5d19c0;
 	virtual void setFlipX(bool) = m1 0x4f3c70, win 0x18e200, imac 0x5c48d0;
@@ -11116,7 +11116,7 @@ class LeaderboardsLayer : cocos2d::CCLayer, LeaderboardManagerDelegate, FLAlertL
 	void onWeek(cocos2d::CCObject* sender);
 	void refreshTabs() = win 0x2afce0;
 	static cocos2d::CCScene* scene(LeaderboardState);
-	void selectLeaderboard(LeaderboardState) = win 0x2afe10, imac 0x51b440, m1 0x4708ec;
+	void selectLeaderboard(LeaderboardState) = win 0x2afe10, imac 0x51b440, m1 0x4708ec, ios 0x3ba270;
 	void setupLevelBrowser(cocos2d::CCArray*) = win 0x2afb80;
 	TodoReturn setupTabs();
 	void toggleTabButtons() = win 0x2b0060;
@@ -13798,13 +13798,13 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 		this->updatePlayerArt();
 	}
 	TodoReturn rotatePreSlopeObjects();
-	void runBallRotation(float) = win 0x36b350;
+	void runBallRotation(float) = win 0x36b350, ios 0x22eaf8;
 	void runBallRotation2() = win 0x36b5b0;
 	void runNormalRotation() {
 		this->runNormalRotation(false, 1.0f);
 	}
-	void runNormalRotation(bool, float) = win 0x9999999, m1 0x381364, mac 0x408ef0;
-	void runRotateAction(bool, int) = win 0x36b480;
+	void runNormalRotation(bool, float) = win 0x9999999, m1 0x381364, mac 0x408ef0, ios 0x22bba0;
+	void runRotateAction(bool, int) = win 0x36b480, ios 0x22d93c;
 	TodoReturn saveToCheckpoint(PlayerCheckpoint*);
 	void setSecondColor(cocos2d::ccColor3B const&) = win 0x37b3b0, m1 0x37fac8, imac 0x407090, ios 0x22a8cc;
 	void setupStreak() = win 0x366920, m1 0x37e59c, imac 0x405810;
