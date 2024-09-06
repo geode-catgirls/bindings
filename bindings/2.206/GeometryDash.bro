@@ -11644,7 +11644,7 @@ class LevelInfoLayer : cocos2d::CCLayer, LevelDownloadDelegate, LevelUpdateDeleg
 	void onLike(cocos2d::CCObject* sender) = win 0x2de4f0, imac 0x2bd8a0, m1 0x25cf1c;
 	void onLowDetailMode(cocos2d::CCObject* sender);
 	void onOwnerDelete(cocos2d::CCObject* sender);
-	void onPlay(cocos2d::CCObject* sender) = win 0x2dc520, imac 0x2bb5c0, m1 0x25acc8;
+	void onPlay(cocos2d::CCObject* sender) = win 0x2dc520, imac 0x2bb5c0, m1 0x25acc8, ios 0x2cda0;
 	void onPlayReplay(cocos2d::CCObject* sender) = imac 0x2c0430, m1 0x25f9b0;
 	void onRate(cocos2d::CCObject* sender) = win 0x2ddd70, imac 0x2c0a80, m1 0x25fff4;
 	void onRateDemon(cocos2d::CCObject* sender) = win 0x2de370, imac 0x2bda80, m1 0x25d0f8;
@@ -11663,7 +11663,7 @@ class LevelInfoLayer : cocos2d::CCLayer, LevelDownloadDelegate, LevelUpdateDeleg
 	bool shouldDownloadLevel();
 	void showSongWarning() = imac 0x2c00c0, m1 0x25f624;
 	void showUpdateAlert(UpdateResponse) = win 0x2dc060, imac 0x2bfc20, m1 0x25f1c4;
-	void tryCloneLevel(cocos2d::CCObject*) = win 0x2dd4f0, imac 0x2bdee0, m1 0x25d588;
+	void tryCloneLevel(cocos2d::CCObject*) = win 0x2dd4f0, imac 0x2bdee0, m1 0x25d588, ios 0x2f290;
 	TodoReturn tryShowAd();
 	void updateLabelValues() = win 0x2df060, imac 0x2bebc0, m1 0x25e294, ios 0x2fc38;
 	void updateSideButtons() = win 0x2de650, imac 0x2bdae0, m1 0x25d14c;
