@@ -776,7 +776,7 @@ class cocos2d::CCNode {
 	void transform() = ios 0x24c55c;
 	void transformAncestors() = ios 0x24c604;
 	void unschedule(cocos2d::SEL_SCHEDULE) = imac 0x2703c0, m1 0x216640, ios 0x24cb78;
-	void unscheduleAllSelectors() = imac 0x26ef70, m1 0x21529c;
+	void unscheduleAllSelectors() = imac 0x26ef70, m1 0x21529c, ios 0x24bd18;
 	void unscheduleUpdate() = imac 0x2702b0, m1 0x216570;
 	void updateChildIndexes();
 
@@ -907,7 +907,7 @@ class cocos2d::CCScheduler {
 	void scheduleSelector(cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, bool) = imac 0x44b660, m1 0x3bcba4;
 	void scheduleUpdateForTarget(cocos2d::CCObject*, int, bool) = imac 0x44c260, m1 0x3bd840, ios 0x1b6dbc;
 	void unscheduleAll();
-	void unscheduleAllForTarget(cocos2d::CCObject*);
+	void unscheduleAllForTarget(cocos2d::CCObject*) = ios 0x1b7380;
 	void unscheduleAllWithMinPriority(int);
 	void unscheduleScriptEntry(unsigned int);
 	void unscheduleSelector(cocos2d::SEL_SCHEDULE, cocos2d::CCObject*) = imac 0x44b190, m1 0x3bc6c0;
