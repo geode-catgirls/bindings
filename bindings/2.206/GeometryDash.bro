@@ -3489,7 +3489,7 @@ class EditorPauseLayer : CCBlockLayer, FLAlertLayerProtocol {
 	void onCreateLoop(cocos2d::CCObject* sender);
 	void onCreateTemplate(cocos2d::CCObject* sender);
 	void onExitEditor(cocos2d::CCObject* sender) = win 0xda950;
-	void onExitNoSave(cocos2d::CCObject* sender) = win 0xdaa20;
+	void onExitNoSave(cocos2d::CCObject* sender) = win 0xdaa20, ios 0x3a6fa0;
 	void onHelp(cocos2d::CCObject* sender);
 	void onKeybindings(cocos2d::CCObject* sender);
 	void onNewGroupX(cocos2d::CCObject* sender);
@@ -3499,9 +3499,9 @@ class EditorPauseLayer : CCBlockLayer, FLAlertLayerProtocol {
 	void onReGroup(cocos2d::CCObject* sender);
 	void onResetUnusedColors(cocos2d::CCObject* sender);
 	void onResume(cocos2d::CCObject* sender) = win 0xd9d40, imac 0x28f5e0, m1 0x232c7c, ios 0x3a6d94;
-	void onSave(cocos2d::CCObject* sender) = win 0xda7e0;
-	void onSaveAndExit(cocos2d::CCObject* sender) = win 0xda910, imac 0x28f6c0, m1 0x232d78;
-	void onSaveAndPlay(cocos2d::CCObject* sender) = win 0xda5a0, imac 0x28f650, m1 0x232ce8;
+	void onSave(cocos2d::CCObject* sender) = win 0xda7e0, ios 0x3a6ee4;
+	void onSaveAndExit(cocos2d::CCObject* sender) = win 0xda910, imac 0x28f6c0, m1 0x232d78, ios 0x3a6e90;
+	void onSaveAndPlay(cocos2d::CCObject* sender) = win 0xda5a0, imac 0x28f650, m1 0x232ce8, ios 0x3a6e00;
 	void onSelectAll(cocos2d::CCObject* sender) = win 0xd9470;
 	void onSelectAllLeft(cocos2d::CCObject* sender) = win 0xd95a0;
 	void onSelectAllRight(cocos2d::CCObject* sender) = win 0xd95c0;
