@@ -9830,7 +9830,7 @@ class GJSearchObject : cocos2d::CCNode {
 	static GJSearchObject* create(SearchType searchType) = win 0x16be20, m1 0x4b5d94, imac 0x567ea0, ios 0xb1dd4;
 	static GJSearchObject* createFromKey(char const* key) = win 0x16b720, imac 0x53fd90, m1 0x491f3c;
 
-	char const* getKey() = win 0x16c370, m1 0x498c5c, imac 0x547b90;
+	char const* getKey() = win 0x16c370, m1 0x498c5c, imac 0x547b90, ios 0xa0314;
 	char const* getNextPageKey();
 	GJSearchObject* getNextPageObject() = imac 0x5687d0, m1 0x4b651c;
 	GJSearchObject* getPageObject(int page) = win 0x16c4c0, imac 0x5687f0, m1 0x4b6528;
@@ -11194,9 +11194,9 @@ class LevelBrowserLayer : cocos2d::CCLayerColor, LevelManagerDelegate, FLAlertLa
 	TodoReturn deleteSelected();
 	TodoReturn exitLayer(cocos2d::CCObject*);
 	cocos2d::CCArray* getItemsMatchingSearch(cocos2d::CCArray*, gd::string, GJSearchObject*) = win 0x2bb8f0;
-	gd::string getSearchTitle() = win 0x2b8750, imac 0x4993a0, m1 0x3fdccc;
+	gd::string getSearchTitle() = win 0x2b8750, imac 0x4993a0, m1 0x3fdccc, ios 0x4211cc;
 	bool init(GJSearchObject*) = win 0x2b57d0, m1 0x3f8fc4, imac 0x494360, ios 0x41d238;
-	bool isCorrect(char const*) = win 0x2b70e0;
+	bool isCorrect(char const*) = win 0x2b70e0, ios 0x420b14;
 	void loadPage(GJSearchObject*) = win 0x2b72b0, m1 0x3fc3cc, imac 0x497710;
 	void onClearSearch(cocos2d::CCObject* sender) = win 0x2bb510;
 	void onDeleteAll(cocos2d::CCObject* sender) = win 0x2baf60;
@@ -11220,7 +11220,7 @@ class LevelBrowserLayer : cocos2d::CCLayerColor, LevelManagerDelegate, FLAlertLa
 	void onToggleAllObjects(cocos2d::CCObject* sender) = win 0x2bbfc0;
 	void reloadAllObjects();
 	void setSearchObject(GJSearchObject*) = imac 0x495d30, m1 0x3fa8f4;
-	void setupLevelBrowser(cocos2d::CCArray*) = win 0x2b8440, m1 0x3fda3c, imac 0x4990a0;
+	void setupLevelBrowser(cocos2d::CCArray*) = win 0x2b8440, m1 0x3fda3c, imac 0x4990a0, ios 0x420f38;
 	void show() = win 0x2bc7d0, m1 0x3ffc14, imac 0x49b600;
 	void updateLevelsLabel();
 	void updatePageLabel() = win 0x2b97e0;
