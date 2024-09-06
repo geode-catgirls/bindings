@@ -11147,10 +11147,10 @@ class LevelAreaInnerLayer : cocos2d::CCLayer, DialogDelegate {
 	static LevelAreaInnerLayer* create(bool) = ios 0x354118;
 
 	bool init(bool) = win 0x2b3200, imac 0x275da0, m1 0x21ba74, ios 0x3541c8;
-	void onBack(cocos2d::CCObject* sender) = win 0x2b5260, imac 0x276ac0, m1 0x21c738;
-	void onDoor(cocos2d::CCObject* sender) = win 0x2b4f70, imac 0x276b10, m1 0x21c790;
-	void onInfo(cocos2d::CCObject* sender);
-	void onNextFloor(cocos2d::CCObject* sender);
+	void onBack(cocos2d::CCObject* sender) = win 0x2b5260, imac 0x276ac0, m1 0x21c738, ios 0x354c00;
+	void onDoor(cocos2d::CCObject* sender) = win 0x2b4f70, imac 0x276b10, m1 0x21c790, ios 0x354c58;
+	void onInfo(cocos2d::CCObject* sender) = ios 0x354e8c;
+	void onNextFloor(cocos2d::CCObject* sender) = ios 0x354d84;
 	bool playStep1();
 	static cocos2d::CCScene* scene(bool) = win 0x2b30f0;
 	cocos2d::CCAction* showFloor1CompleteDialog();
