@@ -11234,8 +11234,8 @@ class LevelBrowserLayer : cocos2d::CCLayerColor, LevelManagerDelegate, FLAlertLa
 	virtual void registerWithTouchDispatcher() = win 0x2bc760, m1 0x3ffbc4, imac 0x49b5a0, ios 0x42283c;
 	virtual void keyBackClicked() = win 0x2b9aa0, m1 0x3fedb8, imac 0x49a740;
 	virtual void keyDown(cocos2d::enumKeyCodes) = win 0x2b9ac0, m1 0x3feddc, imac 0x49a780;
-	virtual void loadLevelsFinished(cocos2d::CCArray*, char const*, int) = win 0x2b8fb0, m1 0x3fe3d0, imac 0x499c80;
-	virtual void loadLevelsFailed(char const*, int) = win 0x2b90e0, m1 0x3fe500, imac 0x499de0;
+	virtual void loadLevelsFinished(cocos2d::CCArray*, char const*, int) = win 0x2b8fb0, m1 0x3fe3d0, imac 0x499c80, ios 0x421718;
+	virtual void loadLevelsFailed(char const*, int) = win 0x2b90e0, m1 0x3fe500, imac 0x499de0, ios 0x42183c;
 	virtual void setupPageInfo(gd::string, char const*) = win 0x2b9130, m1 0x3fe5ec, imac 0x499ec0;
 	virtual void onBack(cocos2d::CCObject* sender) = win 0x2b9a10, m1 0x3fed04, imac 0x49a690;
 	virtual void shareCommentClosed(gd::string, ShareCommentLayer*) = win 0x2baac0, m1 0x3ff0f8, imac 0x49aa70;
