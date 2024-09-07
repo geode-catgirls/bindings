@@ -4869,11 +4869,11 @@ class FMODAudioState {
 class FMODLevelVisualizer : cocos2d::CCNode {
 	// virtual ~FMODLevelVisualizer();
 
-	static FMODLevelVisualizer* create() = win 0x28c5d0, imac 0x2ac1c0, m1 0x24d2e4;
+	static FMODLevelVisualizer* create() = win 0x28c5d0, imac 0x2ac1c0, m1 0x24d2e4, ios 0x2f1b24;
 
-	void updateVisualizer(float, float, float) = win 0x28cb10, imac 0x2ac670, m1 0x24d7dc;
+	void updateVisualizer(float, float, float) = win 0x28cb10, imac 0x2ac670, m1 0x24d7dc, ios 0x2f1f88;
 
-	virtual bool init() = imac 0x2ac230, m1 0x24d36c;
+	virtual bool init() = imac 0x2ac230, m1 0x24d36c, ios 0x2f1ba0;
 }
 
 class FMODMusic {
