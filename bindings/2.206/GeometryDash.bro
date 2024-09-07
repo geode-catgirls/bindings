@@ -6703,7 +6703,7 @@ class GameStatsManager : cocos2d::CCNode {
 	TodoReturn getStatFromKey(StatKey);
 	TodoReturn getStoreItem(int, int);
 	TodoReturn getStoreItem(int);
-	int getTotalCollectedCurrency() = win 0x1d8e50, imac 0x750a0, m1 0x68130;
+	int getTotalCollectedCurrency() = win 0x1d8e50, imac 0x750a0, m1 0x68130, ios 0x344718;
 	int getTotalCollectedDiamonds() = win 0x1d9720, m1 0x68cf4, imac 0x75d50;
 	bool hasClaimedListReward(GJLevelList*) = win 0x1d84b0, m1 0x67584, imac 0x74400, ios 0x3440e0;
 	bool hasCompletedChallenge(GJChallengeItem*);
@@ -6746,7 +6746,7 @@ class GameStatsManager : cocos2d::CCNode {
 	void preSaveGameStats() = win 0x1e6f10;
 	TodoReturn processChallengeQueue(int) = win 0x1d81d0, imac 0x742d0, m1 0x6742c;
 	TodoReturn purchaseItem(int);
-	TodoReturn recountSpecialStats() = win 0x1d9a20, imac 0x762a0, m1 0x691e4;
+	TodoReturn recountSpecialStats() = win 0x1d9a20, imac 0x762a0, m1 0x691e4, ios 0x344ecc;
 	TodoReturn recountUserCoins(bool);
 	TodoReturn registerRewardsFromItem(GJRewardItem*);
 	TodoReturn removeChallenge(int);
@@ -6760,7 +6760,7 @@ class GameStatsManager : cocos2d::CCNode {
 	TodoReturn restorePostSync();
 	void setAwardedBonusKeys(int);
 	void setStarsForMapPack(int, int) = win 0x1d4c00;
-	void setStat(char const*, int) = win 0x1cb2f0, imac 0x658f0, m1 0x5ab70;
+	void setStat(char const*, int) = win 0x1cb2f0, imac 0x658f0, m1 0x5ab70, ios 0x33c40c;
 	void setStatIfHigher(char const*, int);
 	void setupIconCredits() = win 0x1ba150, m1 0x2b9bf4, imac 0x32a5e0;
 	TodoReturn shopTypeForItemID(int);
