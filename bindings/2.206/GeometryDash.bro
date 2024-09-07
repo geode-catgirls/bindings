@@ -5393,7 +5393,7 @@ class GameLevelManager : cocos2d::CCNode {
 	void uploadUserMessage(int, gd::string, gd::string) = win 0x155010, imac 0x556070, m1 0x4a5270, ios 0xa75b4;
 	int userIDForAccountID(int);
 	GJUserScore* userInfoForAccountID(int) = imac 0x535980, m1 0x488cd4;
-	gd::string userNameForUserID(int) = win 0x1414e0, imac 0x535320, m1 0x488848;
+	gd::string userNameForUserID(int) = win 0x1414e0, imac 0x535320, m1 0x488848, ios 0x9620c;
 	void verifyLevelState(GJGameLevel*);
 	gd::string writeSpecialFilters(GJSearchObject*) = win 0x1481b0, imac 0x5466e0, m1 0x497b60;
 
