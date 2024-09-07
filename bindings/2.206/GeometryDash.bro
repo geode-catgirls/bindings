@@ -5093,9 +5093,9 @@ class GameLevelManager : cocos2d::CCNode {
 	void deleteAccountComment(int, int);
 	void deleteComment(int, CommentType, int);
 	bool deleteFriendRequests(int, cocos2d::CCArray*, bool);
-	void deleteLevel(GJGameLevel*) = win 0x140640, imac 0x533f10, m1 0x4874e4;
+	void deleteLevel(GJGameLevel*) = win 0x140640, imac 0x533f10, m1 0x4874e4, ios 0x95684;
 	void deleteLevelComment(int, int);
-	void deleteLevelList(GJLevelList*) = win 0x140ef0, m1 0x487d30, imac 0x534810;
+	void deleteLevelList(GJLevelList*) = win 0x140ef0, m1 0x487d30, imac 0x534810, ios 0x95c08;
 	bool deleteSentFriendRequest(int) = imac 0x55bc60, m1 0x4aa8d0;
 	void deleteServerLevel(int) = win 0x14eb70, imac 0x54e760, m1 0x49e9a0;
 	void deleteServerLevelList(int);
@@ -5776,7 +5776,7 @@ class GameManager : GManager {
 	TodoReturn saveDPadLayout(int, bool);
 	void setGameVariable(char const*, bool) = win 0x179e80, imac 0x3854a0, m1 0x30f154, ios 0x32991c;
 	void setHasRatingPower(int);
-	void setIntGameVariable(char const*, int) = win 0x17a5e0, imac 0x385a80, m1 0x30f7c0;
+	void setIntGameVariable(char const*, int) = win 0x17a5e0, imac 0x385a80, m1 0x30f7c0, ios 0x329c7c;
 	void setPlayerUserID(int);
 	void setUGV(char const*, bool) = win 0x17a310, m1 0x30f4a0, imac 0x3857c0, ios 0x329ab0;
 	void setupGameAnimations() = win 0x1a1830;
@@ -5810,11 +5810,12 @@ class GameManager : GManager {
 	TodoReturn verifySyncedCoins();
 	TodoReturn videoAdHidden();
 	TodoReturn videoAdShowed();
-	virtual void update(float) = win 0x17ff60, m1 0x315d5c, imac 0x38cd80;
-	virtual bool init() = win 0x172b80, m1 0x303cd0, imac 0x378600;
-	virtual void encodeDataTo(DS_Dictionary*) = win 0x17f3a0, m1 0x3151c4, imac 0x38c1d0;
-	virtual void dataLoaded(DS_Dictionary*) = win 0x17d3e0, m1 0x3135bc, imac 0x38a360;
-	virtual void firstLoad() = win 0x17eae0, m1 0x3149bc, imac 0x38b8c0;
+
+	virtual void update(float) = win 0x17ff60, m1 0x315d5c, imac 0x38cd80, ios 0x32de44;
+	virtual bool init() = win 0x172b80, m1 0x303cd0, imac 0x378600, ios 0x322a34;
+	virtual void encodeDataTo(DS_Dictionary*) = win 0x17f3a0, m1 0x3151c4, imac 0x38c1d0, ios 0x32d610;
+	virtual void dataLoaded(DS_Dictionary*) = win 0x17d3e0, m1 0x3135bc, imac 0x38a360, ios 0x32bd34;
+	virtual void firstLoad() = win 0x17eae0, m1 0x3149bc, imac 0x38b8c0, ios 0x32d0f0;
 
 	cocos2d::CCDictionary* m_unkAnimationDict;
 	cocos2d::CCDictionary* m_unkAnimationDict2;
@@ -8542,7 +8543,7 @@ class GJGameLevel : cocos2d::CCNode {
 	TodoReturn getNormalPercent() = ios 0x95830;
 	TodoReturn getSongName();
 	gd::string getUnpackedLevelDescription() = win 0x1678e0, imac 0x566710, m1 0x4b47dc;
-	void handleStatsConflict(GJGameLevel*) = win 0x167410, imac 0x543750, m1 0x495334;
+	void handleStatsConflict(GJGameLevel*) = win 0x167410, imac 0x543750, m1 0x495334, ios 0x9e3d8;
 	inline bool isPlatformer() {
 		return m_levelLength == 5;
 	}
@@ -12463,15 +12464,15 @@ class LocalLevelManager : GManager {
 	gd::string getMainLevelString(int) = win 0x30f930;
 	TodoReturn markLevelsAsUnmodified();
 	TodoReturn moveLevelToTop(GJGameLevel*);
-	TodoReturn reorderLevels();
+	TodoReturn reorderLevels() = ios 0x1d28d8;
 	TodoReturn tryLoadMainLevelString(int) = ios 0x1d1db8;
-	TodoReturn updateLevelOrder() = win 0x30ff30;
-	TodoReturn updateLevelRevision() = win 0x30fba0, m1 0x528ad0, imac 0x601f90;
+	TodoReturn updateLevelOrder() = win 0x30ff30, ios 0x1d26b4;
+	TodoReturn updateLevelRevision() = win 0x30fba0, m1 0x528ad0, imac 0x601f90, ios 0x1d23b4;
 
-	virtual bool init() = win 0x30f670, m1 0x527fcc, imac 0x6012b0;
-	virtual void encodeDataTo(DS_Dictionary*) = win 0x310040, m1 0x52936c, imac 0x6028e0;
-	virtual void dataLoaded(DS_Dictionary*) = win 0x3100a0, m1 0x5293c4, imac 0x602940;
-	virtual void firstLoad() = win 0x30ffb0, m1 0x5292f0, imac 0x602850;
+	virtual bool init() = win 0x30f670, m1 0x527fcc, imac 0x6012b0, ios 0x1d1d78;
+	virtual void encodeDataTo(DS_Dictionary*) = win 0x310040, m1 0x52936c, imac 0x6028e0, ios 0x1d2a7c;
+	virtual void dataLoaded(DS_Dictionary*) = win 0x3100a0, m1 0x5293c4, imac 0x602940, ios 0x1d2ad4;
+	virtual void firstLoad() = win 0x30ffb0, m1 0x5292f0, imac 0x602850, ios 0x1d29b4;
 
 	cocos2d::CCArray* m_localLevels;
 	cocos2d::CCArray* m_localLists;
