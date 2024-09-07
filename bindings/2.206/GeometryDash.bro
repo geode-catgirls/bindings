@@ -7568,7 +7568,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	void teleportPlayer(TeleportPortalObject*, PlayerObject*) = win 0x200b70, m1 0xf2288, imac 0x114ca0;
 	TodoReturn testInstantCountTrigger(int, int, int, bool, int, gd::vector<int> const&, int, int);
 	void toggleAudioVisualizer(bool) = win 0x237b90, imac 0x1047d0, m1 0xe4b14;
-	void toggleDualMode(GameObject*, bool, PlayerObject*, bool) = win 0x207160, m1 0xf5020, imac 0x117fa0;
+	void toggleDualMode(GameObject*, bool, PlayerObject*, bool) = win 0x207160, m1 0xf5020, imac 0x117fa0, ios 0x1f0330;
 	void toggleFlipped(bool, bool) = win 0x235880, imac 0x11c4e0, m1 0xf8868, ios 0x1f34a8;
 	void toggleGroup(int, bool) = imac 0x131520, m1 0x1095c0;
 	TodoReturn toggleLockPlayer(bool, bool) = win 0x37d510;
