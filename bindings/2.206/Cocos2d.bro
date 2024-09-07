@@ -2228,7 +2228,7 @@ class cocos2d::CCString {
 	//createWithContentsOfFile = ios 0x278b74;
 
 	bool boolValue() const = ios 0x278884, m1 0x6bd840, imac 0x7b7080;
-	int intValue() const = imac 0x7b6f90, m1 0x6bd754; // ios 0x2787d4;
+	int intValue() const = imac 0x7b6f90, m1 0x6bd754, ios 0x2787d4;
 }
 
 [[link(win, android)]]
