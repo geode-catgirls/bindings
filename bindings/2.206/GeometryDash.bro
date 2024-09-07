@@ -5018,7 +5018,7 @@ class FriendsProfilePage : FLAlertLayer, FLAlertLayerProtocol, UploadActionDeleg
 	void onBlocked(cocos2d::CCObject* sender) = imac 0x664e20, m1 0x58107c;
 	void onClose(cocos2d::CCObject* sender) = win 0x13c6b0, imac 0x664d60, m1 0x580fc4;
 	void onUpdate(cocos2d::CCObject* sender) = imac 0x664eb0, m1 0x581108;
-	void setupUsersBrowser(cocos2d::CCArray* users, UserListType type) = win 0x13bf40, imac 0x664f20, m1 0x58116c;
+	void setupUsersBrowser(cocos2d::CCArray* users, UserListType type) = win 0x13bf40, imac 0x664f20, m1 0x58116c, ios 0x1e3024;
 
 	virtual void registerWithTouchDispatcher() = m1 0x581780, imac 0x665540, ios 0x1e34dc;
 	virtual void keyBackClicked() = win 0x13c770, m1 0x581774, imac 0x665510;
@@ -5206,7 +5206,7 @@ class GameLevelManager : cocos2d::CCNode {
 	}
 	char const* getUploadMessageKey(int);
 	char const* getUserInfoKey(int);
-	void getUserList(UserListType) = win 0x15c5e0, m1 0x4aca14, imac 0x55df10;
+	void getUserList(UserListType) = win 0x15c5e0, m1 0x4aca14, imac 0x55df10, ios 0xab85c;
 	void getUserMessages(bool, int, int);
 	void getUsers(GJSearchObject*) = win 0x153920, m1 0x4a32f0, imac 0x553eb0;
 	void gotoLevelPage(GJGameLevel*) = win 0x143f60;
