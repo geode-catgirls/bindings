@@ -2265,10 +2265,10 @@ class CommentCell : TableViewCell, LikeItemDelegate, FLAlertLayerProtocol {
 	TodoReturn incrementDislikes();
 	TodoReturn incrementLikes();
 	void loadFromComment(GJComment*) = win 0xb3790, imac 0x242fa0, m1 0x1edab0, ios 0x1075b0;
-	void onConfirmDelete(cocos2d::CCObject* sender) = win 0xb5be0, imac 0x250bc0, m1 0x1fa59c;
+	void onConfirmDelete(cocos2d::CCObject* sender) = win 0xb5be0, imac 0x250bc0, m1 0x1fa59c, ios 0x1122e0;
 	TodoReturn onDelete();
 	void onGoToLevel(cocos2d::CCObject* sender) = imac 0x2509f0, m1 0x1fa408;
-	void onLike(cocos2d::CCObject* sender) = win 0xb5980, imac 0x250ac0, m1 0x1fa4bc;
+	void onLike(cocos2d::CCObject* sender) = win 0xb5980, imac 0x250ac0, m1 0x1fa4bc, ios 0x112200;
 	TodoReturn onUndelete();
 
 	void onUnhide(cocos2d::CCObject* sender) = imac 0x250aa0, m1 0x1fa4b0;
@@ -2276,10 +2276,10 @@ class CommentCell : TableViewCell, LikeItemDelegate, FLAlertLayerProtocol {
 	void updateBGColor(int) = ios 0x108fdc;
 	void updateLabelValues();
 
-	virtual bool init() = win 0xb3770, m1 0x1fa3bc, imac 0x250990;
-	virtual void draw() = m1 0x1fa684, imac 0x250CB0;
-	virtual void likedItem(LikeItemType, int, bool) = win 0xb5ae0, m1 0x1fa730, imac 0x250d80;
-	virtual void FLAlert_Clicked(FLAlertLayer*, bool) = win 0xb5d50, m1 0x1faaac, imac 0x251120;
+	virtual bool init() = win 0xb3770, m1 0x1fa3bc, imac 0x250990, ios 0x112100;
+	virtual void draw() = m1 0x1fa684, imac 0x250CB0, ios 0x11239c;
+	virtual void likedItem(LikeItemType, int, bool) = win 0xb5ae0, m1 0x1fa730, imac 0x250d80, ios 0x112448;
+	virtual void FLAlert_Clicked(FLAlertLayer*, bool) = win 0xb5d50, m1 0x1faaac, imac 0x251120, ios 0x1125c0;
 
 	cocos2d::CCSprite* m_iconSprite;
 	cocos2d::CCLabelBMFont* m_likeLabel;
@@ -5218,7 +5218,7 @@ class GameLevelManager : cocos2d::CCNode {
 	bool hasDownloadedList(int);
 	bool hasLikedAccountItem(LikeItemType, int, bool, int) = imac 0x55fa60, m1 0x4ae4b0;
 	bool hasLikedItem(LikeItemType, int, bool, int) = win 0x15e9c0, imac 0x55f970, m1 0x4ae3b0;
-	bool hasLikedItemFullCheck(LikeItemType, int, int) = win 0x15e930, imac 0x55f170, m1 0x4adaf4;
+	bool hasLikedItemFullCheck(LikeItemType, int, int) = win 0x15e930, imac 0x55f170, m1 0x4adaf4, ios 0xac234;
 	bool hasRatedDemon(int) = win 0x14eaa0, imac 0x54e670, m1 0x49e8a8;
 	bool hasRatedLevelStars(int) = win 0x14e9d0, imac 0x54e2c0, m1 0x49e4e8;
 	bool hasReportedLevel(int) = win 0x1623f0, m1 0x4afe74, imac 0x561500;
@@ -12302,7 +12302,7 @@ class LikeItemDelegate {
 class LikeItemLayer : FLAlertLayer {
 	// virtual ~LikeItemLayer();
 
-	static LikeItemLayer* create(LikeItemType, int, int) = win 0x30d400, imac 0x603930, m1 0x52a0d0;
+	static LikeItemLayer* create(LikeItemType, int, int) = win 0x30d400, imac 0x603930, m1 0x52a0d0, ios 0x25c37c;
 
 	bool init(LikeItemType, int, int) = win 0x30d500, imac 0x603aa0, m1 0x52a1f4;
 	void onClose(cocos2d::CCObject* sender) = imac 0x603e70, m1 0x52a5a8;
