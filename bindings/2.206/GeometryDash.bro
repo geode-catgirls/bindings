@@ -6039,7 +6039,7 @@ class GameObject : CCSpritePlus {
 		m_isDisabled2 = true;
 		setOpacity(0);
 	}
-	void determineSlopeDirection() = win 0x192300, imac 0x5c6ad0, m1 0x4f5cf0;
+	void determineSlopeDirection() = win 0x192300, imac 0x5c6ad0, m1 0x4f5cf0, ios 0x26ca54;
 	bool didScaleXChange();
 	bool didScaleYChange();
 	void dirtifyObjectPos();
