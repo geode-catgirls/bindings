@@ -5089,7 +5089,7 @@ class GameLevelManager : cocos2d::CCNode {
 	GJLevelList* createNewLevelList() = win 0x140910, m1 0x4877e8, imac 0x534200;
 	TodoReturn createPageInfo(int, int, int);
 	GJSmartTemplate* createSmartTemplate();
-	void dataLoaded(DS_Dictionary*) = win 0x145db0, imac 0x542370, m1 0x4941e4;
+	void dataLoaded(DS_Dictionary*) = win 0x145db0, imac 0x542370, m1 0x4941e4, ios 0x9d8a4;
 	void deleteAccountComment(int, int);
 	void deleteComment(int, CommentType, int);
 	bool deleteFriendRequests(int, cocos2d::CCArray*, bool);
@@ -5368,7 +5368,7 @@ class GameLevelManager : cocos2d::CCNode {
 	void storeUserInfo(GJUserScore*);
 	void storeUserMessage(GJUserMessage*);
 	void storeUserMessageReply(int, GJUserMessage*);
-	void storeUserName(int userID, int accountID, gd::string userName) = win 0x141300, imac 0x5350e0, m1 0x4885f4;
+	void storeUserName(int userID, int accountID, gd::string userName) = win 0x141300, imac 0x5350e0, m1 0x4885f4, ios 0x960c8;
 	void storeUserNames(gd::string usernameString) = imac 0x534950, m1 0x487e98;
 	void submitUserInfo();
 	void suggestLevelStars(int, int, int);
@@ -5382,7 +5382,7 @@ class GameLevelManager : cocos2d::CCNode {
 	void updateLevelOrders() = m1 0x48e7fc, imac 0x53c220;
 	void updateLevelRewards(GJGameLevel*) = win 0x1419b0, m1 0x488e90, imac 0x535b80;
 	void updateSavedLevelList(GJLevelList*);
-	void updateUsernames() = imac 0x540eb0, m1 0x492e9c;
+	void updateUsernames() = imac 0x540eb0, m1 0x492e9c, ios 0x9ca80;
 	void updateUserScore() = win 0x14ffb0, imac 0x54f880, m1 0x49f9d0, ios 0xa4158;
 	void uploadAccountComment(gd::string);
 	void uploadComment(gd::string, CommentType, int, int);
