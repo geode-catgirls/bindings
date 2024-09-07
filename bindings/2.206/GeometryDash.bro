@@ -11838,7 +11838,7 @@ class LevelListLayer : LevelBrowserLayer, TextInputDelegate, SelectListIconDeleg
 
 	virtual void onEnter() = win 0x2e4c20, m1 0x2ed43c, imac 0x35ff50;
 	virtual void onExit() = win 0x2e4c50, m1 0x2ed474, imac 0x35ff80;
-	virtual void loadLevelsFinished(cocos2d::CCArray*, char const*, int) = win 0x2e63a0, m1 0x2ed888, imac 0x360390;
+	virtual void loadLevelsFinished(cocos2d::CCArray*, char const*, int) = win 0x2e63a0, m1 0x2ed888, imac 0x360390, ios 0x255b2c;
 	virtual void loadLevelsFailed(char const*, int) = win 0x2b90e0, m1 0x2edb20, imac 0x360630;
 	virtual void onBack(cocos2d::CCObject* sender) = win 0x2e6c00, m1 0x2edf8c, imac 0x360b70;
 	virtual void shareCommentClosed(gd::string, ShareCommentLayer*) = win 0x2e7400, m1 0x2ee934, imac 0x361580;
