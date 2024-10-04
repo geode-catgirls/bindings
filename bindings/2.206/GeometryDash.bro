@@ -6035,7 +6035,7 @@ class GameObject : CCSpritePlus {
 	static GameObject* createWithFrame(char const* name) = win 0x183c60, imac 0x5aa890, m1 0x4ecf80;
 	static GameObject* createWithKey(int) = win 0x181810, imac 0x5a5d30, m1 0x4ecab8, ios 0x264004;
 	void deselectObject(); // = win 0x141b70; actually updateObjectEditorColor, source: LevelEditorLayer::updateVisibility
-	inline void destroyObject() { //  = ios 0x26bd7c
+	void destroyObject() = ios 0x26bd7c {
 		m_isDisabled = true;
 		m_isDisabled2 = true;
 		setOpacity(0);
