@@ -418,7 +418,7 @@ class cocos2d::CCParticleSystem {
 	void calculateWorldSpace();
 	bool isFull();
 	void loadDefaults();
-	void loadScaledDefaults(float);
+	void loadScaledDefaults(float) = ios 0x1a2138;
 	void resetSystem() = m1 0x6dac50, imac 0x7d6b20;
 	void resumeSystem() = m1 0x6dac44, imac 0x7d6b10;
 	void saveDefaults();
