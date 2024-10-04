@@ -7347,7 +7347,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn generateSpawnRemap();
 	TodoReturn generateTargetGroups();
 	TodoReturn generateVisibilityGroups();
-	TodoReturn getActiveOrderSpawnObjects();
+	TodoReturn getActiveOrderSpawnObjects() = ios 0x1f65ac;
 	float getAreaObjectValue(EnterEffectInstance*, GameObject*, cocos2d::CCPoint&, bool&) = win 0x2188d0;
 	TodoReturn getBumpMod(PlayerObject*, int);
 	TodoReturn getCameraEdgeValue(int);
@@ -7360,7 +7360,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn getFollowSpeedVal(GameObject*, int, int, float, float);
 	float getGroundHeight(PlayerObject*, int);
 	TodoReturn getGroundHeightForMode(int) = win 0x2028b0;
-	TodoReturn getGroup(int) = win 0x214a70;
+	TodoReturn getGroup(int) = win 0x214a70, ios 0x1ec63c;
 	TodoReturn getGroupParent(int);
 	TodoReturn getGroupParentsString(GameObject*);
 	TodoReturn getItemValue(int, int);
@@ -7369,7 +7369,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	float getMinPortalY() = win 0x2041f0;
 	float getModifiedDelta(float) = win 0x227730, imac 0x147090, m1 0x11a488, ios 0x2092f0;
 	TodoReturn getMoveTargetDelta(EffectGameObject*, bool);
-	TodoReturn getOptimizedGroup(int);
+	TodoReturn getOptimizedGroup(int) = ios 0x1fc964;
 	PlayerObject* getOtherPlayer(PlayerObject*) = ios 0x1efb58;
 	TodoReturn getParticleKey(int, char const*, int, cocos2d::tCCPositionType);
 	TodoReturn getParticleKey2(gd::string);
@@ -7384,7 +7384,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn getScaledGroundHeight(float);
 	TodoReturn getSingleGroupObject(int);
 	TodoReturn getSpecialKey(int, bool, bool);
-	TodoReturn getStaticGroup(int);
+	TodoReturn getStaticGroup(int) = ios 0x1fc9cc;
 	TodoReturn getStickyGroup(int);
 	TodoReturn getTargetFlyCameraY(GameObject*);
 	TodoReturn getTargetGroup(int, int);
@@ -7416,7 +7416,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	GJGameEvent objectTypeToGameEvent(int) = win 0x222520, imac 0x118d00, m1 0xf5ca0;
 	TodoReturn optimizeMoveGroups();
 	TodoReturn orderSpawnObjects() = ios 0x212024;
-	TodoReturn parentForZLayer(int, bool, int, int);
+	TodoReturn parentForZLayer(int, bool, int, int) = ios 0x1ed778;
 	void pauseAudio() = win 0x227430, imac 0x146fa0, m1 0x11a3b8, ios 0x209244;
 	TodoReturn performMathOperation(double, double, int);
 	TodoReturn performMathRounding(double, int);
@@ -7424,7 +7424,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn playAnimationCommand(int, int);
 	bool playerCircleCollision(PlayerObject*, GameObject*) = win 0x202950;
 	TodoReturn playerIntersectsCircle(PlayerObject*, GameObject*);
-	void playerTouchedObject(PlayerObject*, GameObject*);
+	void playerTouchedObject(PlayerObject*, GameObject*) = ios 0xfa368;
 	void playerTouchedRing(PlayerObject*, RingObject*) = win 0x2086d0, imac 0x11ca30, m1 0xf8dd0;
 	void playerTouchedTrigger(PlayerObject*, EffectGameObject*) = win 0x2087e0;
 	TodoReturn playerWasTouchingObject(PlayerObject*, GameObject*);
@@ -7628,7 +7628,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn updateGuideArt() = win 0x235770;
 	TodoReturn updateInternalCamOffsetX(float, float, float);
 	TodoReturn updateInternalCamOffsetY(float, float, float);
-	void updateKeyframeOrder(int) = m1 0x115808, imac 0x140640;
+	void updateKeyframeOrder(int) = m1 0x115808, imac 0x140640, ios 0x205b28;
 	TodoReturn updateLayerCapacity(gd::string) = ios 0x1e8678;
 	TodoReturn updateLegacyLayerCapacity(int, int, int, int);
 	void updateLevelColors() = win 0x1fd240, imac 0x1078c0, m1 0xe7890, ios 0x1e7968;
@@ -13733,8 +13733,8 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 		return this->handleRotatedCollisionInternal(p0, p1, p2, p3, false, false);
 	}
 	TodoReturn handleRotatedSlopeCollision(float, GameObject*, bool);
-	TodoReturn hardFlipGravity();
-	void hitGround(GameObject*, bool) = win 0x379f40, m1 0x38b4b4, imac 0x415160;
+	TodoReturn hardFlipGravity() = ios 0x234ea0;
+	void hitGround(GameObject*, bool) = win 0x379f40, m1 0x38b4b4, imac 0x415160, ios 0x233c28;
 	TodoReturn hitGroundNoJump(GameObject*, bool);
 	void incrementJumps() = win 0x36acd0, imac 0x40c980, m1 0x38487c, ios 0x22e558;
 	bool init(int, int, GJBaseGameLayer*, cocos2d::CCLayer*, bool) = win 0x364970, m1 0x37c678, imac 0x403590, ios 0x227dd4;
@@ -13742,7 +13742,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	bool isFlying() = imac 0x40a810, m1 0x38285c, ios 0x22cc90;
 	bool isInBasicMode();
 	bool isInNormalMode() = ios 0x22bb58;
-	bool isSafeFlip(float) = m1 0x38b488, imac 0x415120;
+	bool isSafeFlip(float) = m1 0x38b488, imac 0x415120, ios 0x233bfc;
 	bool isSafeHeadTest();
 	bool isSafeMode(float);
 	bool isSafeSpiderFlip(float);
@@ -13769,7 +13769,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void playSpawnEffect() = win 0x3754b0, imac 0x41c710, m1 0x391bb4, ios 0x237974;
 	void playSpiderDashEffect(cocos2d::CCPoint from, cocos2d::CCPoint to) = win 0x373200, imac 0x417a50, m1 0x38d940, ios 0x235aac;
 	void postCollision(float) = win 0x36b6b0, m1 0x385734, imac 0x40d9d0;
-	void preCollision() = m1 0x3855d8, imac 0x40d7d0;
+	void preCollision() = m1 0x3855d8, imac 0x40d7d0, ios 0x22ed60;
 	bool preSlopeCollision(float, GameObject*) = win 0x36d370;
 	void propellPlayer(float, bool, int) = win 0x37d860, imac 0x424240, m1 0x398e28;
 	void pushButton(PlayerButton) = win 0x375f70, imac 0x41d330, m1 0x27f4b0, ios 0x2381e0;
@@ -13853,7 +13853,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn unrotatePreSlopeObjects();
 	TodoReturn updateCheckpointMode(bool);
 	TodoReturn updateCheckpointTest();
-	void updateCollide(PlayerCollisionDirection, GameObject*) = win 0x372080, m1 0x38bb70, imac 0x415900;
+	void updateCollide(PlayerCollisionDirection, GameObject*) = win 0x372080, m1 0x38bb70, imac 0x415900, ios 0x234208;
 	void updateCollideBottom(float, GameObject*);
 	void updateCollideLeft(float, GameObject*);
 	void updateCollideRight(float, GameObject*);
@@ -17863,7 +17863,7 @@ class SpawnTriggerGameObject : EffectGameObject {
 	TodoReturn addRemap(int, int);
 	TodoReturn changeRemap(int, int, bool);
 	TodoReturn removeRemap(int, int);
-	TodoReturn updateRemapKeys(gd::vector<int> const&);
+	TodoReturn updateRemapKeys(gd::vector<int> const&) = ios 0x397a78;
 
 	virtual bool init() = m1 0x186cf8, imac 0x1ccca0;
 	virtual void triggerObject(GJBaseGameLayer*, int, gd::vector<int> const*) = m1 0x186fc4, imac 0x1cd010;
