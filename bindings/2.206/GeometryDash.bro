@@ -5670,7 +5670,7 @@ class GameManager : GManager {
 	}
 
 	void getFontFile(int) = imac 0x384950, m1 0x30e59c, ios 0x328d74;
-	TodoReturn getFontTexture(int);
+	TodoReturn getFontTexture(int) = ios 0x328de0;
 	bool getGameVariable(char const*) = win 0x17a0e0, imac 0x378d40, m1 0x304480, ios 0x322f5c;
 	TodoReturn getGTexture(int) = ios 0x3298d0;
 	int getIconRequestID() = ios 0x328cb8 {
@@ -5678,7 +5678,7 @@ class GameManager : GManager {
 	}
 	int getIntGameVariable(char const*) = win 0x17a6e0, imac 0x385ba0, m1 0x30f8f0, ios 0x329d2c;
 	gd::string getMenuMusicFile() = win 0x172db0, ios 0x322c64, imac 0x378890, m1 0x303f34;
-	TodoReturn getMGTexture(int);
+	TodoReturn getMGTexture(int) = ios 0x329884;
 	TodoReturn getNextUniqueObjectKey();
 	TodoReturn getNextUsedKey(int, bool);
 	TodoReturn getOrderedCustomObjectKeys();
@@ -5700,7 +5700,7 @@ class GameManager : GManager {
 	}
 	TodoReturn levelIsPremium(int, int);
 	TodoReturn likeFacebook();
-	void loadBackground(int) = win 0x179870, imac 0x384b90, m1 0x30e7ec;
+	void loadBackground(int) = win 0x179870, imac 0x384b90, m1 0x30e7ec, ios 0x328fc4;
 	void loadBackgroundAsync(int);
 
 	void loadDeathEffect(int id) = imac 0x384a10, m1 0x30e674, ios 0x328e4c, win inline {
@@ -5987,7 +5987,7 @@ class GameObject : CCSpritePlus {
 	// virtual ~GameObject();
 	GameObject() = win 0x133690;
 
-	void addColorSprite(gd::string) = win 0x1847f0, imac 0x5ad230, m1 0x4edac4;
+	void addColorSprite(gd::string) = win 0x1847f0, imac 0x5ad230, m1 0x4edac4, ios 0x2650fc;
 	void addColorSpriteToParent(bool);
 	void addColorSpriteToSelf();
 	cocos2d::CCSprite* addCustomBlackChild(gd::string, float, bool);
@@ -6035,7 +6035,7 @@ class GameObject : CCSpritePlus {
 	static GameObject* createWithFrame(char const* name) = win 0x183c60, imac 0x5aa890, m1 0x4ecf80;
 	static GameObject* createWithKey(int) = win 0x181810, imac 0x5a5d30, m1 0x4ecab8, ios 0x264004;
 	void deselectObject(); // = win 0x141b70; actually updateObjectEditorColor, source: LevelEditorLayer::updateVisibility
-	inline void destroyObject() {
+	inline void destroyObject() = ios 0x26bd7c {
 		m_isDisabled = true;
 		m_isDisabled2 = true;
 		setOpacity(0);
@@ -6142,13 +6142,13 @@ class GameObject : CCSpritePlus {
 	bool shouldBlendColor(GJSpriteColor*, bool);
 	bool shouldLockX();
 	bool shouldNotHideAnimFreeze();
-	bool shouldShowPickupEffects();
+	bool shouldShowPickupEffects() = ios 0x357df4;
 	bool slopeFloorTop() = ios 0x271218;
 	bool slopeWallLeft();
 	double slopeYPos(cocos2d::CCRect) = ios 0x271234;
 	double slopeYPos(float) = win 0x1973f0;
 	double slopeYPos(GameObject*);
-	void spawnDefaultPickupParticle(GJBaseGameLayer*);
+	void spawnDefaultPickupParticle(GJBaseGameLayer*) = ios 0x357e60;
 	void updateBlendMode();
 	void updateCustomColorType(short);
 	void updateCustomScaleX(float) = win 0x18e690, imac 0x5b24b0, m1 0x4ee91c;
@@ -6722,7 +6722,7 @@ class GameStatsManager : cocos2d::CCNode {
 	bool hasCompletedStarLevel(GJGameLevel*) = ios 0x340ef4;
 	bool hasPendingUserCoin(char const*) = win 0x1d5a00, m1 0x63484, imac 0x6f5b0, ios 0x342124;
 	bool hasRewardBeenCollected(GJRewardType, int);
-	bool hasSecretCoin(char const*) = win 0x1d5ac0, imac 0x6cd60, m1 0x60c9c;
+	bool hasSecretCoin(char const*) = win 0x1d5ac0, imac 0x6cd60, m1 0x60c9c, ios 0x3409cc;
 	bool hasUserCoin(char const*) = win 0x1d5880, m1 0x6356c, imac 0x6f690, ios 0x342194;
 	TodoReturn incrementActivePath(int);
 	TodoReturn incrementChallenge(GJChallengeType, int) = win 0x1d7970;
@@ -6769,12 +6769,12 @@ class GameStatsManager : cocos2d::CCNode {
 	TodoReturn starsForMapPack(int);
 	TodoReturn storeChallenge(int, GJChallengeItem*);
 	TodoReturn storeChallengeTime(int);
-	TodoReturn storePendingUserCoin(char const*);
+	TodoReturn storePendingUserCoin(char const*) = ios 0x342270;
 	TodoReturn storeQueuedChallenge(int, GJChallengeItem*);
 	TodoReturn storeRewardState(GJRewardType, int, int, gd::string);
 	TodoReturn storeSecondaryQueuedChallenge(int, GJChallengeItem*);
-	TodoReturn storeSecretCoin(char const*);
-	void storeUserCoin(char const*);
+	TodoReturn storeSecretCoin(char const*) = ios 0x3422dc;
+	void storeUserCoin(char const*) = ios 0x342204;
 	TodoReturn tempClear();
 	void toggleEnableItem(UnlockType, int, bool) = win 0x1dad90, m1 0x6b1cc, imac 0x78870, ios 0x345e18;
 	void tryFixPathBug() = win 0x1ca870;
@@ -7547,8 +7547,8 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn sortStickyGroups();
 	void spawnGroupTriggered(int groupID, float, bool, gd::vector<int> const&, int, int);
 	TodoReturn spawnObjectsInOrder(cocos2d::CCArray*, double, gd::vector<int> const&, int, int);
-	void spawnParticle(char const*, int, cocos2d::tCCPositionType, cocos2d::CCPoint);
-	TodoReturn spawnParticleTrigger(int, cocos2d::CCPoint, float, float);
+	void spawnParticle(char const*, int, cocos2d::tCCPositionType, cocos2d::CCPoint) = ios 0x20eda0;
+	TodoReturn spawnParticleTrigger(int, cocos2d::CCPoint, float, float) = ios 0x1f3d68;
 	TodoReturn spawnParticleTrigger(SpawnParticleGameObject*);
 	TodoReturn spawnPlayer2();
 	TodoReturn speedForShaderTarget(int) = win 0x213df0;
@@ -8382,7 +8382,7 @@ class GJEffectManager : cocos2d::CCNode {
 	TodoReturn getSaveString();
 	TodoReturn getTempGroupCommand();
 	TodoReturn handleObjectCollision(bool, int, int);
-	TodoReturn hasActiveDualTouch();
+	bool hasActiveDualTouch() = ios 0x15328;
 	TodoReturn hasBeenTriggered(int, int);
 	TodoReturn hasPulseEffectForGroupID(int);
 	bool isGroupEnabled(int) = imac 0x2e64b0, m1 0x27f38c;
@@ -8532,7 +8532,7 @@ class GJGameLevel : cocos2d::CCNode {
 	TodoReturn generateSettingsString();
 	gd::string getAudioFileName() = win 0x164b80, m1 0x4b1710, imac 0x562f90, ios 0xae6c0;
 	int getAverageDifficulty() = win 0x1649c0, m1 0x4b14cc, imac 0x562d50;
-	char const* getCoinKey(int coinNumber) {
+	char const* getCoinKey(int coinNumber) = ios 0xa60d4 {
 		if(m_dailyID > 0) return cocos2d::CCString::createWithFormat("%i_%i_%i", m_levelID.value(), coinNumber, m_dailyID.value())->getCString();
 		if(m_gauntletLevel) return cocos2d::CCString::createWithFormat("%i_%i_g", m_levelID.value(), coinNumber)->getCString();
 		return cocos2d::CCString::createWithFormat("%i_%i", m_levelID.value(), coinNumber)->getCString();
@@ -9261,15 +9261,15 @@ class GJMessagePopup : FLAlertLayer, UploadActionDelegate, UploadPopupDelegate, 
 class GJMGLayer : cocos2d::CCLayer {
 	// virtual ~GJMGLayer();
 
-	static GJMGLayer* create(int);
+	static GJMGLayer* create(int) = ios 0x33014;
 
 	TodoReturn deactivateGround();
-	bool init(int);
-	void loadGroundSprites(int, bool);
+	bool init(int) = ios 0x330e4;
+	void loadGroundSprites(int, bool) = ios 0x3344c;
 	TodoReturn scaleGround(float);
 	TodoReturn toggleVisible01(bool);
 	TodoReturn toggleVisible02(bool);
-	TodoReturn updateGroundColor(cocos2d::ccColor3B, bool);
+	TodoReturn updateGroundColor(cocos2d::ccColor3B, bool) = ios 0x33608;
 	TodoReturn updateGroundOpacity(unsigned char, bool);
 	TodoReturn updateGroundPos(cocos2d::CCPoint);
 	TodoReturn updateGroundWidth(bool);
@@ -13704,7 +13704,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	TodoReturn disablePlayerControls();
 	void disableSwingFire() = win 0x378f10, m1 0x3924d4, imac 0x41d060, ios 0x238034;
 	void doReversePlayer(bool) = win 0x376540, m1 0x383584, imac 0x40b5e0, ios 0x22d77c;
-	void enableCustomGlowColor(cocos2d::_ccColor3B const& color) {
+	void enableCustomGlowColor(cocos2d::_ccColor3B const& color) = ios 0x23c404 {
 		m_hasCustomGlowColor = true;
 		m_glowColor = color;
 	}
@@ -13851,7 +13851,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
 	void tryPlaceCheckpoint();
 	TodoReturn unrotateGameplayObject(GameObject*) = win 0x36f770;
 	TodoReturn unrotatePreSlopeObjects();
-	TodoReturn updateCheckpointMode(bool);
+	TodoReturn updateCheckpointMode(bool) = ios 0x2299d4;
 	TodoReturn updateCheckpointTest();
 	void updateCollide(PlayerCollisionDirection, GameObject*) = win 0x372080, m1 0x38bb70, imac 0x415900, ios 0x234208;
 	void updateCollideBottom(float, GameObject*);
