@@ -2660,7 +2660,7 @@ class cocos2d::ZipUtils {
 	static void ccSetPvrEncryptionKeyPart(int, unsigned int);
 	static gd::string compressString(gd::string const&, bool, int) = m1 0x1b0f10, imac 0x1ff430, ios 0x24da38;
 	static gd::string decompressString2(unsigned char*, bool, int, int);
-	static gd::string decompressString(gd::string const&, bool, int) = imac 0x1ffaf0, m1 0x1b1664;
+	static gd::string decompressString(gd::string const&, bool, int) = imac 0x1ffaf0, m1 0x1b1664, ios 0x24e01c;
 	static gd::string encryptDecrypt(gd::string const&, int);
 	static gd::string encryptDecryptWKey(gd::string const&, gd::string);
 	static unsigned char hexToChar(gd::string const&);
