@@ -6180,8 +6180,8 @@ class GameObject : CCSpritePlus {
 	virtual void setPosition(cocos2d::CCPoint const&) = win 0x18dba0, imac 0x5c43f0, m1 0x4f3740;
 	virtual void setVisible(bool) = win 0x18ec90, imac 0x5c51b0, m1 0x4f44a8, ios 0x26b73c;
 	virtual void setRotation(float) = win 0x18de40, imac 0x5c4660, m1 0x4f39e0, ios 0x26ad98;
-	virtual void setRotationX(float) = m1 0x4f3ac8, win 0x18df90, imac 0x5c4730;
-	virtual void setRotationY(float) = m1 0x4f3ba4, win 0x18e0e0, imac 0x5c47f0;
+	virtual void setRotationX(float) = m1 0x4f3ac8, win 0x18df90, imac 0x5c4730, ios 0x26ae70;
+	virtual void setRotationY(float) = m1 0x4f3ba4, win 0x18e0e0, imac 0x5c47f0, ios 0x27af3c;
 	virtual void setOpacity(unsigned char) = win 0x18e840, m1 0x4f417c, imac 0x5c4e10, ios 0x26b450;
 	virtual bool initWithTexture(cocos2d::CCTexture2D*) = m1 0x4ed1c4, win 0x183cf0, imac 0x5aaac0;
 	virtual void setChildColor(cocos2d::ccColor3B const&) = m1 0x4ff270, win 0x196e00, imac 0x5d19c0;
