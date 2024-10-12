@@ -4636,7 +4636,7 @@ class FMODAudioEngine : cocos2d::CCNode {
 	}
 
 	TodoReturn activateQueuedMusic(int);
-	FMOD::Channel* channelForChannelID(int) = win 0x575d0, m1 0x3638d8, imac 0x3e4320;
+	FMOD::Channel* channelForChannelID(int) = win 0x575d0, m1 0x3638d8, imac 0x3e4320, ios 0x13fe68;
 	TodoReturn channelForUniqueID(int);
 	TodoReturn channelIDForUniqueID(int);
 	TodoReturn channelLinkSound(int, FMODSound*);
@@ -4673,15 +4673,15 @@ class FMODAudioEngine : cocos2d::CCNode {
 	TodoReturn getFMODStatus(int) = win 0x5ba00, ios 0x1450f8;
 	float getMeteringValue() = imac 0x3e7ec0, m1 0x366518;
 	TodoReturn getMusicChannelID(int);
-	unsigned int getMusicLengthMS(int channel) = win 0x5b0e0;
+	unsigned int getMusicLengthMS(int channel) = win 0x5b0e0, ios 0x144bbc;
 	TodoReturn getMusicTime(int);
-	unsigned int getMusicTimeMS(int channel) = win 0x5b080;
+	unsigned int getMusicTimeMS(int channel) = win 0x5b080, ios 0x144b2c;
 	TodoReturn getNextChannelID();
 	TodoReturn getTweenContainer(AudioTargetType);
 	bool isChannelStopping(int);
 	bool isEffectLoaded(gd::string path);
 	bool isMusicPlaying(gd::string path, int p1) = win 0x58f20, imac 0x3ebaa0, m1 0x369394;
-	bool isMusicPlaying(int channel) = win 0x58e50, imac 0x3ebb90, m1 0x3692b8;
+	bool isMusicPlaying(int channel) = win 0x58e50, imac 0x3ebb90, m1 0x3692b8, ios 0x143458;
 	bool isSoundReady(FMOD::Sound* sound);
 	TodoReturn lengthForSound(gd::string path);
 	TodoReturn loadAndPlayMusic(gd::string path, unsigned int p1, int p2);
@@ -4749,7 +4749,7 @@ class FMODAudioEngine : cocos2d::CCNode {
 		m_sfxVolume = volume;
 		if (m_globalChannel) m_globalChannel->setVolume(volume);
 	}
-	void setMusicTimeMS(unsigned int ms, bool, int channel) = win 0x5af40;
+	void setMusicTimeMS(unsigned int ms, bool, int channel) = win 0x5af40, ios 0x141244;
 	void setup() = win 0x52d40, m1 0x36103c, imac 0x3e0e30, ios 0x13e5f0;
 	void setupAudioEngine() = win 0x53220;
 	void start() = win 0x54400;
@@ -17547,10 +17547,10 @@ class Slider : cocos2d::CCLayer {
 		return Slider::create(target, handler, "sliderBar.png", "slidergroove.png", "sliderthumb.png", "sliderthumbsel.png", scale);
 	}
 
-	TodoReturn disableSlider();
+	TodoReturn disableSlider() = ios 0x2ffc10;
 	void disableTouch() = imac 0x303b10, m1 0x297408;
-	TodoReturn enableSlider();
-	bool getLiveDragging() {
+	TodoReturn enableSlider() = ios 0x2ffcf8;
+	bool getLiveDragging() = ios 0x2ffdd8 {
 		return m_touchLogic->m_activateThumb;
 	}
 	SliderThumb* getThumb() {
