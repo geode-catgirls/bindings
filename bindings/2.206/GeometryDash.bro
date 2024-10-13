@@ -7304,7 +7304,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
 	TodoReturn checkCollision(int, int);
 	void checkCollisionBlocks(EffectGameObject*, gd::vector<EffectGameObject*>*, int) = win 0x209650;
 	int checkCollisions(PlayerObject*, float, bool) = win 0x204350, imac 0x119810, m1 0xf661c, ios 0x1f142c;
-	void checkRepellPlayer() = win 0x2294a0;
+	void checkRepellPlayer() = win 0x2294a0, ios 0x20a218;
 	void checkSpawnObjects() = win 0x20b080, ios 0x1f6350;
 	TodoReturn claimMoveAction(int, bool);
 	TodoReturn claimParticle(gd::string, int);
