@@ -12404,7 +12404,7 @@ class LoadingCircle : cocos2d::CCLayerColor {
 class LoadingCircleSprite : cocos2d::CCSprite {
 	// virtual ~LoadingCircleSprite();
 
-	static LoadingCircleSprite* create() = win 0x6a7b0, m1 0x4284a4, imac 0x4c91e0;
+	static LoadingCircleSprite* create() = win 0x6a7b0, m1 0x4284a4, imac 0x4c91e0, ios 0x3a3640;
 
 	void fadeInCircle(bool reverseOpacity) = win inline, m1 0x4285fc, imac 0x4c9350 {
 		this->stopActionByTag(0);
