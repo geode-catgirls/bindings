@@ -802,7 +802,7 @@ class cocos2d::CCParticleSystemQuad {
 
     // CCParticleSystemQuad(cocos2d::CCParticleSystemQuad const&);
     // CCParticleSystemQuad();
-    ~CCParticleSystemQuad() = imac 0x5eb0b0, m1 0x51c380;
+    ~CCParticleSystemQuad() = imac 0x5eb0b0, m1 0x51c380, ios 0x252a00; //uh idk havent tested it yet but looks EXACTLY like on m1 mac
     bool allocMemory() = imac 0x5eaa60, m1 0x51c000;
     void listenBackToForeground(cocos2d::CCObject*);
     [[missing(mac, ios)]]
@@ -1776,7 +1776,7 @@ class cocos2d::CCDirector {
     void calculateDeltaTime();
     void calculateMPF();
     void checkSceneReference();
-    cocos2d::CCPoint convertToGL(cocos2d::CCPoint const&) = imac 0x470e50, m1 0x3dfd04;
+    cocos2d::CCPoint convertToGL(cocos2d::CCPoint const&) = imac 0x470e50, m1 0x3dfd04, ios 0x1793d8;
     cocos2d::CCPoint convertToUI(cocos2d::CCPoint const&);
     void createStatsLabel();
     void drawScene() = m1 0x3deef0, ios 0x178c64;
@@ -1806,7 +1806,7 @@ class cocos2d::CCDirector {
     void showFPSLabel();
     void showStats();
     void toggleShowFPS(bool, gd::string, cocos2d::CCPoint) = imac 0x470800;
-    void updateContentScale(cocos2d::TextureQuality);
+    void updateContentScale(cocos2d::TextureQuality) = ios 0x1792dc;
     void updateScreenScale(cocos2d::CCSize);
     void willSwitchToScene(cocos2d::CCScene*) = imac 0x471140, m1 0x3dff18;
 
@@ -3318,7 +3318,7 @@ class cocos2d::extension::CCHttpClient : cocos2d::CCObject {
     // CCHttpClient() = imac 0x441fb0, m1 0x3b3ec8;
     static cocos2d::extension::CCHttpClient* getInstance() = imac 0x425520, m1 0x3a04ec;
     static void destroyInstance() = m1 0x3a0550;
-    void send(cocos2d::extension::CCHttpRequest* request) = imac 0x426430, m1 0x3a12c0;
+    void send(cocos2d::extension::CCHttpRequest* request) = imac 0x426430, m1 0x3a12c0, ios 0x241138;
     bool lazyInitThreadSemphore() = imac 0x425880, m1 0x3a0864;
     void dispatchResponseCallbacks(float);
 }
