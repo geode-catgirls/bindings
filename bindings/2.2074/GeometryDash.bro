@@ -5429,7 +5429,7 @@ class FriendRequestPopup : FLAlertLayer, UploadActionDelegate, UploadPopupDelega
     static FriendRequestPopup* create(GJFriendRequest*) = win 0x28e370;
 
     void blockUser();
-    bool init(GJFriendRequest*) = imac 0x2916b0;
+    bool init(GJFriendRequest*) = imac 0x2916b0, ios 0x2d889c;
     void loadFromGJFriendRequest(GJFriendRequest*);
     void onAccept(cocos2d::CCObject* sender);
     void onBlock(cocos2d::CCObject* sender);
