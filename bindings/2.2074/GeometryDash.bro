@@ -9857,7 +9857,7 @@ class GJMessageCell : TableViewCell, FLAlertLayerProtocol, UploadPopupDelegate, 
     // virtual ~GJMessageCell();
     GJMessageCell(char const*, float, float);
 
-    void loadFromMessage(GJUserMessage*) = win 0xbc7e0, imac 0x23aa30;
+    void loadFromMessage(GJUserMessage*) = win 0xbc7e0, imac 0x23aa30, ios 0x10d474;
     TodoReturn markAsRead();
     void onDeleteMessage(cocos2d::CCObject* sender);
     void onToggle(cocos2d::CCObject* sender);
