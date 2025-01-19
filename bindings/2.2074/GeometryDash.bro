@@ -7975,7 +7975,7 @@ class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
     TodoReturn processSongState(int, float, float, int, float, float, gd::vector<SongTriggerState>*, SongTriggerGameObject*);
     TodoReturn processStateObjects() = ios 0x1ec358;
     void processTransformActions(bool) = win 0x2273a0;
-    void queueButton(int button, bool push, bool isPlayer2) = win inline, imac 0x13ad90, m1 0x1134ec {
+    void queueButton(int button, bool push, bool isPlayer2) = win inline, imac 0x13ad90, m1 0x1134ec, ios 0x1fc9b8 {
         if (button <= 0 || button > 3) {
             return;
         }
