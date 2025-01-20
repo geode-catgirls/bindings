@@ -266,7 +266,7 @@ class cocos2d::CCMotionStreak {
 
 [[link(win, android)]]
 class cocos2d::CCMoveBy {
-    static cocos2d::CCMoveBy* create(float, cocos2d::CCPoint const&) = imac 0x3a5080, m1 0x331aa8;
+    static cocos2d::CCMoveBy* create(float, cocos2d::CCPoint const&) = imac 0x3a5080, m1 0x331aa8, ios 0x18ed24;
 
     bool initWithDuration(float, cocos2d::CCPoint const&);
 
