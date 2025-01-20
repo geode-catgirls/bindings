@@ -2122,11 +2122,11 @@ class CharacterColorPage : FLAlertLayer {
     void FLAlert_Clicked(FLAlertLayer*, bool);
     cocos2d::CCPoint offsetForIndex(int) = imac 0x648570;
     void onClose(cocos2d::CCObject* sender) = win 0x8a760;
-    void onMode(cocos2d::CCObject* sender) = win 0x89550, imac 0x647690, m1 0x56fc80;
+    void onMode(cocos2d::CCObject* sender) = win 0x89550, imac 0x647690, m1 0x56fc80, ios 0x12c9c8;
     void onPlayerColor(cocos2d::CCObject* sender) = win 0x89d60, m1 0x570904, imac 0x648320, ios 0x12d378;
     void toggleGlow(cocos2d::CCObject*) = win 0x88da0, m1 0x570384, imac 0x647d80, ios 0x12cfe8;
     TodoReturn toggleGlowItems(bool);
-    void toggleShip(cocos2d::CCObject*) = win 0x88c80, imac 0x6475e0, m1 0x56fbb8;
+    void toggleShip(cocos2d::CCObject*) = win 0x88c80, imac 0x6475e0, m1 0x56fbb8, ios 0x12c904;
     void updateColorMode(int) = imac 0x647dc0;
     void updateIconColors() = win 0x8a540, imac 0x647850, ios 0x12cb4c;
 
