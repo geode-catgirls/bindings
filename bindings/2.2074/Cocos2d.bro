@@ -2262,7 +2262,7 @@ class cocos2d::CCActionManager {
 
 [[link(win, android)]]
 class cocos2d::CCAnimate {
-    static cocos2d::CCAnimate* create(cocos2d::CCAnimation*) = imac 0x3a90d0, m1 0x335390;
+    static cocos2d::CCAnimate* create(cocos2d::CCAnimation*) = imac 0x3a90d0, m1 0x335390, ios 0x1908e8;
 
     bool initWithAnimation(cocos2d::CCAnimation*);
 
@@ -2289,7 +2289,7 @@ class cocos2d::CCAnimation {
     // static cocos2d::CCAnimation* create(cocos2d::CCArray*, float);
     static cocos2d::CCAnimation* create(cocos2d::CCArray*, float, unsigned int) = imac 0x284c00;
     static cocos2d::CCAnimation* create();
-    static cocos2d::CCAnimation* createWithSpriteFrames(cocos2d::CCArray*, float) = imac 0x284a00;
+    static cocos2d::CCAnimation* createWithSpriteFrames(cocos2d::CCArray*, float) = m1 0x22e128, imac 0x284a00, ios 0x1a73f4;
 
     bool init();
     bool initWithAnimationFrames(cocos2d::CCArray*, float, unsigned int);
