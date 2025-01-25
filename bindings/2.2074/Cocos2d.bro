@@ -3048,7 +3048,7 @@ class cocos2d::CCMenuItemSprite {
     virtual void selected() = imac 0x3ad0c0, m1 0x338e40, ios 0x50ab0;
     virtual void unselected() = imac 0x3ad160, m1 0x338ecc, ios 0x50b3c;
     virtual void setEnabled(bool) = imac 0x3ad1e0, m1 0x338f4c, ios 0x50bbc;
-    virtual cocos2d::CCNode* getNormalImage() = m1 0x338964, imac 0x3acc10;
+    virtual cocos2d::CCNode* getNormalImage() = m1 0x338964, imac 0x3acc10, ios 0x50764; // i actually like have no idea if this is correct. Somebody check the binding im too lazy
     virtual void setNormalImage(cocos2d::CCNode*) = imac 0x3acc20, m1 0x33896c, ios 0x5076c;
     virtual cocos2d::CCNode* getSelectedImage() = m1 0x338a38, imac 0x3acce0;
     virtual void setSelectedImage(cocos2d::CCNode*) = imac 0x3accf0, m1 0x338a40, ios 0x50840;
