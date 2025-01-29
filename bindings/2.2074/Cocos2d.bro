@@ -145,7 +145,7 @@ class cocos2d::CCEaseExponentialInOut {
 
 [[link(win, android)]]
 class cocos2d::CCEaseExponentialOut {
-    static cocos2d::CCEaseExponentialOut* create(cocos2d::CCActionInterval*) = m1 0x45e9b0;
+    static cocos2d::CCEaseExponentialOut* create(cocos2d::CCActionInterval*) = m1 0x45e9b0, ios 0x26b68c; // ???
 
     // CCEaseExponentialOut(cocos2d::CCEaseExponentialOut const&);
     // CCEaseExponentialOut();
@@ -1904,7 +1904,7 @@ class cocos2d::CCDirector {
     int levelForSceneInStack(cocos2d::CCScene*);
     void pause();
     void popScene() = ios 0x1796e8;
-    bool popSceneWithTransition(float, cocos2d::PopTransition) = imac 0x4714c0, m1 0x3e02e8;
+    bool popSceneWithTransition(float, cocos2d::PopTransition) = imac 0x4714c0, m1 0x3e02e8, ios 0x17976c;
     void popToRootScene();
     void popToSceneInStack(cocos2d::CCScene*);
     void popToSceneStackLevel(int) = ios 0x179844;
@@ -1924,7 +1924,7 @@ class cocos2d::CCDirector {
     void toggleShowFPS(bool, gd::string, cocos2d::CCPoint) = imac 0x470800;
     void updateContentScale(cocos2d::TextureQuality) = ios 0x1792dc;
     void updateScreenScale(cocos2d::CCSize);
-    void willSwitchToScene(cocos2d::CCScene*) = imac 0x471140, m1 0x3dff18;
+    void willSwitchToScene(cocos2d::CCScene*) = imac 0x471140, m1 0x3dff18, ios 0x1794fc;
 
     virtual bool init() = imac 0x46f630, m1 0x3de7f4, ios 0x178608;
     virtual cocos2d::CCScheduler* getScheduler() = m1 0x3e0870, imac 0x471b10, ios 0x179c2c;
@@ -2406,8 +2406,8 @@ class cocos2d::CCDictionary {
     void removeObjectForKey(gd::string const&) = imac 0x2fb510, m1 0x293a98;
     void removeObjectForKey(intptr_t) = imac 0x2fba60, m1 0x293f08;
     void removeObjectsForKeys(cocos2d::CCArray*);
-    cocos2d::CCString const* valueForKey(gd::string const&) = imac 0x2fa030, m1 0x2927ec;
-    cocos2d::CCString const* valueForKey(intptr_t) = imac 0x2fa570, m1 0x292cd4;
+    cocos2d::CCString const* valueForKey(gd::string const&) = imac 0x2fa030, m1 0x2927ec, ios 0x41a868;
+    cocos2d::CCString const* valueForKey(intptr_t) = imac 0x2fa570, m1 0x292cd4, ios 0x41acdc;
     bool writeToFile(char const*);
 
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = imac 0x2fbcf0, m1 0x294174, ios 0x41bfa4;
@@ -2593,7 +2593,7 @@ class cocos2d::CCCallFuncO {
 
 [[link(win, android)]]
 class cocos2d::CCClippingNode : cocos2d::CCNode {
-    static cocos2d::CCClippingNode* create() = imac 0x708da0, m1 0x628634 {
+    static cocos2d::CCClippingNode* create() = imac 0x708da0, m1 0x628634, ios inline {
     	auto pRet = new CCClippingNode();
 
     	if (pRet->init())
@@ -2605,7 +2605,7 @@ class cocos2d::CCClippingNode : cocos2d::CCNode {
     	delete pRet;
     	return nullptr;
     }
-    static cocos2d::CCClippingNode* create(cocos2d::CCNode* stencil) = imac 0x708e30, m1 0x6286bc {
+    static cocos2d::CCClippingNode* create(cocos2d::CCNode* stencil) = imac 0x708e30, m1 0x6286bc, ios inline {
     	auto pRet = new CCClippingNode();
 
     	if (pRet->init(stencil))
@@ -2618,8 +2618,14 @@ class cocos2d::CCClippingNode : cocos2d::CCNode {
     	return nullptr;
     }
 
-    CCClippingNode();
-    virtual ~CCClippingNode();
+    CCClippingNode() = ios inline {
+	m_pStencil = nullptr;
+	m_fAlphaThreshold = 0.0f;
+	m_bInverted = false;
+    }
+    virtual ~CCClippingNode() = ios inline {
+	CC_SAFE_RELEASE(m_pStencil);
+    }
 
     // in normal cocos this is just a static func at the top of the file: https://github.com/cocos2d/cocos2d-x/blob/v2/cocos2dx/misc_nodes/CCClippingNode.cpp#L40
     inline void setProgram(CCNode* n, CCGLProgram* p) {
@@ -2633,11 +2639,11 @@ class cocos2d::CCClippingNode : cocos2d::CCNode {
         }
     }
 
-    virtual bool init() = m1 0x62875c, imac 0x708ee0 {
+    virtual bool init() = m1 0x62875c, imac 0x708ee0, ios inline {
     	return init(nullptr);
     }
 
-    virtual bool init(cocos2d::CCNode* pStencil) = m1 0x62876c, imac 0x708f00 { // ios inline
+    virtual bool init(cocos2d::CCNode* pStencil) = m1 0x62876c, imac 0x708f00, ios inline {
     	CC_SAFE_RELEASE(m_pStencil);
     	m_pStencil = pStencil;
     	CC_SAFE_RETAIN(m_pStencil);
@@ -2660,11 +2666,11 @@ class cocos2d::CCClippingNode : cocos2d::CCNode {
     	return true;
     }
 
-    virtual void onEnter() = m1 0x6287dc, imac 0x708f70 {
+    virtual void onEnter() = m1 0x6287dc, imac 0x708f70, ios inline {
     	CCNode::onEnter();
     		m_pStencil->onEnter();
     }
-    virtual void onEnterTransitionDidFinish() = m1 0x628808, imac 0x708fa0 {
+    virtual void onEnterTransitionDidFinish() = m1 0x628808, imac 0x708fa0, ios inline {
     	CCNode::onEnterTransitionDidFinish();
     		m_pStencil->onEnterTransitionDidFinish();
     }
@@ -2672,12 +2678,12 @@ class cocos2d::CCClippingNode : cocos2d::CCNode {
     	m_pStencil->onExit();
     		CCNode::onExit();
     }
-    virtual void onExitTransitionDidStart() = m1 0x628834, imac 0x708fd0 {
+    virtual void onExitTransitionDidStart() = m1 0x628834, imac 0x708fd0, ios inline {
     	m_pStencil->onExitTransitionDidStart();
     		CCNode::onExitTransitionDidStart();
     }
 
-    virtual void visit() = imac 0x709030, m1 0x628894 {
+    virtual void visit() = imac 0x709030, m1 0x628894, ios inline {
     	// if stencil buffer disabled
     	//if (g_sStencilBits < 1)
     	//{
@@ -2861,16 +2867,26 @@ class cocos2d::CCClippingNode : cocos2d::CCNode {
     	}
     }
 
-    cocos2d::CCNode* getStencil() const;
-    void setStencil(cocos2d::CCNode* pStencil) = imac 0x7093a0, m1 0x628bc4;
+    cocos2d::CCNode* getStencil() const = ios inline {
+	return m_pStencil;
+    }
+    void setStencil(cocos2d::CCNode* pStencil) = imac 0x7093a0, m1 0x628bc4, ios inline {
+	CC_SAFE_RELEASE(m_pStencil);
+	m_pStencil = pStencil;
+	CC_SAFE_RETAIN(m_pStencil);
+    }
 
-    float getAlphaThreshold() const;
-    void setAlphaThreshold(float fAlphaThreshold) = imac 0x7093f0, m1 0x628c10 {
+    float getAlphaThreshold() const = ios inline {
+	return m_fAlphaThreshold;
+    }
+    void setAlphaThreshold(float fAlphaThreshold) = imac 0x7093f0, m1 0x628c10, ios inline {
     	m_fAlphaThreshold = fAlphaThreshold;
     }
 
-    bool isInverted() const;
-    void setInverted(bool bInverted) = imac 0x709410, m1 0x628c20 {
+    bool isInverted() const = ios inline {
+		return m_bInverted;
+	}
+    void setInverted(bool bInverted) = imac 0x709410, m1 0x628c20, ios inline {
     	m_bInverted = bInverted;
     }
 }
@@ -3272,7 +3288,7 @@ class cocos2d {
 
 [[link(win, android)]]
 class DS_Dictionary {
-    DS_Dictionary() = m1 0x135e9c;
+    DS_Dictionary() = m1 0x135e9c, ios 0x1643c4;
     void addBoolValuesToMapForKey(gd::map<gd::string, bool>&, char const*, bool) = m1 0x13d518;
     void addBoolValuesToMapForKeySpecial(gd::map<gd::string, bool>&, char const*, bool) = m1 0x13d1dc;
     void checkCompatibility();
@@ -3298,14 +3314,14 @@ class DS_Dictionary {
     cocos2d::CCPoint getVec2ForKey(char const*);
     bool loadRootSubDictFromCompressedFile(char const*) = imac 0x16a5b0, m1 0x1372fc;
     bool loadRootSubDictFromFile(char const*);
-    bool loadRootSubDictFromString(gd::string const&) = m1 0x1376b0;
+    bool loadRootSubDictFromString(gd::string const&) = m1 0x1376b0, ios 0x1645d4;
     bool rectFromString(gd::string const&, cocos2d::CCRect&);
     void removeAllKeys();
     void removeKey(unsigned int);
     void removeKey(char const*);
     bool saveRootSubDictToCompressedFile(char const*);
     bool saveRootSubDictToFile(char const*);
-    gd::string saveRootSubDictToString() = imac 0x16c030;
+    gd::string saveRootSubDictToString() = imac 0x16c030, m1 0x1388ec, ios 0x164824;
     void setArrayForKey(char const*, cocos2d::CCArray*);
     void setBoolForKey(char const*, bool, bool);
     void setBoolForKey(char const*, bool) = imac 0x16e790, m1 0x13ab9c;
@@ -3333,7 +3349,7 @@ class DS_Dictionary {
     void split(gd::string const&, char const*, gd::vector<gd::string>&);
     bool splitWithForm(gd::string const&, gd::vector<gd::string>&);
     void stepBackToRootSubDict();
-    bool stepIntoSubDictWithKey(char const*) = imac 0x16c5d0;
+    bool stepIntoSubDictWithKey(char const*) = imac 0x16c5d0, m1 0x138dc0, ios 0x164b90;
     void stepOutOfSubDict() = imac 0x16c8a0, m1 0x138ff0;
     bool vec2FromString(gd::string const&, cocos2d::CCPoint&);
 }
@@ -3435,7 +3451,7 @@ class cocos2d::ZipUtils {
     static gd::string base64URLDecode(gd::string const&);
     static gd::string base64URLEncode(gd::string const&);
     static void ccDecodeEncodedPvr(unsigned int*, int);
-    static int ccDeflateMemory(unsigned char*, unsigned int, unsigned char**) = imac 0x1f3290, m1 0x1a8dd8;
+    static int ccDeflateMemory(unsigned char*, unsigned int, unsigned char**) = imac 0x1f3290, m1 0x1a8dd8, ios 0x23d50c;
     static int ccInflateCCZFile(char const*, unsigned char**);
     static int ccInflateGZipFile(char const*, unsigned char**);
     static int ccInflateMemory(unsigned char*, unsigned int, unsigned char**);
@@ -3443,7 +3459,7 @@ class cocos2d::ZipUtils {
     static int ccInflateMemoryWithHint(unsigned char*, unsigned int, unsigned char**, unsigned int);
     static void ccSetPvrEncryptionKey(unsigned int, unsigned int, unsigned int, unsigned int);
     static void ccSetPvrEncryptionKeyPart(int, unsigned int);
-    static gd::string compressString(gd::string const&, bool, int) = imac 0x1f3020, m1 0x1a8b18;
+    static gd::string compressString(gd::string const&, bool, int) = imac 0x1f3020, m1 0x1a8b18, ios 0x23d2b8;
     static gd::string decompressString2(unsigned char*, bool, int, int);
     static gd::string decompressString(gd::string const&, bool, int) = m1 0x1a921c, imac 0x1f36c0;
     static gd::string encryptDecrypt(gd::string const&, int);
@@ -3496,14 +3512,14 @@ class cocos2d::CCSpeed {
 
 [[link(win, android)]]
 class pugi::xml_document {
-    xml_document();
-    ~xml_document() = imac 0x62ab90;
+    xml_document() = m1 0x5553cc, ios 0x3a593c;
+    ~xml_document() = imac 0x62ab90, m1 0x555520, ios 0x3a5a20;
 }
 
 [[link(win, android)]]
 class pugi::xml_node {
     // i'm not bothering
-    	xml_node() = m1 inline, imac inline {
+    	xml_node() = m1 inline, imac inline, ios inline {
     	_root = nullptr;
     }
 }
