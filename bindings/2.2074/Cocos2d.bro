@@ -1673,7 +1673,7 @@ class cocos2d::CCTouchDispatcher {
 class cocos2d::CCTouchHandler {
     static cocos2d::CCTouchHandler* handlerWithDelegate(cocos2d::CCTouchDelegate*, int);
 
-    cocos2d::CCTouchDelegate* getDelegate() = m1 0x3dd4e4;
+    cocos2d::CCTouchDelegate* getDelegate() = m1 0x3dd4e4, ios 0x10c34;
     int getEnabledSelectors();
     int getPriority() = ios inline, m1 0x3dd560 {
     	return m_nPriority;
