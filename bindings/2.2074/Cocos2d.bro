@@ -689,7 +689,7 @@ class cocos2d::CCSet : cocos2d::CCObject {
         
         cocos2d::CCSetIterator it;
 
-        for( it = m_pSet->begin() = imac 0x79e4b0, m1 0x6b09d4; it != m_pSet->end(); ++it)
+        for( it = m_pSet->begin(); it != m_pSet->end(); ++it)
         {
             if (*it)
             {
