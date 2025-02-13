@@ -344,7 +344,7 @@ class cocos2d::CCEaseSineInOut : cocos2d::CCActionEase {
         CC_SAFE_DELETE(pNewZone);
         return pCopy;
     }
-    virtual void update(float) = m1 0x45f574, imac 0x4ffbc0, ios inline {
+    virtual void update(float time) = m1 0x45f574, imac 0x4ffbc0, ios inline {
         m_pInner->update(-0.5f * (cosf((float)M_PI * time) - 1));
     }
     virtual cocos2d::CCActionInterval* reverse() = imac 0x4ffc00, m1 0x45f5c0, ios inline {
