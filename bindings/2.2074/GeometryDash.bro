@@ -2871,7 +2871,7 @@ class CreateParticlePopup : FLAlertLayer, TextInputDelegate, ColorSelectDelegate
     // virtual ~CreateParticlePopup();
 
     static CreateParticlePopup* create(gd::string p0) = m1 0x3ccc68, ios inline {
-        return CreateParticlePopup::create(0, 0, p0) = m1 0x3ccc68, imac 0x45bde0;
+        return CreateParticlePopup::create(0, 0, p0);
     }
     static CreateParticlePopup* create(ParticleGameObject*, cocos2d::CCArray*, gd::string) = m1 0x3cca7c, imac 0x45bb70, ios 0x2cae0c;
     static CreateParticlePopup* create(ParticleGameObject*, cocos2d::CCArray*) = win 0x414180, m1 0x3cca54, imac 0x45bb50, ios 0x2cad90;
@@ -10004,13 +10004,39 @@ class GJGroundLayer : cocos2d::CCLayer {
     }
     bool init(int, int) = win 0x2768f0, imac 0x5d2870, m1 0x506450, ios 0x2fe60;
     void loadGroundSprites(int, bool) = win 0x276e60, m1 0x506af4, imac 0x5d2f10;
-    void positionGround(float) = win inline, m1 0x507460, imac 0x5d38b0;
-    TodoReturn scaleGround(float) = win 0x277310, m1 0x506f20, imac 0x5d3350;
-    void toggleVisible01(bool) = win inline, m1 0x506df0, imac 0x5d31f0;
-    void toggleVisible02(bool) = win inline, m1 0x506e20, imac 0x5d3230;
-    void updateGround01Color(cocos2d::ccColor3B) = win inline, m1 0x506d70, imac 0x5d3170, ios 0x30630;
-    void updateGround02Color(cocos2d::ccColor3B) = win inline, m1 0x506e9c, imac 0x5d32c0, ios 0x3075c;
-    TodoReturn updateGroundPos(cocos2d::CCPoint);
+    void positionGround(float y) = win inline, m1 0x507460, imac 0x5d38b0  {
+        this->setPosition(0.f, y);
+    }
+    void scaleGround(float) = win 0x277310, m1 0x506f20, imac 0x5d3350;
+    void toggleVisible01(bool visible) = win inline, m1 0x506df0, imac 0x5d31f0 {
+        if (m_showGround1 == visible) return;
+        m_showGround1 = visible;
+        this->setVisible(visible && m_showGround2);
+    }
+    void toggleVisible02(bool visible) = win inline, m1 0x506e20, imac 0x5d3230 {
+        if (m_showGround2 == visible) return;
+        m_showGround2 = visible;
+        this->setVisible(visible && m_showGround1);
+    }
+    void updateGround01Color(cocos2d::ccColor3B color) = win inline, m1 0x506d70, imac 0x5d3170 {
+        if (auto children = m_ground1Sprite->getChildren()) {
+            for (int i = 0; i < children->count(); i++) {
+                static_cast<cocos2d::CCSprite*>(children->objectAtIndex(i))->setColor(color);
+            }
+        }
+    }
+    void updateGround02Color(cocos2d::ccColor3B color) = win inline, m1 0x506e9c, imac 0x5d32c0 {
+        if (!m_ground2Sprite) return;
+        if (auto children = m_ground2Sprite->getChildren()) {
+            for (int i = 0; i < children->count(); i++) {
+                static_cast<cocos2d::CCSprite*>(children->objectAtIndex(i))->setColor(color);
+            }
+        }
+    }
+    void updateGroundPos(cocos2d::CCPoint pos) = win inline, m1 0x506e4c, imac 0x5d3270 {
+        m_ground1Sprite->setPosition(pos);
+        if (m_ground2Sprite) m_ground2Sprite->setPosition(pos);
+    }
     void updateGroundWidth(bool) = m1 0x507014, imac 0x5d3460;
     void updateLineBlend(bool blend) = win inline, imac 0x5d3670, m1 0x507214 {
         if (m_blendLine == blend) return;
