@@ -246,6 +246,7 @@ class cocos2d::CCEaseSineIn : cocos2d::CCActionEase {
         // CC_SAFE_DELETE(pNewZone);
         return pCopy;
     }
+    // This doesn't even get called. Why? I don't know.
     virtual void update(float time) = m1 0x45f194, imac 0x4ff7d0, ios inline {
         m_pInner->update(-1 * cosf(time * (float)M_PI_2) + 1);
     }
