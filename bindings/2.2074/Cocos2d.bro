@@ -279,7 +279,7 @@ class cocos2d::CCEaseSineOut : cocos2d::CCActionEase {
     // I can't use flippin CCZone constructor because codegen does not work with args in constructors
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone* pZone) = m1 0x45f2a0, imac 0x4ff8d0, ios inline {
         // CCZone* pNewZone = NULL;
-        CCEaseSineIn* pCopy = NULL;
+        CCEaseSineOut* pCopy = NULL;
         if(pZone && pZone->m_pCopyObject)
         {
             //in case of being called at sub class
@@ -328,7 +328,7 @@ class cocos2d::CCEaseSineInOut : cocos2d::CCActionEase {
     // I can't use flippin CCZone constructor because codegen does not work with args in constructors
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone* pZone) = m1 0x45f48c, imac 0x4ffac0, ios inline {
         // CCZone* pNewZone = NULL;
-        CCEaseSineIn* pCopy = NULL;
+        CCEaseSineInOut* pCopy = NULL;
         if(pZone && pZone->m_pCopyObject)
         {
             //in case of being called at sub class
