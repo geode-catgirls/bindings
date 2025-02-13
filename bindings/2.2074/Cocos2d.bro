@@ -297,6 +297,7 @@ class cocos2d::CCEaseSineOut : cocos2d::CCActionEase {
     }
     virtual void update(float time) = m1 0x45f388, imac 0x4ff9d0, ios inline {
         m_pInner->update(sinf(time * (float)M_PI_2));
+        std::cout << "Update called"; // i hate cout but i dont think i can geode log here
     }
     virtual cocos2d::CCActionInterval* reverse() = m1 0x45f3c4, imac 0x4ffa00, ios inline {
         return CCEaseSineIn::create(m_pInner->reverse());
