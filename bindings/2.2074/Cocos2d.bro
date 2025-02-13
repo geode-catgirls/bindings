@@ -4214,7 +4214,7 @@ class cocos2d::CCActionEase : cocos2d::CCActionInterval {
     virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone* pZone);
     virtual void startWithTarget(cocos2d::CCNode *pTarget) = ios 0x26b00c;
     virtual void stop() = ios 0x26b03c;
-    virtual void update(float time), 0x26b06c;
+    virtual void update(float time) = ios 0x26b06c;
     virtual cocos2d::CCActionInterval* reverse();
     virtual cocos2d::CCActionInterval* getInnerAction() = ios 0x26b09c;
 
