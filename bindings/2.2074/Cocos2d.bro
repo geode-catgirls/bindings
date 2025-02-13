@@ -287,7 +287,7 @@ class cocos2d::CCEaseSineOut : cocos2d::CCActionEase {
         }
         else
         {
-            pCopy = new CCEaseSineIn();
+            pCopy = new CCEaseSineOut();
             // pNewZone = new CCZone(pCopy);
         }
         pCopy->initWithAction((CCActionInterval *)(m_pInner->copy()->autorelease()));
@@ -336,7 +336,7 @@ class cocos2d::CCEaseSineInOut : cocos2d::CCActionEase {
         }
         else
         {
-            pCopy = new CCEaseSineIn();
+            pCopy = new CCEaseSineInOut();
             // pNewZone = new CCZone(pCopy);
         }
 
