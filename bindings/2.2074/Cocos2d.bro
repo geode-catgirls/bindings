@@ -4224,5 +4224,5 @@ class cocos2d::CCActionEase : cocos2d::CCActionInterval {
 
 [[link(win, android)]]
 class cocos2d::CCZone {
-    CCZone(cocos2d::CCObject*) = 0x2534b4;
+    CCZone(cocos2d::CCObject*) = ios 0x2534b4;
 }
