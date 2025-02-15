@@ -4092,3 +4092,28 @@ class cocos2d::CCPoolManager {
 	void removeObject(cocos2d::CCObject*);
 	static cocos2d::CCPoolManager* sharedPoolManager();
 }
+
+[[link(win, android)]]
+class cocos2d::CCActionEase : cocos2d::CCActionInterval {
+    
+    virtual ~CCActionEase() = ios 0x26afb8;
+
+    bool initWithAction(cocos2d::CCActionInterval *pAction) = ios 0x26ae94;
+    virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone* pZone);
+    virtual void startWithTarget(cocos2d::CCNode *pTarget) = ios 0x26b00c;
+    virtual void stop() = ios 0x26b03c;
+    virtual void update(float time) = ios 0x26b06c;
+    virtual cocos2d::CCActionInterval* reverse();
+    virtual cocos2d::CCActionInterval* getInnerAction() = ios 0x26b09c;
+
+    static CCActionEase* create(cocos2d::CCActionInterval *pAction);
+
+    cocos2d::CCActionInterval* m_pInner;
+}
+
+[[link(win, android)]]
+class cocos2d::CCZone {
+    // CCZone(cocos2d::CCObject*) = ios 0x2534b4;
+
+    cocos2d::CCObject* m_pCopyObject;
+}
