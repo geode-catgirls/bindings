@@ -578,7 +578,7 @@ class cocos2d::CCSet : cocos2d::CCObject {
         
         cocos2d::CCSetIterator it;
 
-        for( it = m_pSet->begin() = imac 0x79e4b0, m1 0x6b09d4; it != m_pSet->end(); ++it)
+        for( it = m_pSet->begin(); it != m_pSet->end(); ++it)
         {
             if (*it)
             {
@@ -3711,7 +3711,7 @@ class DS_Dictionary {
     float getFloatForKey(char const*) = imac 0x16d4e0, m1 0x139acc;
     unsigned int getIndexOfKey(char const*);
     unsigned int getIndexOfKeyWithClosestAlphaNumericalMatch(char const*);
-    int getIntegerForKey(char const*) = imac 0x16d2a0, m1 0x1398c8;
+    int getIntegerForKey(char const*) = imac 0x16d2a0, m1 0x1398c8, ios 0x164f04;
     gd::string getKey(unsigned int) = imac 0x16cb80, m1 0x139234;
     unsigned int getNumKeys();
     cocos2d::CCObject* getObjectForKey(char const*) = imac 0x170930, m1 0x13c9b4;
