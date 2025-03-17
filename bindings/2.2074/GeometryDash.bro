@@ -1089,7 +1089,7 @@ class ButtonSprite : cocos2d::CCSprite {
     /// @param height The height of the button, leave 0 for automatic
     /// @param scale Scale of top sprite
     static ButtonSprite* create(cocos2d::CCSprite* topSprite, int width, bool absolute, float height, const char* texture, float scale) {
-        return create(topSprite, width, 0, height, scale, absolute, texture, true) = ios 0x62f8c;
+        return create(topSprite, width, 0, height, scale, absolute, texture, true);
     }
 
     /// Create a ButtonSprite with text, a font and a texture.
@@ -1102,7 +1102,7 @@ class ButtonSprite : cocos2d::CCSprite {
     /// @param scale Scale of text
     /// @returns Pointer to the created ButtonSprite, or nullptr on error
     static ButtonSprite* create(const char* caption, int width, bool absolute, const char* font, const char* texture, float height, float scale) {
-        return create(caption, width, 0, scale, absolute, font, texture, height) = ios 0x62f8c;
+        return create(caption, width, 0, scale, absolute, font, texture, height);
     }
 
     static ButtonSprite* create(char const* caption) {
@@ -1663,7 +1663,7 @@ class CCMenuItemToggler : cocos2d::CCMenuItem {
         sprOff->setScale(scale);
         sprOn->setScale(scale);
 
-        return create(sprOff, sprOn, target, callback) = ios 0x19452c;
+        return create(sprOff, sprOn, target, callback);
     }
     static CCMenuItemToggler* createWithStandardSprites(cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback, float scale) {
         auto sprOff = cocos2d::CCSprite::createWithSpriteFrameName("GJ_checkOff_001.png");
@@ -7555,7 +7555,7 @@ class GameObject : CCSpritePlus {
     inline void destroyObject() { // what ? not inline, imac 0x5a5340
         m_isDisabled = true;
         m_isDisabled2 = true;
-        setOpacity(0) = ios 0x25aafc;
+        setOpacity(0);
     }
     void determineSlopeDirection() = ios 0x25c100, win 0x199340, m1 0x4e0550, imac 0x5a6120;
     bool didScaleXChange();
@@ -9953,7 +9953,7 @@ class GJDropDownLayer : cocos2d::CCLayerColor {
 
     bool init(char const*, float, bool) = ios 0x3aa920, win 0x24feb0, imac 0x5cfdd0, m1 0x503f2c;
     bool init(char const* title) = ios 0x3aa920, win inline, m1 0x50433c, imac 0x5d01f0 {
-        return init(title, 220.0f, false) = ios 0x3aa920;
+        return init(title, 220.0f, false);
     }
 
     cocos2d::CCPoint m_endPosition;
@@ -13094,7 +13094,7 @@ class HardStreak : cocos2d::CCDrawNode {
     }
     void resumeStroke() = m1 0x8ff80, imac 0x9d480, win inline {
         this->m_drawStreak = true;
-        updateStroke(0.f) = ios 0x615ac;
+        updateStroke(0.f);
     }
     TodoReturn scheduleAutoUpdate();
     void stopStroke() = win 0x2b17f0, m1 0x8ff8c, imac 0x9d4a0;
@@ -21984,13 +21984,13 @@ class SliderThumb : cocos2d::CCMenuItemImage {
         float value = getValue();
         m_length = offset;
         this->setPosition({0, 0});
-        setValue(value) = ios 0x2eeb08;
+        setValue(value);
     }
     void setRotated(bool rotated) {
         float value = getValue();
         m_vertical = rotated;
         this->setPosition({0, 0});
-        setValue(value) = ios 0x2eeb08;
+        setValue(value);
     }
     void setValue(float) = ios 0x2eeb08, win 0x71340, imac 0x2ef590, m1 0x289668;
 
@@ -22667,8 +22667,8 @@ class TableView : CCScrollLayerExt, CCScrollLayerExtDelegate {
         return ret;
     }
 
-    virtual void onEnter() = win inline, m1 0x537ea4, imac 0x60ae40, ios 0x2ff6c4 { cocos2d::CCLayer::onEnter() = ios 0x2ff6c4; }
-    virtual void onExit() = win inline, m1 0x537ea8, imac 0x60ae50, ios 0x2ff6c8 { cocos2d::CCLayer::onExit() = ios 0x2ff6c8; }
+    virtual void onEnter() = win inline, m1 0x537ea4, imac 0x60ae40, ios 0x2ff6c4 { cocos2d::CCLayer::onEnter(); }
+    virtual void onExit() = win inline, m1 0x537ea8, imac 0x60ae50, ios 0x2ff6c8 { cocos2d::CCLayer::onExit(); }
     virtual bool ccTouchBegan(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x75250, m1 0x538024, imac 0x60aff0, ios 0x2ff804;
     virtual void ccTouchMoved(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x754e0, m1 0x538a88, imac 0x60bb20, ios 0x2fffbc;
     virtual void ccTouchEnded(cocos2d::CCTouch*, cocos2d::CCEvent*) = win 0x75400, m1 0x538840, imac 0x60b8e0, ios 0x2ffe48;
