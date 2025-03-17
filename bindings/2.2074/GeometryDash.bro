@@ -21790,7 +21790,7 @@ class SimplePlayer : cocos2d::CCSprite {
     inline void disableGlowOutline() {
         disableCustomGlowColor();
         m_hasGlowOutline = false;
-        updateColors() = ios 0x3062ec;
+        updateColors();
     }
     void enableCustomGlowColor(cocos2d::ccColor3B const& color) {
         m_hasCustomGlowColor = true;
@@ -21824,18 +21824,18 @@ class SimplePlayer : cocos2d::CCSprite {
     void setColors(cocos2d::ccColor3B const& color1, cocos2d::ccColor3B const& color2) = win inline, ios inline, imac 0x35b770, m1 0x2eec44 {
         m_firstLayer->setColor(color1);
         m_secondLayer->setColor(color2);
-        updateColors() = ios 0x3062ec;
+        updateColors();
     }
     void setFrames(char const*, char const*, char const*, char const*, char const*) = ios 0x307878, win 0x272c40, imac 0x35d470, m1 0x2f0704;
 
     inline void setGlowOutline(cocos2d::ccColor3B color) {
         enableCustomGlowColor(color);
         m_hasGlowOutline = true;
-        updateColors() = ios 0x3062ec;
+        updateColors();
     }
     void setSecondColor(cocos2d::ccColor3B const& color) {
         m_secondLayer->setColor(color);
-        updateColors() = ios 0x3062ec;
+        updateColors();
     }
     void updateColors() = ios 0x3062ec, win 0x272350, imac 0x35b230, m1 0x2ee780;
     void updatePlayerFrame(int, IconType) = ios 0x303714, win 0x272710, imac 0x3578d0, m1 0x2eb020;
